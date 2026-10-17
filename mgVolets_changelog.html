@@ -1,0 +1,177 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Volets</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-volets">Changelog MG Volets</h1>
+<h2 id="v2-1-91-17-10-2026">v2.1.91 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-1-90-16-10-2026">v2.1.90 - 16/10/2026</h2>
+<ul>
+<li>Noms internes des réglages, des commandes et des pages mis à la norme de l'écosystème.</li>
+<li>Les libellés des commandes (Up, Down, Stop, etatAff, Etat, Position) ne changent pas.</li>
+</ul>
+<h2 id="v2-1-90-15-10-2026">v2.1.90 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-87-14-10-2026">v2.1.87 - 14/10/2026</h2>
+<ul>
+<li>Documentation et historique : marque écrite « mgDomo ».</li>
+<li>Aides précisées : les variables heureReveil, NuitSalon et NuitExt doivent être tenues à jour par vos scénarios ; sans elles, ouverture du matin, positions du soir et de la nuit et alerte « fenêtre ouverte » ne fonctionnent pas.</li>
+<li>Nouveau panneau dans le menu Accueil : tous les équipements du plugin, pièce par pièce, avec leur widget à jour en direct (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+</ul>
+<h2 id="v2-1-83-13-10-2026">v2.1.83 - 13/10/2026</h2>
+<ul>
+<li>Widget : fichiers d'affichage allégés à la distribution (commentaires retirés, mention de licence ajoutée).</li>
+</ul>
+<h2 id="v2-1-82-12-10-2026">v2.1.82 - 12/10/2026</h2>
+<ul>
+<li>Un volet dont la position « ouvert » vaut 99 n'envoie plus d'ordre d'arrêt en butée haute (sur un moteur Somfy RTS cet arrêt valait la touche « my » et pouvait renvoyer le volet à sa position favorite) ; nouvelle icône.</li>
+<li>Portail ou fenêtre sans volet : plus de faux mouvement quotidien ; position sans valeur ignorée ; ordre manuel refusé pendant un mouvement signalé ; sans heureReveil, période de réveil inactive et signalée.</li>
+<li>Préservation manuelle de nuit : ouvrir ou fermer la fenêtre est pris en compte une fois, puis votre réglage est conservé ; elle repart à zéro chaque jour ; luminosité non historisée : valeur instantanée.</li>
+<li>Le type générique « état de volet » n'est plus porté que par la commande Etat (position réelle) : les assistants et comptages ne lisent plus le marqueur « fenêtre ouverte » ; documentation et historique des versions en ligne.</li>
+<li>Aides et documentation corrigées (vent d'un store sans fenêtre, fermeture générale, menu, libellés) ; mention « soleil gênant » retirée pour un volet de regroupement ; erreur répétée sur un volet journalisée une fois par heure.</li>
+</ul>
+<h2 id="v2-1-76-10-10-2026">v2.1.76 - 10/10/2026</h2>
+<ul>
+<li>Correction importante : les volets généraux autres que le salon (chambre, étage, véranda) se ferment de nouveau chaque soir, et non plus une seule fois.</li>
+<li>Vent fort : la protection prime aussi sur la période de réveil, le gel du matin et la fermeture générale du soir, et protège un store sans fenêtre associée.</li>
+<li>Stop manuel fiable, même pendant une manœuvre de groupe ou au démarrage du volet, sans jamais envoyer deux arrêts ; le mouvement suivant n'est plus interrompu.</li>
+<li>Fermeture du soir d'un groupe sans retard pour les autres volets ; configuration du mouvement prise en compte dès l'enregistrement ; un volet en erreur ne bloque plus les autres.</li>
+<li>Fiche d'un volet et aides corrigées (Log actif par défaut, affichage en changeant de volet, réglages sans effet masqués, textes exacts) ; compatible avec Jeedom 4.4.</li>
+</ul>
+<h2 id="v2-1-72-09-10-2026">v2.1.72 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Aide complétée : volet inversé, positions du soir et de la nuit, protections, soleil en ce moment, soleil gênant, réglages de la configuration.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-69-08-10-2026">v2.1.69 - 08/10/2026</h2>
+<ul>
+<li>Alerte « ouvrant encore ouvert le soir » : la condition « personne à l'étage » ne s'applique plus qu'aux ouvrants de l'étage ; le portail, le salon et la véranda sont signalés dès la nuit tombée, hors plage « ne pas déranger ».</li>
+</ul>
+<h2 id="v2-1-68-07-10-2026">v2.1.68 - 07/10/2026</h2>
+<ul>
+<li>Fiche d'un volet et configuration : aides raccourcies et plus claires (vent fort, période de réveil, préservation manuelle, canicule), sans perte d'information.</li>
+<li>Libellés et messages relus : vouvoiement, accents, plus de majuscules d'insistance.</li>
+</ul>
+<h2 id="v2-1-67-06-10-2026">v2.1.67 - 06/10/2026</h2>
+<ul>
+<li>Fermeture du soir : le volet général descend désormais son groupe en premier, au lieu de laisser les volets se fermer un par un avant lui.</li>
+</ul>
+<h2 id="v2-1-66-04-10-2026">v2.1.66 - 04/10/2026</h2>
+<ul>
+<li>Volet général : sa commande (souvent la télécommande radio du groupe) part en premier, puis celles des volets du groupe ; les volets appairés démarrent ensemble.</li>
+<li>Aides réécrites : volet de regroupement, groupe du volet (ce n'est pas la pièce), commandes Monter / Descendre d'un général.</li>
+</ul>
+<h2 id="v2-1-65-03-10-2026">v2.1.65 - 03/10/2026</h2>
+<ul>
+<li>MG Volets passe en version d'exploitation : installation et mises à jour ouvertes à toutes les installations MG Domo.</li>
+<li>À l'installation, un « Volet exemple » est créé dans l'objet Exemples MG Domo, piloté par l'équipement de démonstration ; supprimé, il n'est plus recréé.</li>
+<li>Tuile du dashboard : vraie barre de titre à la couleur de la catégorie, nom centré, cadre assorti, taille habituelle des volets.</li>
+<li>Nouvelle installation sans volet : plus d'alerte toutes les 5 minutes ; le capteur « Présence étage » devient optionnel (étage considéré occupé).</li>
+<li>Un nouveau volet affiche d'emblée son image, son état en %, une position historisée et des commandes rangées dans l'ordre habituel.</li>
+</ul>
+<h2 id="v2-1-57-22-09-2026">v2.1.57 - 22/09/2026</h2>
+<ul>
+<li>Onglets Confort et Soleil mis aux normes de la charte graphique : bandeau qui rappelle le rôle de l'onglet, groupes titrés, unités en indice, aide « ? » sur chaque ligne.</li>
+</ul>
+<h2 id="v2-1-56-21-09-2026">v2.1.56 - 21/09/2026</h2>
+<ul>
+<li>Page d'accueil, onglet Commandes, fiche du volet et page de configuration mis aux normes de la charte graphique mg* (couleurs du thème, groupes titrés, unités en indice).</li>
+<li>Réglages reclassés par affinité : groupe « Paramètres », bloc « Ouvrant associé », libellés raccourcis et seuls les réglages remarquables en orange.</li>
+<li>Champ de recherche affiché seulement quand la liste est longue (équipements ou commandes).</li>
+<li>Corrections : la page de configuration ne reste plus bloquée sur le sablier à la deuxième ouverture ; le bouton de choix de l'ouvrant associé n'agit plus que sur son champ.</li>
+</ul>
+<h2 id="v2-1-53-11-09-2026">v2.1.53 - 11/09/2026</h2>
+<ul>
+<li>Journal plus lisible : le niveau Info ne garde que les événements, le détail passe en Debug et les lignes vides répétées disparaissent.</li>
+</ul>
+<h2 id="v2-1-52-07-09-2026">v2.1.52 - 07/09/2026</h2>
+<ul>
+<li>Correction importante : l'ouverture ou la fermeture d'une fenêtre relance immédiatement la gestion du volet (8 volets sur 15 attendaient jusqu'à 5 minutes).</li>
+<li>Actions de groupe plus fiables : retentées si le volet maître était occupé, volets protégés pendant leur course, deux ordres simultanés ne s'exécutent plus en parallèle.</li>
+<li>Nuit : un volet à fenêtre ouverte va directement à sa position « soir » ou « nuit » ; vent fort évalué avant la fermeture de l'aube.</li>
+<li>Soleil gênant : un seuil laissé vide ne désactive plus la fonction en silence, conformément à l'aide « laisser vide si pas géré ».</li>
+<li>Corrections : un volet neuf ne bloque plus la gestion automatique, les pannes sont enfin journalisées, charge réduite, documentation et aides alignées sur le comportement réel.</li>
+</ul>
+<h2 id="v2-1-41-30-08-2026">v2.1.41 - 30/08/2026</h2>
+<ul>
+<li>Correction importante : en passant d'un équipement à l'autre, les champs vides n'affichent plus les valeurs de l'équipement précédent (risque de piloter le mauvais volet).</li>
+</ul>
+<h2 id="v2-1-40-29-08-2026">v2.1.40 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide anonymisée pour ce plugin et ouvre directement le sujet pré-rempli sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide est orange sur tous les plugins mgDomo, avec une infobulle explicative.</li>
+</ul>
+<h2 id="v2-1-36-28-08-2026">v2.1.36 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation donne la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-35-15-08-2026">v2.1.35 - 15/08/2026</h2>
+<ul>
+<li>Onglet Soleil : l'en-tête indique si le « soleil gênant » est actif pour le volet, avec les raisons s'il ne l'est pas, mises à jour en direct quand on modifie les seuils.</li>
+<li>L'en-tête Soleil / Canicule est horodaté, pour voir d'un coup d'œil si l'affichage est périmé.</li>
+</ul>
+<h2 id="v2-1-33-14-08-2026">v2.1.33 - 14/08/2026</h2>
+<ul>
+<li>Canicule : position différenciée par façade, avec un réglage optionnel « position si façade à l'ombre » ; chaque volet bascule seul entre soleil et ombre.</li>
+<li>Canicule stabilisée : température moyennée sur 30 minutes et hystérésis réglable, fini les cycles fermeture / réouverture autour du seuil.</li>
+<li>Onglet Soleil : la ligne canicule affiche la moyenne, les deux seuils et les deux positions.</li>
+</ul>
+<h2 id="v2-1-31-27-07-2026">v2.1.31 - 27/07/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul>
+<h2 id="v2-1-30-16-07-2026">v2.1.30 - 16/07/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul>
+<h2 id="v2-1-29-10-07-2026">v2.1.29 - 10/07/2026</h2>
+<ul>
+<li>Nouveau volet : son curseur de position est créé directement avec le curseur vertical MG Domo, sans réglage manuel ; une personnalisation posée ensuite est respectée.</li>
+</ul>
+<h2 id="v2-1-28-08-07-2026">v2.1.28 - 08/07/2026</h2>
+<ul>
+<li>Nouvelle fonction canicule (été uniquement) : les volets réglés pour le soleil gênant descendent aussi quand il fait très chaud, avec une position globale réglable.</li>
+<li>Trois réglages en configuration générale : température extérieure, consigne de référence et marge ; l'onglet Soleil affiche l'état canicule en temps réel.</li>
+<li>Corrections : une position de canicule basse est bien atteinte, et les logs ne sont plus encombrés d'avertissements inutiles.</li>
+</ul>
+<h2 id="v2-1-24-06-07-2026">v2.1.24 - 06/07/2026</h2>
+<ul>
+<li>Une consigne fine (par exemple 3 à 7 %) envoyée depuis un scénario ou l'API est désormais appliquée.</li>
+<li>Anémomètre ou capteur d'ouvrant illisible : la panne est signalée dans les logs au lieu d'être silencieuse.</li>
+<li>Durées de montée et descente plafonnées pour qu'une faute de saisie ne bloque pas la gestion automatique ; aides des positions d'hiver précisées.</li>
+</ul>
+<h2 id="v2-1-22-03-07-2026">v2.1.22 - 03/07/2026</h2>
+<ul>
+<li>Lever anticipé : en cas d'activité soutenue, l'ouverture générale peut partir jusqu'à 2 h avant le réveil (seuil et marge réglables) ; les chambres restent protégées.</li>
+<li>Journée : l'ouverture forcée ne s'exécute plus qu'une fois, une fermeture manuelle (sieste) n'est plus annulée toutes les 5 minutes.</li>
+<li>Vent : maintien de 20 minutes après la dernière rafale ; un volet de regroupement sans commandes propres participe aux actions de groupe.</li>
+<li>Page équipement réorganisée au standard mg* ; corrections d'affichage, du gel matinal des chambres et de la documentation.</li>
+</ul>
+<h2 id="v2-1-20-01-07-2026">v2.1.20 - 01/07/2026</h2>
+<ul>
+<li>Un volet descendu pour soleil gênant se rouvre désormais correctement une fois le soleil passé.</li>
+</ul>
+<h2 id="v2-1-19-29-06-2026">v2.1.19 - 29/06/2026</h2>
+<ul>
+<li>Volets inhibés au réveil : plus d'ouverture intempestive au petit matin, le volet fermé à l'aube reste en place jusqu'à l'ouverture générale.</li>
+</ul></body></html>

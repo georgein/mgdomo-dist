@@ -1,0 +1,143 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Roborock</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-roborock">Changelog MG Roborock</h1>
+<h2 id="v2-2-18-17-10-2026">v2.2.18 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-2-17-16-10-2026">v2.2.17 - 16/10/2026</h2>
+<ul>
+<li>Noms internes mis en ordre selon la norme de l'écosystème MG Domo, sans effet sur les libellés, les réglages, l'historique ni vos scénarios.</li>
+<li>Les identifiants techniques des commandes passent en français (ex. etat, batterie, demarrer, regler_aspiration) ; seul un script qui citerait une commande par son identifiant est à revoir.</li>
+<li>Le démon et Jeedom échangent désormais dans des termes français : la mise à jour relance le démon une fois, les réglages de la configuration (port, relance automatique) sont conservés.</li>
+<li>Le panneau affiche de nouveau le message d'erreur quand une synchronisation échoue.</li>
+</ul>
+<h2 id="v2-2-17-15-10-2026">v2.2.17 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-14-14-10-2026">v2.2.14 - 14/10/2026</h2>
+<ul>
+<li>Le bouton « Démarrer » est grisé tant que le robot nettoie, et refusé s'il arrive d'un scénario : il relançait la tâche en cours et rétablissait les réglages par défaut (pour reprendre : Pause puis Démarrer).</li>
+<li>Widget : les réglages affichent votre choix (celui du prochain nettoyage) et non la valeur que le robot reprend en fin de tâche ; la pastille de liaison indique « en ligne · local » ou « cloud », bulle explicative.</li>
+<li>Documentation : exemples de destinataires neutres (@U1), syntaxe actuelle pour un téléphone (TTS:apk:@U1).</li>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+<li>Sans compte Roborock connecté, la page Santé affiche le démon « Désactivé » au lieu d'une erreur, y compris juste après l'installation ; infobulles toujours au format Jeedom après une mise à jour de la tuile.</li>
+</ul>
+<h2 id="v2-2-8-13-10-2026">v2.2.8 - 13/10/2026</h2>
+<ul>
+<li>Widget : fichiers d'affichage allégés à la distribution (commentaires retirés, mention de licence ajoutée).</li>
+</ul>
+<h2 id="v2-2-7-12-10-2026">v2.2.7 - 12/10/2026</h2>
+<ul>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+</ul>
+<h2 id="v2-2-5-11-10-2026">v2.2.5 - 11/10/2026</h2>
+<ul>
+<li>Tant qu'aucun compte Roborock n'est connecté, le démon est « Désactivé » dans la page Santé au lieu de deux erreurs ; il redémarre seul dès la connexion du compte.</li>
+</ul>
+<h2 id="v2-2-4-10-10-2026">v2.2.4 - 10/10/2026</h2>
+<ul>
+<li>Compatible avec Jeedom 4.4 (4.5 n'est plus exigé).</li>
+<li>Plugin libéré : installable et mis à jour sur toutes les installations (Debian 12 minimum, Python 3.11) ; le journal des messages est visible dès la création du robot.</li>
+<li>Démon qui ne démarre pas (compte ou cloud Roborock indisponible) : nouvel essai 1, 2, 4… jusqu'à 60 minutes plus tard, au lieu de chaque minute.</li>
+<li>Départ vers un autre étage après un lavage : la consigne dit bien « Portez le robot dans… ».</li>
+<li>Un code de connexion refusé ne déconnecte plus le compte ; les incidents passagers ne créent plus de message d'erreur, et aucune valeur du robot n'est perdue si Jeedom ne répond pas un instant.</li>
+</ul>
+<h2 id="v2-1-95-09-10-2026">v2.1.95 - 09/10/2026</h2>
+<ul>
+<li>Une session Roborock livrée par erreur avec une version précédente est retirée à la mise à jour : reconnectez votre compte Roborock dans la configuration du plugin.</li>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-92-08-10-2026">v2.1.92 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-91-07-10-2026">v2.1.91 - 07/10/2026</h2>
+<ul>
+<li>Messages, fiche du robot et panneau relus : accents, vouvoiement.</li>
+<li>Documentation réaccentuée et mise à jour : widget en une colonne avec blocs repliables, réglages réels du groupe « Station hors d'atteinte ».</li>
+</ul>
+<h2 id="v2-1-90-03-10-2026">v2.1.90 - 03/10/2026</h2>
+<ul>
+<li>Dans MG Domo, onglet Plugins, le plugin figure dans le tableau « Plugins liés à un matériel » (robot aspirateur Roborock), avec la case « présent ».</li>
+</ul>
+<h2 id="v2-1-89-02-10-2026">v2.1.89 - 02/10/2026</h2>
+<ul>
+<li>Widget refait sur le modèle du widget téléphone de MG Domo : une colonne, état en pastille de couleur, bandeau batterie, charge, carte et liaison, boutons nommés.</li>
+<li>Consigne d'intervention et erreurs dans un encadré en tête, seulement quand il y en a ; réglages, consommables, dernier nettoyage et maintenance en blocs repliables.</li>
+<li>Station : laver, laver puis charger, arrêter le lavage, vider le bac et temps de séchage restant ; le bouton de lavage s'appelle « Serpillière ».</li>
+<li>Seules les commandes cochées « Afficher » apparaissent ; les rendus « complet » et « compact » sont remplacés, le rendu standard de Jeedom reste disponible.</li>
+</ul>
+<h2 id="v2-1-86-26-09-2026">v2.1.86 - 26/09/2026</h2>
+<ul>
+<li>Nettoyage à l'étage sans station : le plugin compte le temps de lavage du sol et, au bout de l'intervalle, demande au robot d'aller laver sa serpillière et annonce de le porter à la station.</li>
+<li>Nouveau réglage « Intervalle de lavage à l'étage » (minutes) ; vide, l'intervalle réglé dans le robot s'applique.</li>
+<li>Station hors d'atteinte : plus de consigne « portez le robot » s'il a déjà été monté à la main, et relancer le nettoyage efface la demande d'intervention.</li>
+<li>Moins de pauses inutiles : la consigne vocale suffit, et une pause décidée par Jeedom est annoncée avec sa raison.</li>
+<li>Corrections : la consigne nomme la bonne carte juste après un changement de carte.</li>
+</ul>
+<h2 id="v2-1-80-22-09-2026">v2.1.80 - 22/09/2026</h2>
+<ul>
+<li>Fiche équipement : le cadre « Station hors d'atteinte » reprend la taille de texte commune.</li>
+</ul>
+<h2 id="v2-1-79-21-09-2026">v2.1.79 - 21/09/2026</h2>
+<ul>
+<li>Pages du plugin (accueil, configuration, robot, commandes) harmonisées avec la charte graphique MG Domo : titres en bleu, aides « ? » vertes, champs alignés et de même largeur.</li>
+<li>Nouveau bloc Community pour demander de l'aide en un clic.</li>
+<li>Configuration : « Valider le code » reste grisé tant qu'aucun code n'est saisi, et une version plus récente de la bibliothèque est annoncée « non testée avec le plugin ».</li>
+<li>Menu : le plugin déclare sa catégorie d'origine « Automatisme », ce qui permet à MG Domo de le reclasser.</li>
+</ul>
+<h2 id="v2-1-75-13-09-2026">v2.1.75 - 13/09/2026</h2>
+<ul>
+<li>Une nouvelle version de la bibliothèque python-roborock n'est signalée qu'une fois, et la ligne « Version » de la configuration l'indique.</li>
+<li>Journal : les pertes et retours de la liaison locale avec le robot ne sont plus répétés dans le journal du plugin.</li>
+</ul>
+<h2 id="v2-1-72-11-09-2026">v2.1.72 - 11/09/2026</h2>
+<ul>
+<li>Les erreurs du robot (brosse bloquée, robot coincé, bac absent…) sont annoncées une fois aux destinataires des alertes et s'effacent d'elles-mêmes ; « Roues dans le vide » reste silencieuse.</li>
+<li>Journaux allégés : seuls les événements utiles restent au niveau Info, et seules les valeurs qui changent sont tracées en Debug.</li>
+</ul>
+<h2 id="v2-1-69-10-09-2026">v2.1.69 - 10/09/2026</h2>
+<ul>
+<li>La station prévient quand elle a besoin de vous (réservoir vide ou plein, filtre bouché, bac absent), une seule fois, avec un message clair.</li>
+<li>Plus de fausse demande de porter le robot quand il est déjà à l'étage ; après son lavage, il attend près de la station au lieu de nettoyer le rez-de-chaussée.</li>
+<li>Niveau d'eau nommé comme dans l'application Roborock (Moindre à Extrême), et chaque nouvelle consigne vocale est annoncée tout de suite.</li>
+<li>Le widget et le panel indiquent ce qui a été lancé ; état, avancement et carte mieux mis en valeur par la couleur.</li>
+<li>Journaux plus lisibles : une micro-coupure n'est plus notée en erreur ; documentation mise à jour.</li>
+</ul>
+<h2 id="v2-1-52-09-09-2026">v2.1.52 - 09/09/2026</h2>
+<ul>
+<li>Alerte « station hors d'atteinte » : le plugin repère un robot qui ne peut pas rejoindre la station depuis un autre étage, vous donne la consigne en nommant la carte, et ne l'arrête qu'en dernier recours.</li>
+<li>Alertes intégrées au système d'alertes de l'installation : destinataires réglables, rappels, durée maximale et couleur de la lampe d'alarme.</li>
+<li>Nouveaux réglages : mode de nettoyage, parcours, niveau d'eau, nombre de passages par pièce, arrêt de sécurité ; les réglages choisis sont renvoyés avant chaque lancement.</li>
+<li>Widget complet et panel identiques, avec journal des derniers messages et consommables en restant sur quantité d'origine (bac à poussière, filtre de la station).</li>
+<li>Corrections : réglages qui n'oscillent plus, « En charge » enfin juste, historique dédupliqué, onglet Commandes complet, listes Pièce et Routine avec avertissement.</li>
+</ul>
+<h2 id="v2-1-2-08-09-2026">v2.1.2 - 08/09/2026</h2>
+<ul>
+<li>Création du plugin : connexion au compte Roborock par un code reçu par courriel (aucun mot de passe conservé) et découverte des robots.</li>
+<li>Liaison directe sur votre réseau quand elle est ouverte, sinon par le serveur Roborock, avec bascule automatique.</li>
+<li>Chaque robot reçoit 29 informations (état, batterie, erreurs, consommables…) mises à jour en temps réel.</li>
+<li>Douze actions : démarrer, pause, arrêt, retour à la station, lavage de la serpillière, vidage du bac, localisation et réglages ; une action refusée remonte sa cause.</li>
+<li>La bibliothèque python-roborock est surveillée chaque jour, sans jamais être mise à jour d'elle-même.</li>
+</ul></body></html>

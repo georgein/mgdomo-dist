@@ -1,0 +1,182 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Thermostat</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-thermostat">Changelog MG Thermostat</h1>
+<h2 id="v2-2-11-17-10-2026">v2.2.11 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+<li>Widget Thermostat : les boutons Confort, Eco, HG et Off utilisent désormais le bouton à icône de MG Domo, avec le même rendu (mode actif cerclé).</li>
+<li>Nouveau thermostat : le curseur de consigne affiche de nouveau la consigne (il signalait « Valeur invalide »), et un mode qui règle la consigne du thermostat la met à jour directement.</li>
+</ul>
+<h2 id="v2-2-9-16-10-2026">v2.2.9 - 16/10/2026</h2>
+<ul>
+<li>Widget Thermostat light : un clic sur une température, la consigne, l'état de l'appareil ou le mode ouvre son historique ; la couleur de la consigne indique, comme sur le widget Thermostat, s'il va chauffer (rouge), refroidir (bleu) ou rien (gris).</li>
+<li>Widget Thermostat light : le pas des boutons -/+ suit celui réglé dans l'affichage de la commande Thermostat.</li>
+<li>Corrigé : graphique des coefficients, consignes d'un nouveau thermostat, sonde reliée à l'enregistrement. Page revue (Réglages, Chauffage seul, Surveillance, Écart toléré, onglet Ouvrants) ; coefficients renommés Coeff. int./ext.</li>
+<li>Corrigé : le thermostat d'exemple n'était plus créé à l'installation (température extérieure de la météo introuvable).</li>
+</ul>
+<h2 id="v2-2-8-15-10-2026">v2.2.8 - 15/10/2026</h2>
+<ul>
+<li>Nouveau choix de widget « Thermostat light » : tuile compacte comme le téléphone de MG Domo (statut, température, consigne -/+, état de l'appareil, verrou, modes), qui ne montre que les commandes cochées « Afficher ».</li>
+<li>Champ « Mode de fonctionnement » retiré : il n'offrait qu'un choix, au nom inexact. La régulation se fait par hystérésis (marche sous la consigne moins l'hystérésis, arrêt à la consigne), précisé dans l'aide.</li>
+</ul>
+<h2 id="v2-2-4-14-10-2026">v2.2.4 - 14/10/2026</h2>
+<ul>
+<li>Exemple de destinataires neutre (@U1) dans l'aide et la documentation.</li>
+<li>Aide précisée : la variable heureReveil, utilisée quand l'heure de lancement est vide, doit être tenue à jour par vos scénarios (aucun plugin ne l'écrit).</li>
+<li>Nouveau panneau dans le menu Accueil : tous les équipements du plugin, pièce par pièce, avec leur widget à jour en direct (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+</ul>
+<h2 id="v2-2-0-13-10-2026">v2.2.0 - 13/10/2026</h2>
+<ul>
+<li>Thermostat neuf : commandes rangées comme le thermostat modèle, consigne limitée de 7,5 à 35 °C, température extérieure moyennée par jour.</li>
+<li>Widget : fichiers d'affichage allégés à la distribution (commentaires retirés, mention de licence ajoutée).</li>
+</ul>
+<h2 id="v2-1-98-12-10-2026">v2.1.98 - 12/10/2026</h2>
+<ul>
+<li>Chauffage et climatisation : la consigne ne bascule plus entre chaud et froid pour un dixième de degré (« Marge de bascule chaud/froid », 1 °C par défaut, limitée d'office) ; chaque mode garde son côté.</li>
+<li>Thermostat d'exemple : température extérieure retenue par MG Météo France, et plus d'erreur « défaillance du chauffage » chaque nuit (sa pièce suit la météo) ; fenêtres au format actuel de Jeedom.</li>
+<li>Apprentissage de l'isolation : la mesure prise en compte est celle du moment de la décision, pas celle relevée pendant la mise en route de l'appareil ; documentation et historique des versions en ligne.</li>
+<li>Un appareil hors tension durablement n'écrit plus qu'une ligne par heure au journal ; plus d'avertissement technique à la création d'un thermostat sans modèle.</li>
+<li>Le nom de mode « Thermostat » est refusé comme le dit le message ; aide de la légende « Fermeture de la fenêtre » alignée sur le vrai sens de la condition ; nouvelle icône au format du Market.</li>
+</ul>
+<h2 id="v2-1-88-11-10-2026">v2.1.88 - 11/10/2026</h2>
+<ul>
+<li>Un appareil hors tension ou un ordre refusé au moment du démarrage ne laisse plus le thermostat croire qu'il chauffe : la régulation reprend dès que l'appareil répond, sans fausse défaillance.</li>
+<li>Consignes minimale et maximale : une valeur non numérique est refusée à la sauvegarde avec un message clair.</li>
+<li>Programmation : la condition de fermeture est expliquée dans son vrai sens (fausse, la période se prolonge ; vraie ou vide, elle se ferme à l'offset de fin).</li>
+<li>Tuile du thermostat général : plus de « 0 °C » ni de consigne 0 ; le bouton Off fait exactement comme le mode Off (compteurs remis à zéro, demandes d'ouverture annulées).</li>
+<li>Documentation : actions de mode, noms interdits, bouton Auto ; journal : libellé exact des relances en bande morte.</li>
+</ul>
+<h2 id="v2-1-87-10-10-2026">v2.1.87 - 10/10/2026</h2>
+<ul>
+<li>Un thermostat remis en marche après un arrêt chauffe de nouveau normalement ; une pièce sous la température minimale continue de chauffer (simple alerte au lieu d'un arrêt) ; compatible avec Jeedom 4.4.</li>
+<li>Ouvertures : une porte refermée puis rouverte ne coupe plus deux fois l'appareil, la reprise suit le bon sens et respecte la protection de la pompe à chaleur ; plus de demande d'ouverture hors Confort.</li>
+<li>Programmation : revenir au mode prévu applique sa consigne, un choix manuel cesse quand la programmation le rejoint ou à la fin de la période, et la fin de période suit l'heure légale au changement d'heure.</li>
+<li>Tuile : plus de faux choix manuel affiché en rouge, bouton Auto sur le général. Page de l'équipement : « Annuler » ne supprime plus le mode ; aides et documentation conformes au fonctionnement réel.</li>
+<li>Journal plus calme : les situations corrigées automatiquement ne sont plus des avertissements, et deux erreurs techniques (ancienne tâche planifiée, réponse de la page) sont supprimées.</li>
+</ul>
+<h2 id="v2-1-79-09-10-2026">v2.1.79 - 09/10/2026</h2>
+<ul>
+<li>La consigne saisie dans la tuile est limitée aux bornes du thermostat (minimum et maximum de la fiche) : plus de 99 degrés possibles par une saisie.</li>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Aide complétée : modèle, sondes, modes, ouvertures, sécurités, apprentissage et configuration globale décrits avec les libellés de l'écran.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+<li>Code interne réécrit (réglages, actions et page de l'équipement), affichage mobile par le widget standard de Jeedom : fonctionnement inchangé.</li>
+</ul>
+<h2 id="v2-1-73-08-10-2026">v2.1.73 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-72-07-10-2026">v2.1.72 - 07/10/2026</h2>
+<ul>
+<li>Aides corrigées : les températures minimale et maximale déclenchent la défaillance de la sonde (arrêt du thermostat), pas celle du chauffage ; la défaillance du chauffage vient d'un écart à la consigne qui s'aggrave pendant un cycle.</li>
+<li>Fiche, messages, aide des widgets et configuration relus : vouvoiement, accents, plus de majuscules d'insistance ni de termes techniques.</li>
+</ul>
+<h2 id="v2-1-71-03-10-2026">v2.1.71 - 03/10/2026</h2>
+<ul>
+<li>MG Thermostat passe en version d'exploitation : installation et mises à jour ouvertes à toutes les installations MG Domo.</li>
+<li>À l'installation, un « Thermostat exemple » est créé dans l'objet Exemples MG Domo : il lit le thermomètre de démonstration et pilote la lampe de démonstration.</li>
+<li>Un thermostat créé est prêt à l'emploi : modes Confort, Eco et Hors-gel, consignes de 7,5 à 35 °C, widget MG Thermostat, commandes dans l'ordre habituel.</li>
+<li>Tuile du dashboard : barre de titre à la couleur de la catégorie, nom centré, curseur de consigne sans faux « Valeur invalide ».</li>
+<li>Corrections : un thermostat sans « État physique équipement » chauffe désormais ; un clic sur un mode applique bien sa consigne dès le premier clic.</li>
+</ul>
+<h2 id="v2-1-61-24-09-2026">v2.1.61 - 24/09/2026</h2>
+<ul>
+<li>Nouvelle option « Filtre intersaison » : en climatisation, plus de demande d'ouvrir les fenêtres quand la moyenne extérieure des dernières 24 heures est sous la consigne de chauffage.</li>
+</ul>
+<h2 id="v2-1-60-22-09-2026">v2.1.60 - 22/09/2026</h2>
+<ul>
+<li>Demandes d'ouverture et de fermeture des ouvrants réglables : écarts intérieur / extérieur et pièce / solarium, rappels, validité, destinataires, et une case par thermostat.</li>
+<li>Les zones ordinaires respectent maintenant l'écart pièce / extérieur avant de demander d'ouvrir.</li>
+<li>Onglets Actions, Modes, Programmation, Ouvertures, Défaillances et Avancé mis aux normes de la charte graphique mg* : bandeau de rôle, groupes titrés, aide « ? » sur chaque ligne.</li>
+</ul>
+<h2 id="v2-1-56-21-09-2026">v2.1.56 - 21/09/2026</h2>
+<ul>
+<li>Page d'accueil, onglet Commandes, fiche du thermostat et page de configuration mis aux normes de la charte graphique mg* (couleurs du thème, groupes titrés, champs alignés).</li>
+<li>La catégorie devient un choix libre (elle n'est plus forcée à « Chauffage » à chaque sauvegarde) ; nouveaux groupes « Fonctionnement » et « Solarium ».</li>
+<li>Correction : la page de configuration du plugin ne reste plus bloquée sur le sablier à la deuxième ouverture.</li>
+</ul>
+<h2 id="v2-1-52-17-09-2026">v2.1.52 - 17/09/2026</h2>
+<ul>
+<li>Ouvrants : fin des fausses « fenêtre ouverte non vue » et des doubles ordres d'arrêt sur une ouverture toute récente ; une ouverture réellement manquée reste rattrapée.</li>
+</ul>
+<h2 id="v2-1-51-11-09-2026">v2.1.51 - 11/09/2026</h2>
+<ul>
+<li>Journal plus lisible : le niveau Info ne garde que les événements, et une fenêtre ouverte n'est plus signalée comme avertissement à chaque relevé (environ 900 lignes par jour en moins).</li>
+<li>Trois anomalies réelles de configuration deviennent visibles dans le journal.</li>
+</ul>
+<h2 id="v2-1-50-07-09-2026">v2.1.50 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers archivés du plugin ne sont plus accessibles depuis le serveur web.</li>
+</ul>
+<h2 id="v2-1-49-30-08-2026">v2.1.49 - 30/08/2026</h2>
+<ul>
+<li>Prévention : en passant d'un équipement à l'autre, tous les champs sont remis à jour et ne peuvent plus garder la valeur de l'équipement précédent.</li>
+</ul>
+<h2 id="v2-1-48-29-08-2026">v2.1.48 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide anonymisée pour ce plugin et ouvre directement le sujet pré-rempli sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide est orange sur tous les plugins mgDomo, avec une infobulle explicative.</li>
+</ul>
+<h2 id="v2-1-44-28-08-2026">v2.1.44 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation donne la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-43-25-08-2026">v2.1.43 - 25/08/2026</h2>
+<ul>
+<li>Correction : plus de fausse alerte « Défaillance sonde » quand la température d'une pièce reste stable ; une sonde réellement muette est toujours détectée.</li>
+</ul>
+<h2 id="v2-1-42-16-08-2026">v2.1.42 - 16/08/2026</h2>
+<ul>
+<li>Correction : le widget ne casse plus le rafraîchissement automatique des autres widgets des designs (notamment DoorBird) sous Jeedom 4.6.</li>
+</ul>
+<h2 id="v2-1-41-16-07-2026">v2.1.41 - 16/07/2026</h2>
+<ul>
+<li>Widget : la couleur de la consigne (rouge, bleu, gris selon la direction prévue) fonctionne aussi avec le nouveau curseur commun MG Domo.</li>
+</ul>
+<h2 id="v2-1-40-13-07-2026">v2.1.40 - 13/07/2026</h2>
+<ul>
+<li>Climatisation et chauffage : après une pause imposée par la protection du compresseur, la reprise se fait dès la fin du délai au lieu d'attendre jusqu'à une dizaine de minutes.</li>
+</ul>
+<h2 id="v2-1-39-08-07-2026">v2.1.39 - 08/07/2026</h2>
+<ul>
+<li>Le curseur de consigne est désormais fourni par MG Domo, sans changement d'aspect ni de comportement.</li>
+</ul>
+<h2 id="v2-1-37-07-07-2026">v2.1.37 - 07/07/2026</h2>
+<ul>
+<li>PAC à démarrage lent (infrarouge) : plus de fausse « Défaillance Chauf/Clim. » quand le démarrage est confirmé tardivement.</li>
+<li>L'arrêt de sécurité laisse 5 minutes de grâce après un démarrage, fin des ordres contradictoires au démarrage du compresseur.</li>
+</ul>
+<h2 id="v2-1-36-06-07-2026">v2.1.36 - 06/07/2026</h2>
+<ul>
+<li>Changement de mode : la consigne du nouveau mode est bien appliquée (un passage Eco vers Confort pouvait rester à la consigne Eco).</li>
+<li>Thermostat général : une pièce sans le mode imposé suit de nouveau son plan individuel.</li>
+<li>Corrections : robustesse face aux commandes manquantes, chargement fiable de la police du curseur de consigne.</li>
+</ul>
+<h2 id="v2-1-35-03-07-2026">v2.1.35 - 03/07/2026</h2>
+<ul>
+<li>Un thermostat volontairement sur « Off » sans mode Off déclaré ne génère plus de message dans les logs.</li>
+</ul>
+<h2 id="v2-1-33-02-07-2026">v2.1.33 - 02/07/2026</h2>
+<ul>
+<li>Fenêtre : la régulation repart vraiment à la fermeture, et un arrêt non confirmé est signalé en défaillance avec nouvelles tentatives automatiques.</li>
+<li>Inversion chauffage / climatisation : arrêt intermédiaire systématique, fin des statuts erronés pendant qu'une PAC tournait en sens inverse.</li>
+<li>Une température virtuelle cassée ne publie plus 0 °C comme vraie mesure ; le thermostat général ne réécrit plus le mode d'une pièce pendant qu'il impose le sien.</li>
+<li>Corrections : apprentissage fiabilisé, widgets plus fiables, aides et libellés corrigés, onglet Agenda inopérant retiré.</li>
+</ul></body></html>

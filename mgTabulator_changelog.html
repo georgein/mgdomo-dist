@@ -1,0 +1,172 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Tabulator</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-tabulator">Changelog MG Tabulator</h1>
+<h2 id="v2-1-65-17-10-2026">v2.1.65 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-1-64-16-10-2026">v2.1.64 - 16/10/2026</h2>
+<ul>
+<li>Noms internes des réglages, des actions et de la page mis à la norme de l'écosystème.</li>
+<li>L'affichage mémorisé de chaque table (largeurs, tris, filtres) est conservé.</li>
+<li>Une page déjà ouverte avant la mise à jour est à recharger avant d'enregistrer.</li>
+</ul>
+<h2 id="v2-1-64-15-10-2026">v2.1.64 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-59-14-10-2026">v2.1.59 - 14/10/2026</h2>
+<ul>
+<li>Nouveau panneau dans le menu Accueil : il ouvre le tableur sur la dernière table ouverte (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+</ul>
+<h2 id="v2-1-57-13-10-2026">v2.1.57 - 13/10/2026</h2>
+<ul>
+<li>La grille tient entière dans la fenêtre, avec ou sans le menu MG Domo : l'ascenseur horizontal et les dernières lignes ne sont plus cachés sous le bord de l'écran.</li>
+</ul>
+<h2 id="v2-1-56-12-10-2026">v2.1.56 - 12/10/2026</h2>
+<ul>
+<li>Enregistrer refuse, avec un message clair, une grille dont une colonne de clé primaire est masquée (elle aurait pris toutes les lignes pour nouvelles) ; toutes les colonnes sont exportées quelle que soit leur visibilité.</li>
+<li>Dans la fenêtre Tables SQL de MG Domo, la hauteur de la grille suit le redimensionnement de la fenêtre, en gardant le défilement et l'affichage progressif des grandes tables.</li>
+<li>La version de MG Tabulator est de nouveau bien reconnue : la page des plugins de MG Domo n'annonce plus à tort une mise à jour juste après son installation.</li>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom ; description du plugin complétée.</li>
+</ul>
+<h2 id="v2-1-49-11-10-2026">v2.1.49 - 11/10/2026</h2>
+<ul>
+<li>Ouverte depuis l'onglet Tables SQL de MG Domo, la table affiche bien ses lignes dès la première ouverture (la grille restait vide quand la fenêtre s'ouvrait trop vite).</li>
+<li>Fenêtre de réglage d'une colonne (Ctrl+clic) : largeur, visibilité et classement s'appliquent dès l'OK (ils restaient sans effet jusqu'à Rétablir l'affichage) ; le Ctrl+clic n'ajoute plus de tri.</li>
+<li>« Rétablir l'affichage » n'efface plus que les préférences de la table affichée, pas celles des autres tables ; les filtres saisis sous les en-têtes sont désormais mémorisés comme promis.</li>
+<li>Enregistrer rattache chaque valeur à sa colonne par son nom (plus de décalage possible si l'affichage mémorisé diffère de la table) ; une ligne ajoutée en doublon d'une clé unique est refusée au lieu d'écraser la ligne existante.</li>
+<li>Thème personnalisé : fond rosé sur une cellule refusée ; sauvegarde CSV : échec dit à l'écran, répertoire limité à Jeedom ; documentation : accès au plugin, désinstallation sans perte des réglages de colonnes.</li>
+</ul>
+<h2 id="v2-1-47-10-10-2026">v2.1.47 - 10/10/2026</h2>
+<ul>
+<li>Restaurer le CSV refuse désormais une sauvegarde dont le nombre de colonnes ne correspond plus à la table : les valeurs ne peuvent plus être écrites dans la mauvaise colonne.</li>
+<li>Table des paramètres : boutons CSV grisés avec la raison au survol ; Rétablir l'affichage et l'actualisation de la page relisent toujours la base, sans refaire la dernière sauvegarde ou restauration.</li>
+<li>Une table de plus de 2 500 lignes (positions GPS) s'ouvre en lecture seule, cellules non modifiables, et montre ses 2 500 dernières lignes au lieu des plus anciennes ; le titre donne le total.</li>
+<li>Le bouton de fonction d'une table personnalisée n'apparaît plus que sur les lignes qui remplissent la condition configurée ; la corbeille retire aussi une ligne ajoutée mais pas encore enregistrée.</li>
+<li>Librairie de tableaux Tabulator mise à jour (6.6.1) ; le journal ne signale plus en avertissement les réparations automatiques ni les refus déjà affichés à l'écran ; compatible avec Jeedom 4.4.</li>
+</ul>
+<h2 id="v2-1-42-09-10-2026">v2.1.42 - 09/10/2026</h2>
+<ul>
+<li>Sauvegarde CSV : la table des paramètres du socle (clés et identifiants) n'est plus jamais exportée ; les clés ne vivent que dans la base.</li>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-38-07-10-2026">v2.1.38 - 07/10/2026</h2>
+<ul>
+<li>Boutons renommés en clair : Enregistrer, Charger, Sauvegarder en CSV, Restaurer le CSV, Rétablir l'affichage ; leurs aides disent exactement ce qu'ils font.</li>
+<li>Fenêtre de réglage d'une colonne (Ctrl+clic) entièrement en français : types, alignements, ordre croissant ou décroissant, infobulle ; thèmes « personnalisé » et « sombre ».</li>
+<li>Configuration et messages relus : accents, vouvoiement, avertissements sans majuscules.</li>
+</ul>
+<h2 id="v2-1-37-02-10-2026">v2.1.37 - 02/10/2026</h2>
+<ul>
+<li>Les références à un équipement ou à une commande suivent désormais les renommages ; l'affichage et la saisie restent en clair, sous la forme #[Objet][Equipement][Commande]#.</li>
+<li>Les réglages de colonnes prévus pour les tables des autres plugins mg* ne sont plus effacés à la première ouverture de la page.</li>
+<li>Ouvert depuis l'onglet Tables SQL de MG Domo, le tableau n'affiche plus une seconde barre de menu Jeedom ; libellé « Dernière sauvegarde csv ».</li>
+</ul>
+<h2 id="v2-1-35-22-09-2026">v2.1.35 - 22/09/2026</h2>
+<ul>
+<li>Infobulle de la demande d'aide (Community) traduite et accentuée.</li>
+</ul>
+<h2 id="v2-1-34-21-09-2026">v2.1.34 - 21/09/2026</h2>
+<ul>
+<li>Page de configuration du plugin mise aux normes de la charte graphique mg* : titres de groupe avec icône, aide « ? » sur chaque ligne, champs alignés, textes accentués.</li>
+<li>L'encadré « Panel » inutile disparaît de la page de configuration.</li>
+</ul>
+<h2 id="v2-1-32-20-09-2026">v2.1.32 - 20/09/2026</h2>
+<ul>
+<li>Au premier accès, la table ouverte par défaut est désormais la table des paramètres, plus utile que la première par ordre alphabétique.</li>
+</ul>
+<h2 id="v2-1-31-11-09-2026">v2.1.31 - 11/09/2026</h2>
+<ul>
+<li>Journal plus lisible : les traces d'affichage passent en Debug, les purges de données deviennent des avertissements et une restauration impossible devient une erreur.</li>
+</ul>
+<h2 id="v2-1-30-07-09-2026">v2.1.30 - 07/09/2026</h2>
+<ul>
+<li>Enregistrement fiabilisé : la grille est écrite en une seule fois, tout ou rien, toujours dans la bonne table ; une erreur s'affiche à l'écran.</li>
+<li>Table sans clé primaire en lecture seule, avec avertissement, pour éviter de créer des lignes en double ; suppression de ligne sans rechargement de la grille.</li>
+<li>Réglages de colonnes attachés au nom de la colonne : ajouter ou déplacer une colonne ne les fait plus glisser sur la voisine ; nettoyage des réglages des tables supprimées.</li>
+<li>Corrections : plus de groupe « undefined » fantôme, changement de thème immédiat, export et CSV fiabilisés, alerte au-delà de 2500 lignes.</li>
+<li>Sécurité : fichiers archivés inaccessibles depuis le serveur web ; librairie Tabulator allégée (0,5 Mo au lieu de 5,7 Mo).</li>
+</ul>
+<h2 id="v2-1-23-31-08-2026">v2.1.23 - 31/08/2026</h2>
+<ul>
+<li>Les noms de colonnes décrits par la table des compléments acceptent désormais 30 caractères (20 auparavant).</li>
+</ul>
+<h2 id="v2-1-22-29-08-2026">v2.1.22 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle icône d'aide dans la barre de titre, pastille orange bien visible : elle prépare une demande d'aide anonymisée et ouvre un sujet pré-rempli sur le forum Jeedom.</li>
+</ul>
+<h2 id="v2-1-18-28-08-2026">v2.1.18 - 28/08/2026</h2>
+<ul>
+<li>Documentation : paragraphes, listes et encadrés de mise en garde s'affichent désormais correctement.</li>
+<li>Si le socle MG Domo manque, le message d'installation donne la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-16-27-07-2026">v2.1.16 - 27/07/2026</h2>
+<ul>
+<li>Une table vide affiche désormais ses colonnes (en-têtes, infobulles, éditeurs) au lieu d'une grille muette.</li>
+</ul>
+<h2 id="v2-1-15-04-07-2026">v2.1.15 - 04/07/2026</h2>
+<ul>
+<li>Table des compléments : les menus déroulants dans les cellules (type, alignement, groupe, classement) fonctionnent de nouveau.</li>
+<li>CSV : une valeur contenant un point-virgule ou un guillemet ne corrompt plus la ligne, et un échec de sauvegarde est signalé au lieu d'être présenté comme réussi.</li>
+<li>Corrections : plus d'avertissement récurrent sur les cellules vides, plus de nouvelle tentative en boucle si une suppression échoue.</li>
+</ul>
+<h2 id="v2-1-13-26-06-2026">v2.1.13 - 26/06/2026</h2>
+<ul>
+<li>Le changelog est consultable depuis la page d'aide (bouton Changelog), avec navigation entre documentation et changelog.</li>
+</ul>
+<h2 id="v2-1-12-24-06-2026">v2.1.12 - 24/06/2026</h2>
+<ul>
+<li>Documentation utilisateur refondue : sommaire cliquable, captures annotées, texte corrigé (sauvegardes CSV, bouton Enregistre, édition de colonne par Ctrl+clic).</li>
+</ul>
+<h2 id="v2-1-9-13-06-2026">v2.1.9 - 13/06/2026</h2>
+<ul>
+<li>Sécurité renforcée sur la suppression de lignes et l'affichage des tables ; les valeurs contenant un « # » peuvent de nouveau être supprimées.</li>
+</ul>
+<h2 id="08-06-2026">08/06/2026</h2>
+<ul>
+<li>Le bouton Enregistre sauvegarde les largeurs de toutes les colonnes en une fois.</li>
+</ul>
+<h2 id="05-06-2026">05/06/2026</h2>
+<ul>
+<li>Références aux équipements et commandes stockées sous une forme lisible et portable d'une installation à l'autre ; les anciennes valeurs restent lues.</li>
+<li>Correction : l'enregistrement pouvait écrire dans la mauvaise table après une ouverture depuis MG Domo.</li>
+<li>L'installation crée la table des compléments si besoin et vérifie la présence du socle MG Domo.</li>
+</ul>
+<h2 id="01-05-2026">01/05/2026</h2>
+<ul>
+<li>Correction d'une erreur MySQL lors de l'enregistrement d'une ligne sur certaines colonnes obligatoires.</li>
+</ul>
+<h2 id="28-04-2026">28/04/2026</h2>
+<ul>
+<li>Les espaces parasites sont retirés des valeurs saisies avant enregistrement.</li>
+<li>L'export JSON reflète désormais le dernier enregistrement, sans décalage ; la mémorisation de l'affichage n'écrase plus les définitions de colonnes.</li>
+</ul>
+<h2 id="27-04-2026">27/04/2026</h2>
+<ul>
+<li>Barre de boutons réorganisée : « Sauvegarde csv » et « Restaure csv », un fichier CSV par table.</li>
+<li>Corrections : sauvegarde CSV de nouveau fonctionnelle, grille qui remplit la fenêtre, ouverture directe d'une table depuis MG Domo.</li>
+</ul>
+<h2 id="24-04-2026">24/04/2026</h2>
+<ul>
+<li>Le plugin s'appuie désormais sur le socle MG Domo.</li>
+</ul></body></html>

@@ -1,0 +1,187 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Nexus</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-nexus">Changelog MG Nexus</h1>
+<h2 id="v2-2-11-17-10-2026">v2.2.11 - 17/10/2026</h2>
+<ul>
+<li>Page de l'équipement : « Chercher les types », « Scanner la base » et « Comparer » signalent désormais un échec de Haiku (lots en erreur, cause du repli) au lieu de l'ignorer en silence.</li>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-2-10-16-10-2026">v2.2.10 - 16/10/2026</h2>
+<ul>
+<li>Bulletin météo vocal : lit MG Météo France sous les nouveaux noms de ses commandes (les anciens restent reconnus).</li>
+<li>Réglages du plugin renommés selon la norme de l'écosystème MG Domo ; les valeurs déjà saisies sont conservées.</li>
+<li>Commandes « Question » et « Réponse » : noms internes renommés, sans effet sur les scénarios ni sur l'historique.</li>
+<li>Widget et page vocale : noms internes renommés selon la même norme ; leurs styles ne peuvent plus entrer en conflit avec ceux des autres plugins.</li>
+<li>Page de l'équipement : « Chercher les types » et l'analyse de la base affichent de nouveau les propositions de Haiku (0 proposition auparavant) ; l'analyse de la base propose de vrais alias et les mots-clés des pièces.</li>
+</ul>
+<h2 id="v2-2-10-15-10-2026">v2.2.10 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-6-14-10-2026">v2.2.6 - 14/10/2026</h2>
+<ul>
+<li>Historique : marque écrite « mgDomo ».</li>
+<li>L'assistant se situe dans la ville renseignée dans la configuration de Jeedom (Réglages, Système, Configuration, Informations) pour la météo et l'actualité locales, au lieu d'une commune fixe ; sans ville renseignée, il ne cite aucun lieu.</li>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+</ul>
+<h2 id="v2-2-2-13-10-2026">v2.2.2 - 13/10/2026</h2>
+<ul>
+<li>Widget : fichiers d'affichage allégés à la distribution (commentaires retirés, mention de licence ajoutée).</li>
+</ul>
+<h2 id="v2-2-1-12-10-2026">v2.2.1 - 12/10/2026</h2>
+<ul>
+<li>Questions météo : valeurs retenues par MG Météo France (votre capteur, l'aéroport ou Météo France), annoncées sans leur préfixe technique (RECO_...) ; « quel temps fait-il » répond par « Calcul météo actuelle ».</li>
+<li>Fenêtre agrandie : plus d'erreur Jeedom à chaque clic sur une page design (ses éléments sont désormais créés par la page qui les affiche) ; documentation et historique des versions en ligne ; nouvelle icône au format du Market.</li>
+<li>L'apostrophe typographique (’) vaut l'apostrophe droite ; un compteur sans unité reste un index ; l'IA et le moteur lisent les libellés d'état, accentués (« allumée »), même après une réactivation ; une fenêtre se dit fermée à 1.</li>
+<li>Sécurité : l'assistant ne répond plus qu'à un utilisateur connecté à Jeedom ou au plugin lui-même (avant, il répondait à tout appel) ; l'injection d'échanges depuis l'extérieur (ancien bookmarklet) est retirée.</li>
+<li>Widget : barre de titre comme celle des autres équipements mgDomo (nom centré, couleur de la catégorie, lien vers l'équipement) ; l'assistant d'exemple d'une nouvelle installation est classé en Automatisme.</li>
+</ul>
+<h2 id="v2-1-87-11-10-2026">v2.1.87 - 11/10/2026</h2>
+<ul>
+<li>Vocabulaire : à l'installation, les pièces sont celles de votre station, plus celles d'une autre maison ; « Charger la référence » remet ce vocabulaire de base. Relancez « Scanner la base » après avoir créé vos objets.</li>
+<li>Sans clé IA, une phrase d'orientation remplace l'erreur technique et la réponse du moteur reste affichée ; pièces à plusieurs mots et commandes typées reconnues ; réponses en bon français, oui ou non justes (« inverser » respecté).</li>
+<li>Widget : bouton « ? » vers l'aide (chargée au clic, fermée aussi après un changement de page) ; sortie vocale en haut-parleur, erreur affichée sous la réponse (et page vocale) ; micro bloqué : guide ; les flèches rappellent l'historique.</li>
+<li>Météo (ciel, vent, pluie) et « y a-t-il quelqu'un ? » ; au futur, la prévision de MG Météo France ; « claude … », l'historique et le passé (même un comptage) vont à l'IA ; un volet ne se pilote que par ouvre, ferme, monte, baisse, règle.</li>
+<li>L'IA dit l'état des portes comme le dashboard, calcule juste un compteur remis à zéro, inclut la journée demandée, ne lit que les journaux Jeedom et borne les curseurs ; le haut-parleur respecte « Exécuter les actions ».</li>
+</ul>
+<h2 id="v2-1-63-10-10-2026">v2.1.63 - 10/10/2026</h2>
+<ul>
+<li>Sécurité : seul un ordre simple et sans ambiguïté pilote un appareil (« allume la lampe du bureau ») ; s'il y a plusieurs appareils possibles, l'assistant demande lequel ; valeur hors limites refusée.</li>
+<li>Nouveaux modèles Claude 5.5 (Haiku, Sonnet, Opus) ; les scénarios utilisent le modèle choisi ; « consommation du cumulus » donne la consommation des dernières 24 h ; enceintes de la sortie vocale à choisir dans la configuration.</li>
+<li>Compréhension plus juste : comptages corrects, toute la maison si aucune pièce n'est citée, plus de mot reconnu au milieu d'un autre, noms à tiret retrouvés (lave-vaisselle) ; compatible avec Jeedom 4.4.</li>
+<li>L'assistant peut de nouveau lancer un scénario et chercher dans un journal ; panne de l'IA signalée clairement ; vocabulaire non lisible depuis le réseau ; un assistant d'exemple est créé à l'installation.</li>
+<li>Vocabulaire protégé : une sauvegarde refusée est signalée, les 10 versions précédentes sont gardées ; couleurs par défaut sur une installation neuve ; plus de relevé en arrière-plan ; plugin libéré pour toutes les installations.</li>
+</ul>
+<h2 id="v2-1-43-09-10-2026">v2.1.43 - 09/10/2026</h2>
+<ul>
+<li>
+<p>Le vocabulaire de l'assistant (pièces, synonymes) que vous avez personnalisé n'est plus écrasé par une mise à jour ; une installation neuve reçoit le vocabulaire de référence.</p>
+</li>
+<li>
+<p>Aide complétée : détail de chaque onglet du langage, propositions de l'IA, journal, historique et couleurs du widget, style d'affichage, onglet Commandes.</p>
+</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-40-08-10-2026">v2.1.40 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-39-07-10-2026">v2.1.39 - 07/10/2026</h2>
+<ul>
+<li>Textes de la page, de la configuration, du widget et de la documentation relus : accents, vouvoiement, explications vérifiées.</li>
+<li>Journal NLP : en cas d'ambiguïté tranchée, l'équipement mis en gras est bien celui retenu (le premier de la liste).</li>
+<li>Fenêtre agrandie : les boutons d'effacement s'appellent désormais « Dernier » et « Tout » ; le bouton « ? » ouvre la documentation du plugin à la place de l'ancienne aide.</li>
+</ul>
+<h2 id="v2-1-37-03-10-2026">v2.1.37 - 03/10/2026</h2>
+<ul>
+<li>Tuile du dashboard : la barre de titre et le cadre prennent la couleur de la catégorie de l'équipement réglée dans MG Domo (onglet Widgets).</li>
+</ul>
+<h2 id="v2-1-36-22-09-2026">v2.1.36 - 22/09/2026</h2>
+<ul>
+<li>Les sept onglets du langage (Pièces, Génériques, Actions, Synonymes, Articles, Triggers IA, Remplacements) sont remis en page : bandeau d'explication, liste pleine largeur, boutons Ajouter et Supprimer.</li>
+<li>Onglet Equipement : outils des tables regroupés dans « Tables du langage » ; le journal NLP devient un tableau lisible avec aides « ? ».</li>
+<li>Toute la page suit le thème Jeedom, clair ou sombre, et les textes sont accentués.</li>
+</ul>
+<h2 id="v2-1-35-21-09-2026">v2.1.35 - 21/09/2026</h2>
+<ul>
+<li>Fiche de l'assistant, page de configuration, page d'accueil et onglet Commandes remis en page selon la charte mgDomo, avec aides « ? » sur chaque réglage.</li>
+<li>« Options » devient « Etat du widget » ; les plafonds de tokens rejoignent les réglages de l'intelligence artificielle.</li>
+<li>Un équipement désactivé apparaît grisé ; le bouton de suppression d'une commande disparaît, les commandes étant créées par le plugin.</li>
+</ul>
+<h2 id="v2-1-32-11-09-2026">v2.1.32 - 11/09/2026</h2>
+<ul>
+<li>Les actions décidées par l'assistant (commande exécutée, scénario lancé ou arrêté, annonce vocale) sont désormais tracées dans le journal.</li>
+<li>Correction : une commande refusée par Jeedom n'est plus annoncée comme réussie, mais signalée comme une erreur.</li>
+<li>Journal : les traces du plugin arrivent enfin dans son journal ; une panne de l'intelligence artificielle est signalée comme une erreur.</li>
+</ul>
+<h2 id="v2-1-31-07-09-2026">v2.1.31 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-30-29-08-2026">v2.1.30 - 29/08/2026</h2>
+<ul>
+<li>Les clés API Anthropic, OpenAI et Gemini ne sont plus remplies automatiquement par le gestionnaire de mots de passe du navigateur.</li>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide avec le rapport anonymisé du plugin et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle qui explique son rôle.</li>
+</ul>
+<h2 id="v2-1-25-28-08-2026">v2.1.25 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation indique la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-24-04-07-2026">v2.1.24 - 04/07/2026</h2>
+<ul>
+<li>Modèles à jour : les questions générales utilisent Claude Sonnet 5 et Claude Opus 4.8 ; la domotique reste sur Haiku.</li>
+<li>Correction : l'assistant sait de nouveau lister les équipements sans fil et leur niveau de pile.</li>
+<li>Sécurité : la page vocale filtre les liens dans les réponses, comme le widget.</li>
+<li>Plus de blocage si un service est injoignable, et la fenêtre de conversation se ferme proprement.</li>
+</ul>
+<h2 id="v2-1-23-27-06-2026">v2.1.23 - 27/06/2026</h2>
+<ul>
+<li>Micro : nouvel essai automatique quand la reconnaissance vocale d'Edge échoue au premier essai.</li>
+<li>Micro : le message d'erreur réseau n'accuse plus à tort le son du PC.</li>
+</ul>
+<h2 id="v2-1-21-24-06-2026">v2.1.21 - 24/06/2026</h2>
+<ul>
+<li>Documentation utilisateur illustrée complète : 10 chapitres et 10 figures sur le widget, la conversation, l'administration NLP et la configuration.</li>
+</ul>
+<h2 id="v2-1-17-21-06-2026">v2.1.17 - 21/06/2026</h2>
+<ul>
+<li>Le bouton d'aide Jeedom ouvre la documentation du plugin.</li>
+</ul>
+<h2 id="v2-1-12-15-06-2026">v2.1.12 - 15/06/2026</h2>
+<ul>
+<li>Nouvelle question de comptage, par exemple « combien de volets ouverts dans le salon » ; une telle question ne déclenche jamais d'action.</li>
+<li>Meilleure compréhension : température, luminosité ou humidité d'une pièce, et moyenne de la « température intérieure ».</li>
+<li>Le coût d'une réponse reste affiché après rechargement du widget.</li>
+</ul>
+<h2 id="v2-1-1-14-06-2026">v2.1.1 - 14/06/2026</h2>
+<ul>
+<li>Sécurité et fiabilité renforcées : une action ambiguë demande une précision au lieu d'agir au hasard.</li>
+<li>L'assistant répond aux questions de consommation et de puissance ; la consommation par jour d'un compteur est corrigée.</li>
+<li>Corrections : affichage du coût dans la fenêtre de conversation.</li>
+</ul>
+<h2 id="v2-1-0-06-06-2026">v2.1.0 - 06/06/2026</h2>
+<ul>
+<li>Le plugin porte désormais un numéro de version, utilisé par les mises à jour MG Domo.</li>
+</ul>
+<h2 id="05-06-2026">05/06/2026</h2>
+<ul>
+<li>Si le socle MG Domo est absent, l'activation s'arrête avec un message clair au lieu de planter.</li>
+</ul>
+<h2 id="25-04-2026">25/04/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul>
+<h2 id="09-04-2026">09/04/2026</h2>
+<ul>
+<li>Choix centralisé des modèles d'intelligence artificielle (Haiku, Sonnet, Opus, GPT-4o mini, Gemini), avec alerte et remplacement automatique d'un modèle obsolète.</li>
+<li>Réglages affinés : quotas de tokens séparés, taille d'historique réglable, infobulles d'aide.</li>
+<li>Reformulation optionnelle de la réponse et meilleur traitement des phrases longues.</li>
+</ul>
+<h2 id="01-04-2026">01/04/2026</h2>
+<ul>
+<li>Aiguillage automatique entre questions domotiques et questions générales.</li>
+<li>Une question sur une pièce couvre aussi ses sous-pièces.</li>
+<li>Outil de test intégré : journal en temps réel, séries de questions de test, modes d'inhibition ; historique de conversation propre à chaque équipement.</li>
+</ul>
+<h2 id="31-03-2026">31/03/2026</h2>
+<ul>
+<li>Compréhension locale refondue : recherche par nom ou type d'équipement dans une pièce, demande de précision si plusieurs équipements correspondent, gestion du pluriel et des sous-pièces.</li>
+</ul></body></html>

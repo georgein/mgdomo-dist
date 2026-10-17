@@ -1,0 +1,104 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Solaire</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mgsolaire">Changelog mgSolaire</h1>
+<h2 id="v2-1-87-17-10-2026">v2.1.87 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-1-86-16-10-2026">v2.1.86 - 16/10/2026</h2>
+<ul>
+<li>Noms internes mis en ordre selon la norme de l'écosystème MG Domo, sans effet sur les libellés, les réglages, l'historique ni vos scénarios.</li>
+<li>Les commandes de cumul passent en français (ex. jour_production, mois_consommation, cumul_edf_achat) ; seul un script qui citerait une commande par son nom technique est à revoir.</li>
+<li>Les commandes calculées du schéma prennent le préfixe « schema_ » (ex. schema_reseau_puissance) ; réglages d'apparence, appareils pilotés et charges conservés.</li>
+</ul>
+<h2 id="v2-1-86-15-10-2026">v2.1.86 - 15/10/2026</h2>
+<ul>
+<li>Widget : la fin de la ligne de production du jour affiche le coefficient de correction réellement appliqué par Solcast (« coeff Solcast x0,80 ») au lieu d'un « Rendement » qui se lisait à tort comme production réelle / prévue.</li>
+</ul>
+<h2 id="v2-1-83-14-10-2026">v2.1.83 - 14/10/2026</h2>
+<ul>
+<li>Historique : marque écrite « mgDomo » ; l'aide de la colonne valeur des textes libres ne fait plus signaler une commande introuvable par la page Santé de mgDomo.</li>
+<li>L'alerte de coupure EDF (et son SMS + mail directs la nuit) va à l'utilisateur principal déclaré dans MG Domo, et non plus à un destinataire fixe.</li>
+<li>Le plugin calcule lui-même la position du soleil (hauteur et azimut, au degré, chaque minute) : deux nouvelles commandes, à afficher sur le widget par un texte libre.</li>
+<li>Nouveau panneau dans le menu Accueil : tous les équipements du plugin, pièce par pièce, avec leur widget à jour en direct (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+</ul>
+<h2 id="v2-1-77-13-10-2026">v2.1.77 - 13/10/2026</h2>
+<ul>
+<li>Widget de l'onduleur réécrit et fourni par MG Solaire : il ne clignote plus à chaque cycle et se redessine aussitôt après Sauvegarder quand ses réglages changent.</li>
+<li>L'onglet Widget ne se règle plus ligne par ligne : chaque type de la table des consommations est une charge à afficher ou masquer (16 places, ordre par glisser-déposer) ; la charge « Non attribué » est fournie par le plugin.</li>
+<li>Textes libres plus simples (libellé, commande, décimales, unité, position) et trois mesures facultatives dans l'onglet Equipement ; l'ancienne configuration est reprise automatiquement, historique compris (exceptions : voir la doc).</li>
+<li>La ligne « PROD. JOUR » indique la part de la consommation attendue (moyenne des 7 derniers jours) que la production prévue devrait couvrir, puis le rendement (coefficient de correction Solcast).</li>
+</ul>
+<h2 id="v2-1-57-12-10-2026">v2.1.57 - 12/10/2026</h2>
+<ul>
+<li>Un thermostat réglé dans la fiche mais privé de ses commandes Mode, Eco ou Auto n'est plus commandé pendant une coupure : la règle est désactivée et signalée une fois par heure.</li>
+<li>Le plugin se range dans la catégorie Énergie de Jeedom, comme les autres plugins mgDomo dans la leur (il restait seul sous « MG Domo »).</li>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+<li>Fenêtres de confirmation et de saisie au format actuel de Jeedom (prêtes pour les prochaines versions du core).</li>
+</ul>
+<h2 id="v2-1-52-11-10-2026">v2.1.52 - 11/10/2026</h2>
+<ul>
+<li>Installation neuve : créer un équipement n'affiche plus d'erreur de base de données quand la table des consommations n'existe pas encore ; les charges du widget valent alors 0.</li>
+<li>Une mesure, un équipement piloté, une marche forcée ou le thermostat supprimés après leur réglage : une seule ligne par heure dans le journal du plugin, qui nomme le réglage à corriger, au lieu d'une erreur MG Domo par minute.</li>
+<li>Aide : la table des consommations est celle du scénario EDF de l'utilisateur ; sans elle, les charges du widget valent 0.</li>
+</ul>
+<h2 id="v2-1-48-10-10-2026">v2.1.48 - 10/10/2026</h2>
+<ul>
+<li>Compatible avec Jeedom 4.4 (4.5 n'est plus exigé).</li>
+<li>Plugin libéré : installable et mis à jour sur toutes les installations ; exemples de commandes de la page sans nom d'installation.</li>
+<li>L'historique des lignes du widget ne peut plus être effacé par le cycle ; après une perte de cache, un cumul reprend sa dernière valeur au lieu de repartir de zéro.</li>
+<li>Noms en double refusés à l'enregistrement (équipements pilotés, lignes du widget), comme une liste illisible ; échanger ou recréer un nom d'appareil n'échoue plus ; un curseur appelé sans valeur ne change plus le réglage.</li>
+<li>Journal plus calme : une mesure aberrante en coupure n'est plus un avertissement, une configuration incomplète n'est signalée qu'une fois par heure ; aide corrigée (rafraîchissement, autonomie, réserve).</li>
+</ul>
+<h2 id="v2-1-34-09-10-2026">v2.1.34 - 09/10/2026</h2>
+<ul>
+<li>Le journal d'une coupure EDF ne cite plus une lampe d'alerte quand aucune n'est réglée ; les textes du jour du widget écrivent « prévue ».</li>
+<li>Sur une autre installation, la lampe d'alerte de coupure EDF n'est plus cherchée sous un nom propre à la maison de référence : elle reste éteinte tant qu'elle n'est pas réglée.</li>
+<li>La page Santé de MG Domo ne signale plus les exemples de commandes Solcast de la fiche comme des commandes introuvables.</li>
+<li>Aide complétée : réglages de l'onduleur champ par champ, équipements pilotés, lignes du widget, page de configuration.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-29-08-10-2026">v2.1.29 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-28-07-10-2026">v2.1.28 - 07/10/2026</h2>
+<ul>
+<li>Aides de la fiche relues : plus de majuscules d'insistance, exemples de commandes sans nom d'installation.</li>
+<li>Alertes de coupure EDF et bilan du mois écrits sans majuscules d'insistance.</li>
+</ul>
+<h2 id="v2-1-27-03-10-2026">v2.1.27 - 03/10/2026</h2>
+<ul>
+<li>Le plugin déclare son matériel (« Onduleur Huawei SUN2000 ») : dans MG Domo, onglet Plugins, il figure dans le tableau « Plugins liés à un matériel », avec la case « présent ».</li>
+</ul>
+<h2 id="v2-1-26-02-10-2026">v2.1.26 - 02/10/2026</h2>
+<ul>
+<li>Recharge à la réserve : la charge s'arrête de nouveau à la réserve seule ; l'onduleur la tient ensuite, la maison étant alimentée par le réseau.</li>
+<li>Widget : les lignes « Charge réseau » et « SOC / Secours » ne sont plus cliquables vers un historique.</li>
+</ul>
+<h2 id="v2-1-24-01-10-2026">v2.1.24 - 01/10/2026</h2>
+<ul>
+<li>Création du plugin, qui reprend le scénario EDF Solaire sous la forme d'un seul équipement onduleur, avec la liste des appareils pilotés (délestage en coupure, contraintes de batterie, de production et de durée, marche forcée).</li>
+<li>Widget de l'onduleur repris tel quel, alimenté par un nouvel onglet « Widget » ; affichage du « Secours » (autonomie en coupure) et des durées de décharge, lissés sur 30 minutes.</li>
+<li>Pilotage de la batterie : charge, arrêt, réserve secours et SOC de fin de décharge, appliqués à l'onduleur et rétablis s'il les perd ; recharge automatique depuis le réseau quand le SOC passe sous la réserve.</li>
+<li>Le plugin ne désactive plus aucun scénario : la piscine est autorisée ou délestée par sa commande « Gestion », et la surveillance d'internet relève désormais de MG Domo.</li>
+<li>Corrections : cumuls d'énergie justes même pour les petits flux, appareils contraints non rallumés d'office au retour du réseau, curseurs de la tuile remis masqués, plus d'alerte au contrôle de santé.</li>
+</ul></body></html>

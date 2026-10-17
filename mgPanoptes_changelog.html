@@ -1,0 +1,190 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Panoptes</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-panoptes">Changelog MG Panoptes</h1>
+<h2 id="v2-2-46-17-10-2026">v2.2.46 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-2-45-16-10-2026">v2.2.45 - 16/10/2026</h2>
+<ul>
+<li>Noms internes des réglages, des actions et des pages mis à la norme de l'écosystème.</li>
+<li>La taille mémorisée de la fenêtre des graphiques est oubliée une fois et reprend sa taille par défaut.</li>
+<li>Une page de supervision ouverte avant la mise à jour se remet à jour d'elle-même à la génération suivante (5 minutes au plus).</li>
+</ul>
+<h2 id="v2-2-45-15-10-2026">v2.2.45 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-41-14-10-2026">v2.2.41 - 14/10/2026</h2>
+<ul>
+<li>Exemples de destinataires neutres (@U1) dans les aides et la documentation.</li>
+<li>À l'installation, les alertes graves sont adressées par défaut à l'utilisateur principal coché dans MG Domo.</li>
+<li>Tableaux des paramètres : un clic sur une cellule ouvre bien la saisie ; une ligne se déplace désormais par sa poignée, tout à gauche.</li>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+</ul>
+<h2 id="v2-2-36-12-10-2026">v2.2.36 - 12/10/2026</h2>
+<ul>
+<li>Coupure internet : si la commande mémo réglée dans MG Domo est supprimée ou n'est pas une info, plus d'erreur à chaque passage (une ligne par heure au journal de MG Domo) ; le plugin fonctionne comme sans coupure.</li>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+<li>Infobulle de l'icône Satellite : exemple d'adresse générique.</li>
+</ul>
+<h2 id="v2-2-32-11-10-2026">v2.2.32 - 11/10/2026</h2>
+<ul>
+<li>Activité des équipements : un équipement neuf qui n'a encore jamais communiqué n'est plus en DANGER rouge dès son apparition ; il suit le délai habituel à partir de sa date de création.</li>
+</ul>
+<h2 id="v2-2-31-10-10-2026">v2.2.31 - 10/10/2026</h2>
+<ul>
+<li>Fenêtre Paramètres : seule la case à gauche sélectionne une ligne, et « Fermer quand même » abandonne vraiment les modifications (elles ne partent plus au prochain Enregistrer).</li>
+<li>Journal : seuls les problèmes à corriger y sont signalés, une ligne par épisode (veille, relevé en échec, onduleur). Mémoire ou disque non mesuré : « ? » au lieu de 0 %. Relevé du cache compatible Jeedom 4.4.</li>
+<li>Secours Tailscale : une mise à jour non installée depuis plus de 21 jours est signalée, même si d'autres versions sortent entre-temps.</li>
+<li>Coupure secteur : un silence de la prise témoin n'est retenu que si l'onduleur est passé sur batterie ; sinon simple note au journal (le blocage suivant une vraie coupure reste en place).</li>
+<li>Grilles à jour de MG Tabulator, survol des lignes rétabli ; fenêtre de graphique déplaçable sans se fermer ; bouton Rafraîchir qui montre la production en cours ; aide complétée.</li>
+</ul>
+<h2 id="v2-2-9-09-10-2026">v2.2.9 - 09/10/2026</h2>
+<ul>
+<li>Bandeau des disques : le débit « ~N Go/j » est désormais la moyenne des 7 derniers jours (plus parlant, sans pic à chaque nuit de sauvegarde) ; la fenêtre se remplit sur une semaine à partir de cette version.</li>
+<li>Survoler les valeurs d'un disque rappelle ce que mesure chaque nombre : usure, moyenne 7 jours, moyenne sur toute la vie du disque, espérance de vie.</li>
+<li>Le seuil d'alerte d'écriture (onglet Stockage) compare cette même moyenne sur 7 jours : une dérive durable alerte, un pic d'un soir non.</li>
+<li>L'espérance de vie d'un disque s'affiche à une décimale jusqu'à 20 ans (au lieu de 10), « &gt;20 ans » au-delà : son évolution se suit d'une semaine à l'autre.</li>
+<li>Aide complétée : boutons de la page et nouveau chapitre des paramètres, onglet par onglet ; licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-2-4-08-10-2026">v2.2.4 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-2-3-07-10-2026">v2.2.3 - 07/10/2026</h2>
+<ul>
+<li>Onglet Général, « Secteur de la maison » : une prise témoin non secourue signale chaque coupure du secteur (ligne Timeline avec début, fin et durée) et suspend tous les redémarrages de prises pendant le délai réglé ; vide = désactivé.</li>
+<li>Équipements réseau : une prise qui vient de voir une coupure de courant n'est plus coupée pendant le délai réglé (1 h par défaut) pour redémarrer un appareil absent, qui a déjà redémarré seul.</li>
+<li>Réglages, page et documentation relus : accents, « démon » au lieu de « daemon », aides plus courtes, sans majuscules d'insistance.</li>
+</ul>
+<h2 id="v2-2-0-06-10-2026">v2.2.0 - 06/10/2026</h2>
+<ul>
+<li>Aide des canaux de la timeline : l'exemple du mail porte le @ devant l'utilisateur (sans lui, l'adresse était ignorée sans erreur).</li>
+</ul>
+<h2 id="v2-1-99-05-10-2026">v2.1.99 - 05/10/2026</h2>
+<ul>
+<li>Brokers MQTT : un broker qui ne reçoit plus rien au-delà du délai réglé dans jMQTT (Configuration avancée &gt; Alertes) passe en alerte avec mail : une passerelle arrêtée est signalée en quelques minutes.</li>
+<li>Bandeau « Secours Tailscale » : un téléphone est nommé par son utilisateur MG Domo (« NR (Pixel 7a) ») dans le bandeau, la timeline et le mail d'alerte, dès que l'application téléphone 0.7.6 a déclaré son adresse Tailscale.</li>
+<li>Un appareil inconnu qui apparaît dans le tailnet est signalé en rouge pendant 24 heures ; les appareils déjà présents sont appris sans alerte au premier passage.</li>
+<li>Un téléphone hors ligne depuis plus de 7 jours est signalé (il n'a plus de secours) ; les PC hors ligne restent non alarmants.</li>
+<li>Une nouvelle version de Tailscale disponible est indiquée, et passe en alerte si elle n'est toujours pas installée après 21 jours.</li>
+</ul>
+<h2 id="v2-1-96-02-10-2026">v2.1.96 - 02/10/2026</h2>
+<ul>
+<li>Installation : SSH Manager est installé avant Monitoring, le faux message « Le plugin SSHManager n'est pas installé » n'apparaît plus sur une station neuve.</li>
+<li>Installation : les alertes DANGER vont au premier utilisateur déclaré dans MG Domo, et la ligne CPU du cadre VM Jeedom est renseignée dès l'installation.</li>
+<li>Paramètres : équipements et commandes s'affichent et se saisissent en clair, et suivent les renommages ; le bandeau onduleur nomme en clair un équipement non trouvé.</li>
+</ul>
+<h2 id="v2-1-93-28-09-2026">v2.1.93 - 28/09/2026</h2>
+<ul>
+<li>Nouveau réglage « Réseaux autorisés à lire la page » : vide, il vaut le réseau local de Jeedom ; la protection de la page est recréée automatiquement à chaque mise à jour, plus rien à restaurer à la main.</li>
+<li>Ouvrir ou rafraîchir la page ne fait plus que l'afficher : relances, coupures de prises et alertes sont faites uniquement par le passage automatique de 5 minutes, une seule coupure de prise par passage.</li>
+<li>Paramètres : les saisies sont contrôlées à l'enregistrement (champ fautif nommé, rien n'est enregistré en cas d'erreur) ; la clé SSH déposée n'est acceptée que depuis l'adresse de Jeedom.</li>
+<li>Un état non mesuré ne s'affiche plus comme sain : machine ou disque en orange avec la raison au survol, métrique absente affichée « ? » ; la timeline n'écrit plus une ligne toutes les 5 minutes pour une alerte qui dure.</li>
+<li>Corrections : bouton « Relever maintenant » qui restait sans effet, case « Disque système » à cocher, relevé de disque limité à 30 secondes, faux « smartctl introuvable » sous Windows, actions du panel déclenchées plusieurs fois.</li>
+</ul>
+<h2 id="v2-1-77-23-09-2026">v2.1.77 - 23/09/2026</h2>
+<ul>
+<li>Fenêtre Paramètres mise aux normes de la charte graphique mg* : bandeau bleu en tête de chaque onglet, réglages rangés par sujet sur deux colonnes, aide dans le « ? » de chaque groupe.</li>
+<li>Onglet Logs : les réglages à gauche, la table des motifs à droite ; deux tables d'un même onglet sont côte à côte.</li>
+<li>Correction : le témoin de couleur à droite de chaque champ de l'onglet Apparence montre à nouveau la couleur.</li>
+</ul>
+<h2 id="v2-1-74-22-09-2026">v2.1.74 - 22/09/2026</h2>
+<ul>
+<li>Accents rétablis dans tous les textes visibles : titres, libellés, aides des onglets de réglages, barre de la fenêtre, messages et infobulle de la demande d'aide (Community).</li>
+<li>La pastille des réglages qui agissent sur l'installation dit « action » (et non plus « agit »).</li>
+</ul>
+<h2 id="v2-1-72-21-09-2026">v2.1.72 - 21/09/2026</h2>
+<ul>
+<li>Page de configuration du plugin mise aux normes de la charte graphique mg* : titres de groupe en bleu avec icône, aide « ? » verte sur chaque ligne, libellés et champs alignés.</li>
+<li>Menu : le plugin déclare sa catégorie Jeedom d'origine (« Monitoring »), ce qui permet à MG Domo de le reclasser sous cette catégorie.</li>
+</ul>
+<h2 id="v2-1-70-20-09-2026">v2.1.70 - 20/09/2026</h2>
+<ul>
+<li>Correction : sur une station sans Proxmox déclaré, une erreur n'est plus journalisée toutes les 5 minutes ; l'affichage reste « non configuré ».</li>
+</ul>
+<h2 id="v2-1-69-19-09-2026">v2.1.69 - 19/09/2026</h2>
+<ul>
+<li>Bandeau d'usure des disques : seules les valeurs du disque concerné changent de couleur, orange sous 5 ans d'espérance de vie, rouge clignotant sous 3 ans ou en cas d'anomalie (seuils auparavant de 3 et 2 ans).</li>
+<li>Le « ! » d'un disque en anomalie est expliqué au survol (santé SMART, secteurs réalloués, erreurs de liaison, débit du jour trop élevé…).</li>
+<li>Corrections : l'alerte d'un disque reste affichée toute la journée même si une autre machine dormait au relevé ; en cas de cache KO seul le constat clignote ; sans réglage de coupure internet, le mail d'alerte part normalement.</li>
+</ul>
+<h2 id="v2-1-67-18-09-2026">v2.1.67 - 18/09/2026</h2>
+<ul>
+<li>Tableau des brokers jMQTT : nouvelle colonne « Hors ligne » qui compte les équipements muets au-delà d'un délai réglable ; pour les brokers choisis (« Shelly » par défaut), alerte et mail avec la consigne de couper l'alimentation.</li>
+<li>Équipements réseau à redémarrer : après un nombre réglable de redémarrages sans retour (3 par défaut), l'équipement est déclaré EN PANNE avec mail, et sa prise n'est plus coupée ; le tableau affiche la progression.</li>
+<li>Plusieurs équipements sur la même prise ne provoquent plus une seconde coupure dix minutes après la première.</li>
+<li>Corrections : une prise saisie sous forme de chemin complet est de nouveau réellement coupée ; pendant une coupure Internet, le mail DANGER est différé et part au retour d'Internet.</li>
+</ul>
+<h2 id="v2-1-64-17-09-2026">v2.1.64 - 17/09/2026</h2>
+<ul>
+<li>Synthèse des logs : deux cases « error » et « warning » à droite du titre choisissent les niveaux signalés ; erreurs et warnings sont comptés séparément pour chaque fichier (nom en rouge ou en orange).</li>
+<li>Un clic sur une alerte de la synthèse ouvre la page des logs dans l'onglet de Panoptès, sans onglet en double.</li>
+<li>Activité des équipements : le seuil d'avertissement par défaut passe de 24 h à 25 h, ce qui supprime les fausses alertes sur les équipements rafraîchis une fois par jour.</li>
+<li>Le log du plugin ne garde en warning et erreur que les défaillances de Panoptès lui-même ; notifications et mails inchangés.</li>
+</ul>
+<h2 id="v2-1-59-16-09-2026">v2.1.59 - 16/09/2026</h2>
+<ul>
+<li>« Recadrer » et « Agrandir » mémorisent l'état « plein cadre » : la fenêtre occupe toute la hauteur disponible même si le navigateur a changé de taille.</li>
+<li>La fenêtre de supervision ne passe plus sous l'en-tête Jeedom ni sous le bas de l'écran : sa barre de titre et ses boutons restent visibles.</li>
+</ul>
+<h2 id="v2-1-57-14-09-2026">v2.1.57 - 14/09/2026</h2>
+<ul>
+<li>Timeline : un équipement réseau absent, une panne amont ou un démon en erreur ne sont plus annoncés toutes les 5 minutes ; une ligne au début, une à la fin avec la durée.</li>
+<li>La page, le compteur de constats et le mail d'alerte (un par jour) ne changent pas.</li>
+</ul>
+<h2 id="v2-1-55-13-09-2026">v2.1.55 - 13/09/2026</h2>
+<ul>
+<li>Journal : une anomalie connue et stable (poste éteint, batterie faible, équipement inactif, broker hors ligne) n'est plus rappelée chaque nuit ; une ligne à son apparition puis à chaque changement d'état.</li>
+</ul>
+<h2 id="v2-1-54-12-09-2026">v2.1.54 - 12/09/2026</h2>
+<ul>
+<li>Journal : plus de fausse erreur « aucune machine joignable » chaque matin pendant le rattrapage d'un poste endormi ; l'erreur ne sort que si aucune machine n'a répondu de la journée.</li>
+</ul>
+<h2 id="v2-1-53-11-09-2026">v2.1.53 - 11/09/2026</h2>
+<ul>
+<li>Nouveau bandeau « Secours Tailscale » : il vérifie en permanence que l'accès de secours fonctionne, sans réglage ; il n'apparaît pas sans Tailscale installé.</li>
+<li>Alerte (rouge clignotant, message et mail) si Tailscale est arrêté, si une clé d'appareil expire sous 30 jours, si un routeur de sous-réseau tombe ou si une alerte de santé persiste.</li>
+<li>Journal allégé : fin des faux avertissements à chaque passage et des lignes répétées toutes les cinq minutes pour une anomalie qui dure.</li>
+</ul>
+<h2 id="v2-1-51-07-09-2026">v2.1.51 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-50-31-08-2026">v2.1.50 - 31/08/2026</h2>
+<ul>
+<li>Batteries : une batterie sous son seuil n'est plus journalisée toutes les 5 minutes, mais une fois par jour et à chaque changement de palier ou de statut.</li>
+<li>Une batterie en WARNING est journalisée en avertissement et non plus en erreur.</li>
+</ul>
+<h2 id="v2-1-49-29-08-2026">v2.1.49 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle icône d'aide orange dans la barre de titre : elle prépare une demande d'aide anonymisée et ouvre un sujet pré-rempli sur le forum Jeedom.</li>
+<li>Un poste endormi à l'heure du relevé des disques est désormais relevé à son réveil, au lieu de rester « endormi » jusqu'au lendemain.</li>
+</ul>
+<h2 id="v2-1-43-28-08-2026">v2.1.43 - 28/08/2026</h2>
+<ul>
+<li>Le plugin se configure seul à l'installation : machine surveillée, pièce principale, plugins suivis, dépendances (SMART, mgTabulator, Monitoring), clé SSH générée automatiquement ; une configuration existante n'est pas écrasée.</li>
+<li>La page de supervision est produite dès l'installation ; les cadres non configurés et les relevés vides expliquent pourquoi et où les renseigner.</li>
+<li>Nouveau bouton « Relever maintenant » (onglet Stockage) ; la table des noms de disques se remplit seule au relevé.</li>
+<li>Équipements réseau à redémarrer : le cadre peut désormais agir en coupant la prise d'un équipement absent, avec garde-fous ; livré désarmé, il montre d'abord ce qu'il aurait fait.</li>
+<li>Réglages et page refaits : boutons homogènes, aides complétées et lisibles, fenêtre plein cadre sans débordement, noms d'objets en jaune, documentation réécrite.</li>
+</ul></body></html>

@@ -1,0 +1,195 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Météo France</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-meteo-france">Changelog MG Meteo France</h1>
+<h2 id="v2-3-17-17-10-2026">v2.3.17 - 17/10/2026</h2>
+<ul>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-3-16-16-10-2026">v2.3.16 - 16/10/2026</h2>
+<ul>
+<li>Noms internes des réglages, des commandes et des pages mis à la norme de l'écosystème.</li>
+<li>Code interne en partie réécrit, sans changement pour vous : widget, valeurs et réglages identiques ; une partie des messages du journal passe en français.</li>
+<li>Page de l'équipement : le choix du lieu s'appelle désormais « Lieu des prévisions » (Aucun lieu, Position de Jeedom). Crédits de la police météo et des pictogrammes de vigilance ajoutés à la documentation.</li>
+</ul>
+<h2 id="v2-3-16-15-10-2026">v2.3.16 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-3-13-14-10-2026">v2.3.13 - 14/10/2026</h2>
+<ul>
+<li>Historique : marque écrite « mgDomo ».</li>
+<li>La prévision du jour (annonce vocale, assistant mgNexus) est disponible dès la création de l'équipement, au lieu de l'heure pleine suivante.</li>
+<li>Nouveau panneau dans le menu Accueil : tous les équipements du plugin, pièce par pièce, avec leur widget à jour en direct (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+<li>Infobulles de la tuile : toujours au format Jeedom (fond bleu) après une mise à jour de la tuile ; elles passaient au format du navigateur (fond clair, petite police).</li>
+</ul>
+<h2 id="v2-3-8-12-10-2026">v2.3.8 - 12/10/2026</h2>
+<ul>
+<li>Valeurs actuelles (température, humidité, vent, rafales, direction, pression) : dès l'installation puis toutes les 5 mn, la meilleure de trois sources (votre capteur, l'aéroport le plus proche, Météo France), commandes RECO_ et METAR_.</li>
+<li>Nouvelle commande « Calcul météo actuelle » : le temps qu'il fait en une phrase, avec les valeurs retenues ; sur la fiche, dans MG Nexus et dans le « ? » du widget (première heure ; celui des jours donne la prévision) ; fiche complétée.</li>
+<li>Les six commandes « Temps actuel » deviennent MF_ et sont historisées ; types génériques et badge Saison passent aux valeurs retenues. Météo d'exemple : le bas du widget n'est plus coupé ; aide et historique en ligne.</li>
+<li>Vigilance : les textes de bulletin ne sont plus téléchargés (ils n'étaient affichés nulle part) ; leur absence sur le portail de Météo France, quand aucune vigilance n'est en cours, ne déclenche plus de fausse alerte « vérifiez la clé ».</li>
+<li>Coupure internet : si la commande mémo réglée dans MG Domo est supprimée ou n'est pas une info, plus d'erreur à chaque passage (une ligne par heure au journal de MG Domo) ; le plugin fonctionne comme sans coupure ; nouvelle icône.</li>
+</ul>
+<h2 id="v2-2-17-11-10-2026">v2.2.17 - 11/10/2026</h2>
+<ul>
+<li>Éphéméride : entre minuit et 2 h (heure d'été), le lever et le coucher du soleil sont calculés localement au lieu de rester vides jusqu'au rafraîchissement suivant (station installée la nuit).</li>
+<li>Les commandes « Temps actuel » (température, humidité, pression, vent, direction) portent un type générique, posé aussi sur les stations existantes à la mise à jour : l'assistant MG Nexus retrouve la météo.</li>
+<li>Nouvelle commande « Calcul météo prévue » : la prévision des 12 prochaines heures, propre à chaque équipement, affichée en orange sur sa fiche ; le vent y est dit en toutes lettres (« du nord-ouest »).</li>
+</ul>
+<h2 id="v2-2-14-10-10-2026">v2.2.14 - 10/10/2026</h2>
+<ul>
+<li>Vigilance : un refus du service de Météo France (clé révoquée, quota) n'efface plus les alertes en cours et il est signalé ; entre minuit et 6 h, la vigilance du jour s'affiche au lieu de celle de la veille.</li>
+<li>Sortie idéale : rafales et averses toujours colorées, une averse coupe le créneau ; l'indice d'effort calcule mieux la hauteur du soleil ; infobulles accentuées.</li>
+<li>Une panne passagère du service d'adresses pendant l'enregistrement de l'équipement ne coupe plus les prévisions : la position précédente est conservée (sans position, le journal invite à réenregistrer).</li>
+<li>Saison été / hiver : chaque jour pèse autant dans la moyenne des 10 derniers jours (les derniers pesaient trop) ; seuils réglables, avec la moyenne du jour et le graphe de la température.</li>
+<li>Fiabilité : une panne prolongée des prévisions ou de la vigilance est enfin signalée dans le journal, une fois ; enregistrer la page ne supprime plus de commandes ; aide mise à jour ; Jeedom 4.4 minimum requis.</li>
+</ul>
+<h2 id="v2-2-10-09-10-2026">v2.2.10 - 09/10/2026</h2>
+<ul>
+<li>Retrait des anciens widgets de commande inutilisés (Horloge, Vigilance, météo du jour et de l'heure) : l'affichage de l'équipement ne change pas.</li>
+<li>Aide mise à jour : réglages réels de l'équipement, sortie idéale (classement des heures, créneau, seuils), clé Météo France de la vigilance ; anciens réglages disparus retirés.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein ; nouvelle icône du plugin ; noms des commandes reformulés pour les nouvelles installations (les commandes existantes gardent leur nom).</li>
+<li>Commandes Marine, Bulletins et Alertes retirées (inutilisées) ; sur mobile, l'équipement s'affiche avec le widget standard de Jeedom.</li>
+<li>Code interne réécrit (récupération des prévisions, de la pluie, de la vigilance et rendu du widget) : fonctionnement et affichage inchangés.</li>
+</ul>
+<h2 id="v2-2-3-08-10-2026">v2.2.3 - 08/10/2026</h2>
+<ul>
+<li>Les rafales de vent comptent désormais (dès 50 km/h l'heure passe en orange, dès 70 km/h en rouge, et elle n'est plus annoncée en « sortie idéale ») ; une heure pluvieuse passe en orange sur la courbe.</li>
+<li>Chaque heure est classée sur sa moyenne avec l'heure précédente et la suivante, avec une marge de sortie réglable (0,5 ° et 5 km/h) : une courbe qui longe un seuil ne change plus de couleur à chaque heure.</li>
+<li>Nouvelle section « Sortie idéale » dans la fiche de la météo : seuils de chaleur, de froid, de rafales, de pluie, durée minimale du créneau et marges, avec une explication du classement.</li>
+<li>La configuration du plugin détaille, avec les liens, comment obtenir gratuitement la clé Météo France de la carte de vigilance, , et explique comment ouvrir la page de l'API du portail, qui reste vide quand on la suit par un clic simple.</li>
+<li>Les encarts d'aide de la fiche et de la configuration sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes.</li>
+</ul>
+<h2 id="v2-1-94-07-10-2026">v2.1.94 - 07/10/2026</h2>
+<ul>
+<li>Textes de la fiche, de la configuration, des messages et de l'aide des widgets relus : accents, vouvoiement, coquilles corrigées.</li>
+</ul>
+<h2 id="v2-1-93-03-10-2026">v2.1.93 - 03/10/2026</h2>
+<ul>
+<li>La météo utilise uniquement la position de Jeedom ; si elle est vide à l'installation, elle est initialisée sur Paris.</li>
+<li>À l'installation, le plugin crée sa météo d'exemple « Démo Météo » dans l'objet Exemples MG Domo ; supprimée, elle n'est pas recréée.</li>
+<li>L'indice d'effort extérieur calcule la hauteur du soleil à la position de la météo, et non plus à un lieu fixe.</li>
+<li>Tuile du dashboard : barre de titre et cadre prennent la couleur de la catégorie réglée dans MG Domo.</li>
+</ul>
+<h2 id="v2-1-89-25-09-2026">v2.1.89 - 25/09/2026</h2>
+<ul>
+<li>Le classement des heures pour une activité extérieure (vert, orange, rouge, « sortie idéale ») tient désormais compte du vent et du soleil ; par temps froid, rien ne change.</li>
+<li>L'infobulle horaire affiche la valeur de ce nouvel indice d'effort.</li>
+<li>Le calcul du rayonnement peut servir pour un autre lieu, ce qui permet à MG Geofence de l'utiliser pour une sortie éloignée.</li>
+</ul>
+<h2 id="v2-1-87-21-09-2026">v2.1.87 - 21/09/2026</h2>
+<ul>
+<li>Pages du plugin (accueil, configuration, équipement, commandes) harmonisées avec la charte graphique MG Domo : titres en bleu, aides « ? » vertes, champs alignés.</li>
+<li>Onglet Commandes : recherche au-delà de 30 commandes, plus de bouton de suppression ni de tri par nom qui réordonnait les commandes pour de bon.</li>
+<li>Vigilance : un raté ponctuel de l'API Météo France n'est plus signalé ; une vraie panne l'est une seule fois, au troisième échec d'affilée.</li>
+<li>Libellés revus : « Options » devient « Etat du widget », « Paramètres spécifiques » devient « Paramètres ».</li>
+</ul>
+<h2 id="v2-1-82-20-09-2026">v2.1.82 - 20/09/2026</h2>
+<ul>
+<li>Vigilance : les couleurs par phénomène sont récupérées gratuitement même sans clé ; renseigner la clé Météo France suffit à activer la carte illustrée.</li>
+<li>Sans clé, les deux vignettes (aujourd'hui et demain) affichent une capture de la carte marquée d'un point d'interrogation.</li>
+<li>Le bandeau « Saison » affiche une estimation dès l'installation, en attendant 10 jours d'historique de température.</li>
+<li>Textes de configuration et de la fiche équipement mis à jour.</li>
+</ul>
+<h2 id="v2-1-75-19-09-2026">v2.1.75 - 19/09/2026</h2>
+<ul>
+<li>Verrou « coupure internet » : sans réglage, le plugin considère qu'il n'y a pas de coupure ; aucun changement si le réglage est déjà renseigné.</li>
+</ul>
+<h2 id="v2-1-74-13-09-2026">v2.1.74 - 13/09/2026</h2>
+<ul>
+<li>Un jour de prévision sans description ni icône s'affiche avec l'icône neutre, sans avertissements répétés dans le journal.</li>
+</ul>
+<h2 id="v2-1-73-11-09-2026">v2.1.73 - 11/09/2026</h2>
+<ul>
+<li>Journal plus clair : les échecs fréquents et attendus de l'interface mobile de Météo-France ne sont plus des avertissements.</li>
+<li>Un jeton refusé par le portail, qui bloque la vigilance, est désormais signalé comme une erreur.</li>
+<li>Quand l'interface des adresses ne répond pas, la vraie cause est indiquée au lieu d'une ville introuvable.</li>
+</ul>
+<h2 id="v2-1-72-07-09-2026">v2.1.72 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles depuis le serveur web.</li>
+</ul>
+<h2 id="v2-1-71-30-08-2026">v2.1.71 - 30/08/2026</h2>
+<ul>
+<li>Les champs de la page de configuration sont remis à jour à chaque changement d'équipement, comme sur les autres plugins mgDomo.</li>
+</ul>
+<h2 id="v2-1-70-29-08-2026">v2.1.70 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle vignette « Community / Nouveau sujet » : elle prépare une demande d'aide anonymisée et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle explicative.</li>
+</ul>
+<h2 id="v2-1-66-28-08-2026">v2.1.66 - 28/08/2026</h2>
+<ul>
+<li>Un nouvel équipement suit dès sa création la localisation de Jeedom (Paris si elle est vide) : plus d'erreur « Localisation non configurée ».</li>
+<li>Si le socle MG Domo manque, le message d'installation donne la commande à exécuter.</li>
+</ul>
+<h2 id="v2-1-63-22-08-2026">v2.1.63 - 22/08/2026</h2>
+<ul>
+<li>Widget : l'infobulle de chaque heure explique sa couleur (ressenti, zone et seuil) et donne température, humidité, vent et pluie.</li>
+<li>L'infobulle s'affiche au-dessus de la bande, sur plusieurs lignes, entièrement visible.</li>
+<li>La pluie n'y est mentionnée qu'au-delà de 0,5 mm.</li>
+</ul>
+<h2 id="v2-1-58-21-08-2026">v2.1.58 - 21/08/2026</h2>
+<ul>
+<li>Widget et message vocal : le créneau conseillé est annoncé par « sortie idéale ».</li>
+</ul>
+<h2 id="v2-1-57-20-08-2026">v2.1.57 - 20/08/2026</h2>
+<ul>
+<li>Widget : la courbe horaire se colore selon les conditions pour une activité extérieure (vert idéal, orange modéré, rouge déconseillé).</li>
+<li>Nouveau créneau conseillé dans l'en-tête et le message vocal du matin, en vert gras, avec celui du lendemain si besoin.</li>
+<li>Widget : humidité sous la température de chaque heure et cumul de pluie du jour dans l'en-tête.</li>
+<li>Message vocal : les journées orageuses annoncent un cumul de pluie possible.</li>
+<li>Les courbes des deux bandes vont désormais jusqu'aux bords.</li>
+</ul>
+<h2 id="v2-1-47-07-08-2026">v2.1.47 - 07/08/2026</h2>
+<ul>
+<li>Coupure internet : les rafraîchissements (prévisions, pluie, vigilance, bouton du widget) sont suspendus tant que la coupure est confirmée ; les dernières valeurs restent affichées.</li>
+<li>Reprise automatique au retour d'internet, sans erreurs dans le journal.</li>
+</ul>
+<h2 id="v2-1-45-21-07-2026">v2.1.45 - 21/07/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul>
+<h2 id="v2-1-44-09-07-2026">v2.1.44 - 09/07/2026</h2>
+<ul>
+<li>Vigilance : icônes et cartes de France affichées en permanence, colorées dès qu'une vigilance concerne la journée ; la zone ne disparaît plus.</li>
+<li>Survol d'un jour de la bande : détail par moment de la journée, indice de confiance, et vent pour les jours lointains.</li>
+</ul>
+<h2 id="v2-1-41-08-07-2026">v2.1.41 - 08/07/2026</h2>
+<ul>
+<li>Bande de prévisions simplifiée : 15 jours en colonnes min et max, jour courant inclus.</li>
+<li>Configuration allégée : plusieurs réglages devenus inutiles sont retirés.</li>
+<li>Widget : le bouton d'actualisation ne lance plus qu'une collecte et le rafraîchissement automatique ne se perd plus.</li>
+<li>Vigilance via la seule API officielle, avec un message d'alerte si elle n'est pas rafraîchie depuis plus de 12 heures.</li>
+<li>L'enregistrement d'un équipement n'interroge plus inutilement le site Météo France.</li>
+</ul>
+<h2 id="v2-1-33-07-07-2026">v2.1.33 - 07/07/2026</h2>
+<ul>
+<li>Une réponse partielle de Météo France n'interrompt plus la collecte ; les valeurs journalières gardent leur dernière valeur connue.</li>
+<li>Pluie : si le service est injoignable, plus de faux « pas de pluie ».</li>
+<li>Un serveur d'icônes figé ne ralentit plus l'affichage du widget.</li>
+</ul>
+<h2 id="v2-1-32-05-07-2026">v2.1.32 - 05/07/2026</h2>
+<ul>
+<li>Widget : bande unifiée en météogramme, courbe des heures puis courbes maximum (rouge) et minimum (bleu) des jours, icônes à la hauteur de leur température.</li>
+<li>Le vent est affiché sur tous les jours de la bande, et le 15e jour de prévision réapparaît.</li>
+<li>Pluie dans l'heure : la commande devient « Intensite max (0-4) » et affiche l'intensité maximale de l'heure.</li>
+<li>Corrections : direction du vent, lecture des réponses partielles de vigilance, en-têtes de cases sur une ligne.</li>
+</ul></body></html>
