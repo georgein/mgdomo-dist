@@ -1,0 +1,182 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Garmin</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mggarmin">Changelog mgGarmin</h1>
+<h2 id="v2-2-26-23-10-2026">v2.2.26 - 23/10/2026</h2>
+<ul>
+<li>Aide : table des matières cliquable en tête de la documentation.</li>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-2-24-20-10-2026">v2.2.24 - 20/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-22-19-10-2026">v2.2.22 - 19/10/2026</h2>
+<ul>
+<li>Le km-effort des sorties importées de la montre suit les réglages de dénivelé de MG Geofence (montée et descente en mètres pour 1 km) : à installer avec MG Geofence du même jour.</li>
+</ul>
+<h2 id="v2-2-22-17-10-2026">v2.2.22 - 17/10/2026</h2>
+<ul>
+<li>Les secrets du compte Garmin (identifiants, session) redeviennent lisibles par le seul serveur web, même après une réparation des droits de Jeedom.</li>
+<li>Appels à la bibliothèque du socle MG Domo renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+<li>Page : durées en « min », bandeau de la base à jour après une collecte, messages accentués ; dépendance SQLite adaptée à toute version de PHP.</li>
+<li>Nettoyage sans effet visible (anciennes évolutions de la base et chemins de repli retirés, documentation à jour).</li>
+</ul>
+<h2 id="v2-2-21-16-10-2026">v2.2.21 - 16/10/2026</h2>
+<ul>
+<li>Noms internes mis en ordre selon la norme de l'écosystème MG Domo, sans effet sur les libellés, les réglages, l'historique ni vos scénarios.</li>
+<li>Les identifiants techniques de quelques commandes changent (score de disponibilité, température extérieure de l'activité, date de synchronisation) ; seul un script qui citerait une commande par son identifiant est à revoir.</li>
+<li>A installer avec MG Geofence du même jour : les deux plugins ont été mis à jour ensemble.</li>
+<li>Les durées s'affichent en « min » (symbole international) au lieu de « mn ».</li>
+</ul>
+<h2 id="v2-2-20-15-10-2026">v2.2.20 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-17-14-10-2026">v2.2.17 - 14/10/2026</h2>
+<ul>
+<li>Définition des commandes : retrait d'une mention de l'installation de l'auteur dans un texte d'explication.</li>
+<li>Installation des dépendances : Apache est rechargé au lieu d'être redémarré ; les démons des autres plugins (ex. diaporama de mgFrameTV) ne sont plus arrêtés.</li>
+</ul>
+<h2 id="v2-2-15-13-10-2026">v2.2.15 - 13/10/2026</h2>
+<ul>
+<li>Plusieurs sorties MG Geofence le même jour : la séance montre est rattachée à la sortie dont l'heure de départ est la plus proche ; la recherche après une sortie porte sur la dernière sortie close.</li>
+</ul>
+<h2 id="v2-2-13-12-10-2026">v2.2.13 - 12/10/2026</h2>
+<ul>
+<li>Sortie sans montre, ou montre démarrée en retard ou arrêtée après le retour : fréquence cardiaque, zones, minutes intensives et Body Battery au départ sont calculés sur les heures réelles de la sortie.</li>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+<li>Fiche du plugin : versions de Debian prises en charge et langue déclarées.</li>
+</ul>
+<h2 id="v2-2-9-10-10-2026">v2.2.9 - 10/10/2026</h2>
+<ul>
+<li>Corrigé : la Body Battery au départ d'une sortie est relue à l'instant réel du départ (elle était prise une à deux heures plus tard, en pleine activité).</li>
+<li>Les pesées acceptées par Garmin mais pas encore retrouvées par une collecte ne repartent plus en double : un envoi qui les contient est refusé, avec la date à partir de laquelle collecter.</li>
+<li>Une seule opération Garmin à la fois ; heure des pesées juste au changement d'heure ; traces GPX non téléchargées signalées ; identifiant du compte limité à 3 caractères, comme dans MG Geofence ; noms des commandes accentués.</li>
+<li>Page de l'équipement : le suivi d'un transfert s'arrête quand vous quittez la page, et le bouton Rechercher n'agit plus sur les pages des autres plugins.</li>
+<li>Journal : un incident qui se règle seul n'est plus signalé comme avertissement ; la date d'un transfert affichée est celle de sa fin réelle.</li>
+</ul>
+<h2 id="v2-1-97-09-10-2026">v2.1.97 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Aide complétée : identité de l'équipement, contenu de la base locale et date de collecte proposée, état des transferts, onglet Commandes.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-94-08-10-2026">v2.1.94 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-93-07-10-2026">v2.1.93 - 07/10/2026</h2>
+<ul>
+<li>Fiche du compte : aides corrigées et raccourcies ; « Synchro du matin » décrit son fonctionnement réel (30 derniers jours collectés et pesées manquantes envoyées chaque matin).</li>
+<li>Messages de collecte et de transfert accentués, avec le geste à faire ; documentation réaccentuée et corrigée (durée d'une collecte, effet de « Log actif »).</li>
+</ul>
+<h2 id="v2-1-92-03-10-2026">v2.1.92 - 03/10/2026</h2>
+<ul>
+<li>Le plugin déclare son matériel (« Montre Garmin et compte Garmin Connect ») : il figure dans MG Domo, onglet Plugins, au tableau « Plugins liés à un matériel », avec la case « présent ».</li>
+</ul>
+<h2 id="v2-1-91-02-10-2026">v2.1.91 - 02/10/2026</h2>
+<ul>
+<li>Plugin libéré : il passe en « OK pour l'exploitation » et devient installable et mis à jour sur les autres installations.</li>
+<li>Installation : l'extension PHP SQLite, indispensable à la base locale Garmin, est installée avec les dépendances du plugin ; il n'est plus nécessaire de l'installer à la main.</li>
+<li>L'exemple du champ « Identifiant du compte » est neutre.</li>
+</ul>
+<h2 id="v2-1-89-24-09-2026">v2.1.89 - 24/09/2026</h2>
+<ul>
+<li>Les pesées de Jeedom partent automatiquement vers Garmin chaque matin : la montre reçoit le poids du jour sans intervention.</li>
+<li>Rattrapage : les 30 derniers jours sont réexaminés à chaque passage, un jour manqué repart le lendemain, et les jours déjà présents chez Garmin ne sont jamais renvoyés.</li>
+<li>Actif pour les équipements dont la synchronisation est activée et la commande de poids renseignée.</li>
+</ul>
+<h2 id="v2-1-87-22-09-2026">v2.1.87 - 22/09/2026</h2>
+<ul>
+<li>Onglet Équipement : les groupes « Mise à jour de la base locale Garmin » et « Transferts Jeedom =&gt; Garmin » sont côte à côte, au gabarit commun, et le bouton « Rechercher » est libellé ; rien ne change dans le fonctionnement.</li>
+</ul>
+<h2 id="v2-1-86-21-09-2026">v2.1.86 - 21/09/2026</h2>
+<ul>
+<li>Page d'accueil, fiche d'un compte et onglet Commandes mis aux normes de la charte graphique mg* : groupes à titre bleu, aides « ? » vertes, libellés et champs alignés, tableau des commandes à 6 colonnes.</li>
+<li>« Options » devient « Etat du widget », la case « Logs » devient la ligne « Log actif », et « Identifiant du compte » rejoint le groupe « Compte Garmin ».</li>
+<li>Couleurs lisibles en thème clair comme en thème sombre ; plus d'accent sur les lettres majuscules.</li>
+</ul>
+<h2 id="v2-1-83-20-09-2026">v2.1.83 - 20/09/2026</h2>
+<ul>
+<li>Correction : sur une installation neuve, la table du plugin et sa synchronisation automatique sont de nouveau créées à l'installation.</li>
+</ul>
+<h2 id="v2-1-82-15-09-2026">v2.1.82 - 15/09/2026</h2>
+<ul>
+<li>Agenda Google : en mode Garmin, une sortie créée par la montre est aussitôt écrite dans l'agenda Google de la personne (nécessite mgGeofence et un agenda configuré).</li>
+</ul>
+<h2 id="v2-1-81-11-09-2026">v2.1.81 - 11/09/2026</h2>
+<ul>
+<li>Journal : les erreurs de mise à jour de la base apparaissent désormais dans le journal du plugin au lieu d'être invisibles.</li>
+<li>Les traitements incomplets (séances non importées, trace non déposée) sont signalés en avertissement ; la réparation automatique de la protection du dossier de données n'en est plus un.</li>
+</ul>
+<h2 id="v2-1-80-09-09-2026">v2.1.80 - 09/09/2026</h2>
+<ul>
+<li>Onglet Commandes : chaque colonne retrouve son titre (valeur, bornes et boutons étaient sous un titre qui ne les concernait pas, la colonne du nom était écrasée).</li>
+</ul>
+<h2 id="v2-1-79-07-09-2026">v2.1.79 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-78-04-09-2026">v2.1.78 - 04/09/2026</h2>
+<ul>
+<li>Une seule sortie par jour et par personne : la plus longue activité montre est retenue et sa trace, déposée dans mgGeofence, sert au recalcul ; une sortie montre n'est plus perdue quand le téléphone n'a rien enregistré.</li>
+<li>Pesées : « Injecter » n'envoie plus que les nouvelles pesées (fin des doublons chez Garmin), et un bouton « Tout renvoyer » permet un rejeu complet volontaire.</li>
+<li>L'import quotidien ne relit plus que les 14 derniers jours ; le dossier de données est purgé chaque matin ; une activité plus courte que la distance minimale ne crée plus de ligne.</li>
+<li>Corrections : heure locale au lieu de l'UTC, installation de chromium et xvfb sur une station neuve, mot de passe changé pris en compte avant chaque envoi, Body Battery sans %.</li>
+<li>Sécurité renforcée sur l'identifiant Garmin, le dossier de données et la session ; aide du plugin réécrite sur l'interface réelle.</li>
+</ul>
+<h2 id="v2-1-63-03-09-2026">v2.1.63 - 03/09/2026</h2>
+<ul>
+<li>Collecte : la trace GPS de chaque sortie enregistrée par la montre est rapatriée et affichée dans la carte mgGeofence.</li>
+<li>Journal des activités : le vent est converti en km/h et les libellés météo sont accentués, comme ceux de mgGeofence ; les lignes existantes ont été converties.</li>
+</ul>
+<h2 id="v2-1-60-02-09-2026">v2.1.60 - 02/09/2026</h2>
+<ul>
+<li>Le nom du parcours calculé par mgGeofence part chez Garmin Connect dès le retour d'activité ; le renommage s'appuie sur la séance réelle, les journées à plusieurs séances ne sont plus écartées.</li>
+<li>Les pas de la montre complètent le journal des activités quand le téléphone n'en a pas compté ; cadence moyenne et cadence maximale, peu fiables, sont retirées.</li>
+<li>Plus aucune commande n'est historisée par défaut, la base Garmin locale gardant tout ; les échecs sont désormais journalisés en erreur.</li>
+</ul>
+<h2 id="v2-1-55-01-09-2026">v2.1.55 - 01/09/2026</h2>
+<ul>
+<li>Retour d'activité : les mesures de la montre sont récupérées quelques minutes après la fin d'une sortie, sans attendre le lendemain, avec un message dans la timeline.</li>
+<li>Nettoyage quotidien des fichiers de suivi des transferts devenus inutiles.</li>
+</ul>
+<h2 id="v2-1-53-31-08-2026">v2.1.53 - 31/08/2026</h2>
+<ul>
+<li>La collecte remplit automatiquement le journal des activités et la nouvelle table des mesures Garmin (zones cardiaques, puissance, météo, sommeil, Body Battery au départ), sans doublon.</li>
+<li>La montre ne crée des séances au journal qu'en mode Garmin ; une sortie est appariée par type, heure de départ et distance (tolérance réglable).</li>
+<li>La synchronisation quotidienne est créée dès l'installation et passe en milieu de matinée, quand Garmin a consolidé les données de la nuit.</li>
+<li>Page équipement réorganisée : état de la base locale affiché en permanence, transferts simplifiés sur tout l'historique, source des pesées au choix (balance ou table des activités), textes accentués.</li>
+<li>Corrections : croix du bilan qui le faisait réapparaître, message clair sans mgGeofence, fenêtre Dépendances qui affichait NOK à tort.</li>
+</ul>
+<h2 id="v2-1-25-30-08-2026">v2.1.25 - 30/08/2026</h2>
+<ul>
+<li>Nouveau rechargement de l'historique Garmin depuis une date choisie, en arrière-plan avec barre de progression ; la date est pré-remplie intelligemment.</li>
+<li>Nouveau tableau du contenu de la base locale : nombre de mesures et période couverte par famille de données.</li>
+<li>Corrections : la case « Synchronisation active » reflète la valeur réelle, le bouton « Envoyer quand même cette période » fonctionne, la disposition reste stable quelle que soit la largeur d'écran.</li>
+</ul>
+<h2 id="v2-1-12-29-08-2026">v2.1.12 - 29/08/2026</h2>
+<ul>
+<li>Les transferts affichent leur avancement, continuent sur le serveur si la page est fermée, et le bilan détaille les échecs.</li>
+<li>Protection contre les doublons de pesées chez Garmin : une période déjà envoyée est refusée, sauf rejeu volontaire par un bouton distinct.</li>
+<li>Les noms d'activités trop longs sont raccourcis au lieu d'être ignorés ; les gestionnaires de mots de passe ne remplissent plus les identifiants Garmin.</li>
+<li>Nouvelle vignette « Community » orange : elle prépare une demande d'aide anonymisée et ouvre un sujet pré-rempli sur le forum Jeedom.</li>
+</ul></body></html>

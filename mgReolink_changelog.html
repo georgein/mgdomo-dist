@@ -1,0 +1,172 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Reolink</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-reolink">Changelog MG Reolink</h1>
+<h2 id="v2-1-52-23-10-2026">v2.1.52 - 23/10/2026</h2>
+<ul>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-1-52-19-10-2026">v2.1.52 - 19/10/2026</h2>
+<ul>
+<li>Les boutons Documentation et Changelog de Jeedom ouvrent la documentation du plugin.</li>
+</ul>
+<h2 id="v2-1-51-18-10-2026">v2.1.51 - 18/10/2026</h2>
+<ul>
+<li>Une caméra qui refuse ses identifiants n'est plus redémarrée toutes les 30 minutes : le journal signale le refus, corrigez l'identifiant ou le mot de passe.</li>
+<li>Aide et documentation : seules les relectures d'état sont groupées par 4 ; une action part seule.</li>
+</ul>
+<h2 id="v2-1-50-17-10-2026">v2.1.50 - 17/10/2026</h2>
+<ul>
+<li>À installer avec MG Domo du même jour.</li>
+</ul>
+<h2 id="v2-1-48-14-10-2026">v2.1.48 - 14/10/2026</h2>
+<ul>
+<li>Historique : marque écrite « mgDomo ».</li>
+</ul>
+<h2 id="v2-1-47-12-10-2026">v2.1.47 - 12/10/2026</h2>
+<ul>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom ; description du plugin complétée.</li>
+</ul>
+<h2 id="v2-1-45-10-10-2026">v2.1.45 - 10/10/2026</h2>
+<ul>
+<li>Compatible avec Jeedom 4.4 (4.5 n'est plus exigé).</li>
+<li>Plugin libéré : installable et mis à jour sur toutes les installations.</li>
+<li>L'état du microphone est de nouveau relu sur la caméra ; « Tester » détecte un mot de passe faux ; les actions sont plus rapides.</li>
+<li>Une caméra qui ne répond pas une fois ne crée plus de message d'erreur ; seule une panne confirmée est signalée. Toute caméra est contrôlée toutes les 5 minutes.</li>
+<li>Mode jeton fiable après un redémarrage de caméra ; « Informations » enregistre la caméra même sans image du modèle.</li>
+</ul>
+<h2 id="v2-1-39-09-10-2026">v2.1.39 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Aide complétée : identité de l'équipement, aperçu de la caméra, colonnes de l'onglet Commandes.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-36-08-10-2026">v2.1.36 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-35-07-10-2026">v2.1.35 - 07/10/2026</h2>
+<ul>
+<li>Textes de la fiche, de la configuration, des messages et de la documentation relus : vouvoiement, accents, aides complétées.</li>
+<li>Configuration : la méthode d'authentification affichée est désormais celle réellement utilisée (identifiant et mot de passe par défaut).</li>
+<li>Documentation corrigée : HTTPS est le type de connexion par défaut ; ajout de l'auto-redémarrage et du comportement en cas de caméra injoignable.</li>
+</ul>
+<h2 id="v2-1-34-03-10-2026">v2.1.34 - 03/10/2026</h2>
+<ul>
+<li>Le plugin déclare son matériel « Caméras Reolink » : il figure dans l'onglet Plugins de MG Domo, tableau « Plugins liés à un matériel », avec la case « présent ».</li>
+</ul>
+<h2 id="v2-1-33-22-09-2026">v2.1.33 - 22/09/2026</h2>
+<ul>
+<li>Fiche équipement : les boutons Tester, Informations et Commandes passent dans le titre du groupe « Informations », aux couleurs communes. Aucun changement de fonctionnement.</li>
+</ul>
+<h2 id="v2-1-32-21-09-2026">v2.1.32 - 21/09/2026</h2>
+<ul>
+<li>Fiche d'une caméra, page de configuration, page d'accueil et onglet Commandes remis en page selon la charte mgDomo, avec aides « ? » sur chaque champ.</li>
+<li>« Catégorie » propose les huit catégories de Jeedom ; « Options » devient « Etat du widget » et l'accès à la caméra s'appelle « Connexion ».</li>
+<li>Le bouton de suppression d'une commande disparaît, les commandes étant créées par le plugin.</li>
+</ul>
+<h2 id="v2-1-28-19-09-2026">v2.1.28 - 19/09/2026</h2>
+<ul>
+<li>Journal : un échec de lecture isolé d'une caméra n'est plus un avertissement ; l'avertissement est réservé à la panne confirmée, au deuxième échec.</li>
+</ul>
+<h2 id="v2-1-27-12-09-2026">v2.1.27 - 12/09/2026</h2>
+<ul>
+<li>Journal : une caméra injoignable n'écrit plus un avertissement toutes les cinq minutes, seulement aux deux premiers échecs ; son retour reste signalé.</li>
+</ul>
+<h2 id="v2-1-26-11-09-2026">v2.1.26 - 11/09/2026</h2>
+<ul>
+<li>Le message « caméra injoignable » n'est plus envoyé sur un échec isolé, mais au deuxième échec consécutif : une coupure brève ne déclenche plus d'alerte.</li>
+<li>La caméra reste marquée indisponible dès le premier échec, et les actions des scénarios sont suspendues comme avant.</li>
+<li>Journal allégé : seuls l'essentiel et les vraies suppressions de commandes restent visibles en niveau Info.</li>
+</ul>
+<h2 id="v2-1-23-07-09-2026">v2.1.23 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-22-30-08-2026">v2.1.22 - 30/08/2026</h2>
+<ul>
+<li>Correction : en passant d'une caméra à l'autre, le champ « Port » ne garde plus la valeur de la caméra précédente, ce qui pouvait casser la connexion à la sauvegarde.</li>
+</ul>
+<h2 id="v2-1-21-29-08-2026">v2.1.21 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide avec le rapport anonymisé du plugin et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle qui explique son rôle.</li>
+</ul>
+<h2 id="v2-1-17-28-08-2026">v2.1.17 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation indique la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-16-21-08-2026">v2.1.16 - 21/08/2026</h2>
+<ul>
+<li>Le redémarrage automatique n'est plus tenté quand la caméra est absente du réseau : fin du message quotidien de redémarrage physique pour une caméra éteinte la nuit.</li>
+<li>Il reste actif quand la caméra répond sur le réseau mais ne répond plus aux commandes.</li>
+<li>Une caméra injoignable est toujours signalée une fois et ses actions restent suspendues jusqu'à son retour.</li>
+</ul>
+<h2 id="v2-1-15-19-08-2026">v2.1.15 - 19/08/2026</h2>
+<ul>
+<li>Une caméra figée qui répond encore sur le réseau est désormais détectée comme injoignable, avec alerte et suspension des actions.</li>
+<li>Le redémarrage automatique passe par ONVIF, seul canal encore utilisable quand la caméra est figée.</li>
+<li>Corrections : le plugin ne se croit plus connecté sans avoir contacté la caméra ; les cases à cocher affichent toujours l'état réel de la caméra consultée.</li>
+</ul>
+<h2 id="v2-1-14-04-07-2026">v2.1.14 - 04/07/2026</h2>
+<ul>
+<li>Une nouvelle caméra utilise HTTPS par défaut, comme le réglage d'usine Reolink.</li>
+<li>Suppression d'un mécanisme de détection hérité qui ne produisait aucun effet.</li>
+</ul>
+<h2 id="v2-1-12-26-06-2026">v2.1.12 - 26/06/2026</h2>
+<ul>
+<li>Une caméra figée ne sature plus les journaux : elle est signalée une seule fois par un message Jeedom quand elle devient injoignable.</li>
+<li>Les actions de scénario sur une caméra injoignable sont ignorées immédiatement, sans attente.</li>
+<li>Nouvelle case « Auto-redemarrage » par caméra, désactivée par défaut, pour tenter de relancer une caméra figée.</li>
+</ul>
+<h2 id="v2-1-11-24-06-2026">v2.1.11 - 24/06/2026</h2>
+<ul>
+<li>Documentation illustrée complète : 8 chapitres et 6 figures (configuration, boutons, commandes, authentification, aperçu).</li>
+</ul>
+<h2 id="v2-1-6-21-06-2026">v2.1.6 - 21/06/2026</h2>
+<ul>
+<li>La documentation du plugin s'ouvre depuis les boutons d'aide de Jeedom.</li>
+</ul>
+<h2 id="v2-1-1-15-06-2026">v2.1.1 - 15/06/2026</h2>
+<ul>
+<li>Sécurité : la clé de la caméra n'apparaît plus dans la page ; l'aperçu passe par le serveur et demande une session administrateur.</li>
+<li>Plus d'erreurs quand une caméra est injoignable, et journal moins bavard à l'enregistrement des équipements.</li>
+</ul>
+<h2 id="08-06-2026">08/06/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul>
+<h2 id="05-06-2026">05/06/2026</h2>
+<ul>
+<li>L'installation s'arrête avec un message clair si le socle MG Domo est absent.</li>
+</ul>
+<h2 id="24-04-2026">24/04/2026</h2>
+<ul>
+<li>Le plugin s'appuie désormais sur le socle MG Domo.</li>
+</ul>
+<h2 id="05-04-2026">05/04/2026</h2>
+<ul>
+<li>Lecture des capacités de la caméra fiabilisée, même si elle répond mal ou est injoignable.</li>
+</ul>
+<h2 id="12-03-2026">12/03/2026</h2>
+<ul>
+<li>La caméra est testée avant chaque appel, avec abandon propre si elle est injoignable.</li>
+<li>Moins de commandes envoyées à la fois, pour alléger la charge sur la caméra.</li>
+</ul></body></html>

@@ -1,0 +1,170 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Doorbird</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-doorbird">Changelog MG Doorbird</h1>
+<h2 id="v2-1-50-23-10-2026">v2.1.50 - 23/10/2026</h2>
+<ul>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-1-49-17-10-2026">v2.1.49 - 17/10/2026</h2>
+<ul>
+<li>Sonnette, mouvement et ouverture : depuis le 16/10, chaque réabonnement inscrivait une adresse de rappel vide dans le boîtier ; corrigé, et le contrôle automatique (10 min) vérifie les adresses, pas seulement leur nombre.</li>
+<li>Tableau de bord : le widget masquait le nom des commandes de tous les autres équipements de la page ; il ne masque plus que les siens.</li>
+<li>Appels à la bibliothèque mg du socle renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+<li>Fin de la prise en charge des anciennes adresses de rappel du boîtier : elles sont refaites automatiquement au premier contrôle.</li>
+<li>Documentation et journal mis à jour (noms actuels des réglages et des dossiers, clé du plugin masquée) ; nettoyage de code sans effet visible.</li>
+</ul>
+<h2 id="v2-1-48-16-10-2026">v2.1.48 - 16/10/2026</h2>
+<ul>
+<li>Noms internes mis en ordre selon la norme de l'écosystème MG Domo, sans effet sur les libellés, l'historique ni vos scénarios.</li>
+<li>Les identifiants techniques des commandes passent en français (ex. sonnette, mouvement, porte_ouverte) ; seul un script qui citerait une commande par son identifiant est à revoir.</li>
+<li>Widget : la barre d'informations et les flèches de défilement restent visibles dans la tuile (panneau, tableau de bord) ; l'image s'ajuste à la place restante, et le mode agrandi s'ouvre centré depuis le panneau.</li>
+</ul>
+<h2 id="v2-1-47-15-10-2026">v2.1.47 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-44-14-10-2026">v2.1.44 - 14/10/2026</h2>
+<ul>
+<li>Historique : marque écrite « mgDomo ».</li>
+<li>L'alerte « boîtier injoignable » envoie son SMS à l'utilisateur principal déclaré dans MG Domo, et non plus à un destinataire fixe.</li>
+<li>Nouveau panneau dans le menu Accueil : tous les équipements du plugin, pièce par pièce, avec leur widget à jour en direct (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+</ul>
+<h2 id="v2-1-41-13-10-2026">v2.1.41 - 13/10/2026</h2>
+<ul>
+<li>Widget : fichiers d'affichage allégés à la distribution (commentaires retirés, mention de licence ajoutée).</li>
+</ul>
+<h2 id="v2-1-40-12-10-2026">v2.1.40 - 12/10/2026</h2>
+<ul>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom ; description du plugin complétée.</li>
+</ul>
+<h2 id="v2-1-38-11-10-2026">v2.1.38 - 11/10/2026</h2>
+<ul>
+<li>Installation neuve : le bouton « Ajouter » crée l'équipement sans erreur de base de données.</li>
+</ul>
+<h2 id="v2-1-37-10-10-2026">v2.1.37 - 10/10/2026</h2>
+<ul>
+<li>Compatible avec Jeedom 4.4 (4.5 n'est plus exigé).</li>
+<li>Sécurité : une ancienne photo de visiteur restée dans le dossier du plugin n'est plus accessible par le web ; plus aucun fichier de ce dossier n'est servi sans connexion.</li>
+<li>Journal : les réabonnements automatiques de la sonnette, un équipement désactivé ou une installation sans interphone ne produisent plus d'avertissement.</li>
+<li>Documentation : taille réelle des photos indiquée (640 x 480, affichées en 324 x 243).</li>
+</ul>
+<h2 id="v2-1-35-09-10-2026">v2.1.35 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-1-33-07-10-2026">v2.1.33 - 07/10/2026</h2>
+<ul>
+<li>Fiche de l'interphone : libellés en clair (Adresse IP, Identifiant, Mot de passe, Modèle, Numéro de build, Images conservées par type) et aides complétées.</li>
+<li>Widget et messages relus : accents, vouvoiement ; documentation alignée sur les nouveaux libellés.</li>
+</ul>
+<h2 id="v2-1-32-03-10-2026">v2.1.32 - 03/10/2026</h2>
+<ul>
+<li>MG Doorbird passe en version d'exploitation : installation et mises à jour ouvertes à toutes les installations MG Domo.</li>
+<li>Le plugin déclare son matériel « Portier vidéo Doorbird » : il figure dans l'onglet Plugins de MG Domo, tableau « Plugins liés à un matériel », avec la case « présent ».</li>
+</ul>
+<h2 id="v2-1-30-29-09-2026">v2.1.30 - 29/09/2026</h2>
+<ul>
+<li>Une coupure brève du boîtier, rétablie au passage suivant, ne produit plus d'erreur, d'avertissement ni de message.</li>
+<li>Une coupure qui dure (environ 5 minutes) est signalée une seule fois par une erreur, puis son retour par une ligne indiquant sa durée.</li>
+<li>Un délai de connexion dépassé est désormais traité comme une coupure du boîtier.</li>
+</ul>
+<h2 id="v2-1-29-22-09-2026">v2.1.29 - 22/09/2026</h2>
+<ul>
+<li>Fiche équipement : le texte d'attente du widget reprend la couleur atténuée commune, sans changement de fonctionnement.</li>
+</ul>
+<h2 id="v2-1-28-21-09-2026">v2.1.28 - 21/09/2026</h2>
+<ul>
+<li>Fiche d'un interphone remise en page selon la charte mgDomo : groupes « Connexion », « Paramètres », « Informations » et « Widget » réorganisés, aides « ? » sur tous les champs.</li>
+<li>« Options » devient « Etat du widget » et « Paramètres de Doorbird » devient « Connexion ».</li>
+<li>Page d'accueil et onglet Commandes harmonisés : couleurs communes, colonnes alignées, champ de recherche affiché seulement quand la liste est longue.</li>
+</ul>
+<h2 id="v2-1-25-14-09-2026">v2.1.25 - 14/09/2026</h2>
+<ul>
+<li>Journal : une panne du portier ne produit plus qu'une erreur au début, puis une ligne à son retour avec la durée de la coupure, au lieu de centaines de lignes.</li>
+<li>L'alerte de connexion du portier (annonce vocale et SMS) reste inchangée.</li>
+</ul>
+<h2 id="v2-1-24-11-09-2026">v2.1.24 - 11/09/2026</h2>
+<ul>
+<li>Sécurité : l'adresse d'appel du portier, qui contient l'identifiant et le mot de passe, n'est plus écrite en clair dans le journal.</li>
+<li>Journal allégé : en niveau Info, seuls restent la réception d'un événement du portier et l'arrivée d'une nouvelle image.</li>
+<li>Journal : une erreur réseau à la lecture d'une image est désormais signalée ; un équipement désactivé ou non configuré ne produit plus d'erreur.</li>
+</ul>
+<h2 id="v2-1-23-07-09-2026">v2.1.23 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-22-30-08-2026">v2.1.22 - 30/08/2026</h2>
+<ul>
+<li>Page de configuration : les champs sont toujours remis à jour au changement d'équipement, pour ne jamais afficher la valeur de l'équipement consulté juste avant.</li>
+</ul>
+<h2 id="v2-1-21-29-08-2026">v2.1.21 - 29/08/2026</h2>
+<ul>
+<li>L'utilisateur et le mot de passe du portier ne sont plus remplis automatiquement par le gestionnaire de mots de passe du navigateur.</li>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide avec le rapport anonymisé du plugin et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle qui explique son rôle.</li>
+</ul>
+<h2 id="v2-1-16-28-08-2026">v2.1.16 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation indique la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-15-16-08-2026">v2.1.15 - 16/08/2026</h2>
+<ul>
+<li>Widget, vue Live : l'image ne reste plus noire au retour sur un onglet mis en arrière-plan.</li>
+<li>Le flux est relancé automatiquement en cas de coupure, en 2 secondes au lieu de 5 minutes, et les anciens flux sont arrêtés proprement (moins de charge sur l'interphone).</li>
+</ul>
+<h2 id="v2-1-14-28-07-2026">v2.1.14 - 28/07/2026</h2>
+<ul>
+<li>Correction : la caméra Doorbird existante est de nouveau trouvée par le plugin caméra de Jeedom, et sa création automatique fonctionne ; la sauvegarde de l'équipement n'échoue plus.</li>
+</ul>
+<h2 id="v2-1-13-27-07-2026">v2.1.13 - 27/07/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul>
+<h2 id="v2-1-12-21-07-2026">v2.1.12 - 21/07/2026</h2>
+<ul>
+<li>Correction : l'alerte « DoorBird injoignable » se ferme automatiquement dès que la connexion revient, au lieu de continuer ses rappels vocaux et SMS.</li>
+</ul>
+<h2 id="v2-1-11-03-07-2026">v2.1.11 - 03/07/2026</h2>
+<ul>
+<li>Si l'interphone est injoignable, le téléchargement des images abandonne au bout de 8 secondes au lieu d'attendre longuement.</li>
+<li>Correction : la commande de maintenance « purge » fonctionne de nouveau.</li>
+</ul>
+<h2 id="v2-1-10-26-06-2026">v2.1.10 - 26/06/2026</h2>
+<ul>
+<li>Widget, aperçu de la page de configuration : l'image des onglets Appels et Mouvements ne rétrécit plus à chaque clic.</li>
+</ul>
+<h2 id="v2-1-7-23-06-2026">v2.1.7 - 23/06/2026</h2>
+<ul>
+<li>Documentation utilisateur illustrée complète : 9 chapitres et 5 figures (onglets Live, Appels, Mouvements, configuration, commandes).</li>
+<li>Les images de la documentation s'affichent depuis le bouton d'aide.</li>
+</ul>
+<h2 id="v2-1-3-13-06-2026">v2.1.3 - 13/06/2026</h2>
+<ul>
+<li>Correction : la sonnette fonctionne de nouveau ; le plugin vérifie régulièrement ses abonnements aux notifications du portier et les rétablit s'ils ont disparu.</li>
+<li>Sécurité : les images d'appel et de mouvement ne sont accessibles qu'aux administrateurs connectés, et la clé API n'est plus écrite dans le journal.</li>
+<li>Réception d'un événement plus rapide, la suite des images étant complétée ensuite.</li>
+<li>Traductions anglaise, allemande et espagnole corrigées ; boutons d'onglets du widget en icônes ; bouton d'aide vers la documentation.</li>
+</ul>
+<h2 id="08-06-2026">08/06/2026</h2>
+<ul>
+<li>Améliorations internes de fiabilité, sans changement visible.</li>
+</ul></body></html>

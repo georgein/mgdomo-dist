@@ -1,0 +1,183 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Routeur Asus</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-routeur-asus">Changelog MG Routeur Asus</h1>
+<h2 id="v2-1-99-23-10-2026">v2.1.99 - 23/10/2026</h2>
+<ul>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-1-98-19-10-2026">v2.1.98 - 19/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-97-17-10-2026">v2.1.97 - 17/10/2026</h2>
+<ul>
+<li>Fiche du routeur : les blocs « Accès Internet » et « Réservation DHCP » (réservés aux clients) n'y sont plus affichés ; aide et documentation alignées ; un format de mesure CPU inconnu n'est signalé qu'une fois par jour.</li>
+<li>Noms internes mis en ordre selon la norme de l'écosystème MG Domo, sans effet sur les libellés, l'historique ni vos scénarios.</li>
+<li>Les identifiants techniques des commandes changent (ex. statut, adresse_ip, dhcp_reserve) ; les libellés restent les mêmes. Seul un script qui citerait une commande par son identifiant est à revoir.</li>
+<li>Nouvelle description du plugin ; colonnes du panneau renommées (Équipement, Adresse MAC, Liaison, Signal (dBm)) et tri par adresse MAC dans le bon ordre.</li>
+</ul>
+<h2 id="v2-1-95-15-10-2026">v2.1.95 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-92-14-10-2026">v2.1.92 - 14/10/2026</h2>
+<ul>
+<li>L'alerte de lien dégradé d'un nœud AiMesh va par défaut à l'utilisateur principal coché dans MG Domo.</li>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+</ul>
+<h2 id="v2-1-89-12-10-2026">v2.1.89 - 12/10/2026</h2>
+<ul>
+<li>Coupure internet : si la commande mémo réglée dans MG Domo est supprimée ou n'est pas une info, plus d'erreur à chaque passage (une ligne par heure au journal de MG Domo) ; le plugin fonctionne comme sans coupure.</li>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+<li>Fenêtres de confirmation et de saisie au format actuel de Jeedom (prêtes pour les prochaines versions du core).</li>
+</ul>
+<h2 id="v2-1-85-11-10-2026">v2.1.85 - 11/10/2026</h2>
+<ul>
+<li>Installation neuve : le bouton « Ajouter » crée l'équipement sans erreur de base de données.</li>
+</ul>
+<h2 id="v2-1-84-10-10-2026">v2.1.84 - 10/10/2026</h2>
+<ul>
+<li>Compatible avec Jeedom 4.4 (4.5 n'est plus exigé).</li>
+<li>Présence plus fiable : une panne SSH du routeur ou des relevés sautés (redémarrage du routeur) ne font plus déclarer absents tous les appareils.</li>
+<li>Le contournement du plantage du service AiProtection du routeur fonctionne de nouveau (il était inactif depuis le 28/09) ; une alerte de borne en 2,4 GHz ne part qu'une fois.</li>
+<li>Fiche d'un appareil : le nœud privilégié n'est plus effacé quand sa borne manque quelques minutes ; « Dernière communication » montre la date de l'appareil affiché.</li>
+<li>Journal : les coupures passagères du routeur ne sont plus des erreurs, une panne de 5 relevés ratés est signalée une fois ; tri « Depuis » du panneau, redémarrage, VPN et Interdire Internet corrigés.</li>
+</ul>
+<h2 id="v2-1-80-09-10-2026">v2.1.80 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+<li>Nouvelle icône du plugin ; captures d'écran inutilisées retirées.</li>
+<li>Panneau mobile retiré (inutilisé) ; le panneau de la page d'accueil reste.</li>
+</ul>
+<h2 id="v2-1-75-07-10-2026">v2.1.75 - 07/10/2026</h2>
+<ul>
+<li>Fiche d'un appareil : témoins « Accès Internet » et « Adresse IP figée » en écriture normale, textes accentués ; vignette « Panneau Asus ».</li>
+<li>Alertes du routeur (nœud AiMesh absent, lien 5 GHz perdu, réservation DHCP refusée) relues : accents, geste à faire au vouvoiement.</li>
+</ul>
+<h2 id="v2-1-74-03-10-2026">v2.1.74 - 03/10/2026</h2>
+<ul>
+<li>MG Routeur Asus passe en version d'exploitation : installation et mises à jour ouvertes à toutes les installations MG Domo.</li>
+<li>Dans MG Domo, onglet Plugins, le plugin figure dans le tableau « Plugins liés à un matériel » (routeur Asus accessible en SSH), avec la case « présent ».</li>
+<li>Installation sans routeur configuré : plus d'erreur ni de message chaque minute ; l'équipement routeur n'est créé qu'une fois l'adresse renseignée.</li>
+<li>Alerte « nœud AiMesh en 2,4 GHz seul » : envoyée par défaut au premier utilisateur déclaré dans MG Domo (SMS et mail).</li>
+</ul>
+<h2 id="v2-1-71-02-10-2026">v2.1.71 - 02/10/2026</h2>
+<ul>
+<li>Contrôle de santé MG Domo : la fin d'alerte AiMesh envoyée à la Timeline a désormais une valeur par défaut, l'avertissement disparaît.</li>
+</ul>
+<h2 id="v2-1-70-29-09-2026">v2.1.70 - 29/09/2026</h2>
+<ul>
+<li>Répartition Wi-Fi entre bornes : une borne muette le temps d'un cycle ne produit plus d'avertissement ; une borne réellement absente reste signalée au-delà de 5 minutes.</li>
+</ul>
+<h2 id="v2-1-69-28-09-2026">v2.1.69 - 28/09/2026</h2>
+<ul>
+<li>Figer ou libérer une adresse IP devient sûr : écriture en une opération, retour à la liste d'origine si le routeur la refuse, plus de demandes qui s'effacent ; réservation posée et vérifiée en 4,5 secondes.</li>
+<li>Présence plus stable : un appareil n'est déclaré absent qu'après environ 2 minutes sans réponse (statut « STALE » entre-temps), et reste présent tant qu'il est associé en Wi-Fi à une borne.</li>
+<li>Wake On Lan fonctionne : le paquet de réveil part du routeur à partir de l'adresse MAC, et le journal indique s'il est parti.</li>
+<li>Fiabilité : routeur injoignable abandonné vite sans retarder les autres plugins, cycle allégé, steering AiMesh plus réactif, bornes absentes depuis 7 jours retirées du suivi.</li>
+<li>Corrections : tri des colonnes du panel, températures des radios Wi-Fi, messages lisibles en cas de refus, état « accès Internet » préservé après une lecture ratée, page vide mieux expliquée.</li>
+</ul>
+<h2 id="v2-1-55-27-09-2026">v2.1.55 - 27/09/2026</h2>
+<ul>
+<li>Steering AiMesh : plus d'éjection d'un appareil vers un nœud injoignable (en redémarrage) et au plus 2 éjections par appareil et par heure.</li>
+<li>Nœuds AiMesh : « Connexion », « RSSI » et « Access Point » indiquent le lien réel de chaque nœud (bande, signal), relu toutes les 5 minutes.</li>
+<li>Alerte (journal, Timeline, SMS, mail) quand un nœud reste plus de 15 minutes sur le 2,4 GHz seul, avec la durée de l'épisode au retour du 5 GHz.</li>
+</ul>
+<h2 id="v2-1-53-22-09-2026">v2.1.53 - 22/09/2026</h2>
+<ul>
+<li>Fiche équipement : les témoins « Accès Internet » et « Réservation DHCP » reprennent la taille de texte commune.</li>
+</ul>
+<h2 id="v2-1-52-21-09-2026">v2.1.52 - 21/09/2026</h2>
+<ul>
+<li>Pages du plugin (accueil, configuration, équipement, commandes) harmonisées avec la charte graphique MG Domo : titres en bleu, aides « ? » vertes, champs alignés.</li>
+<li>Recherche affichée seulement au-delà de 15 équipements ou 30 commandes ; le bouton « Accès au panel » prend une icône d'écran.</li>
+<li>Libellés revus : « Options » devient « Etat du widget », « Nœud privilégié » correctement accentué, « Dernière communication » en orange.</li>
+</ul>
+<h2 id="v2-1-48-19-09-2026">v2.1.48 - 19/09/2026</h2>
+<ul>
+<li>Verrou « coupure internet » : sans réglage, le plugin considère qu'il n'y a pas de coupure ; aucun changement si le réglage est déjà renseigné.</li>
+</ul>
+<h2 id="v2-1-47-17-09-2026">v2.1.47 - 17/09/2026</h2>
+<ul>
+<li>Surveillance des nœuds AiMesh : un nœud absent n'est signalé qu'après plus de cinq minutes ; une absence plus courte est simplement notée au retour du nœud.</li>
+</ul>
+<h2 id="v2-1-46-12-09-2026">v2.1.46 - 12/09/2026</h2>
+<ul>
+<li>Surveillance des nœuds AiMesh : un nœud qui disparaît de la liste du routeur est signalé une fois, son retour est tracé.</li>
+<li>La liste est relue jusqu'à trois fois avant de déclarer un nœud disparu ; une absence passagère ne génère plus de message.</li>
+<li>Steering : plus d'avertissement répété à chaque cycle quand le nœud préféré d'un équipement manque.</li>
+</ul>
+<h2 id="v2-1-44-11-09-2026">v2.1.44 - 11/09/2026</h2>
+<ul>
+<li>Page de l'appareil : le bandeau « Accès Internet » propose « Interdire Internet » ou « Rétablir Internet » avec confirmation, puis affiche l'état réel du routeur.</li>
+<li>Commande « Présence » historisée par défaut sur 7 jours, y compris pour les appareils existants.</li>
+<li>Corrections : rechargement de l'écran après Figer ou Libérer, et état Internet qui n'est plus écrasé par le scan en cours.</li>
+<li>Journal allégé au niveau Info, et actions Internet, WOL et DHCP tracées dans le journal principal du plugin.</li>
+</ul>
+<h2 id="v2-1-42-07-09-2026">v2.1.42 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles depuis le serveur web.</li>
+</ul>
+<h2 id="v2-1-41-06-09-2026">v2.1.41 - 06/09/2026</h2>
+<ul>
+<li>Routeur XT12 : deux interfaces internes inutilisées sont maintenues désactivées, y compris après redémarrage, car elles faisaient planter la protection AiProtection plusieurs fois par heure.</li>
+</ul>
+<h2 id="v2-1-40-30-08-2026">v2.1.40 - 30/08/2026</h2>
+<ul>
+<li>Correction importante : la liste « Noeud privilegie » pouvait afficher la borne de l'équipement précédent, au risque d'associer la mauvaise borne à l'enregistrement.</li>
+<li>Les bornes AiMesh sont désignées par le nom que vous leur avez donné suivi de leur IP, dans la liste comme dans le commentaire des équipements créés.</li>
+<li>Le panel affiche une colonne « Noeud privilegie » pour voir d'un coup d'œil les équipements dirigés vers une borne.</li>
+</ul>
+<h2 id="v2-1-36-29-08-2026">v2.1.36 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle vignette « Community / Nouveau sujet » : elle prépare une demande d'aide anonymisée et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle explicative.</li>
+<li>L'identifiant et le mot de passe SSH du routeur ne sont plus remplis par le gestionnaire de mots de passe du navigateur.</li>
+</ul>
+<h2 id="v2-1-31-28-08-2026">v2.1.31 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation donne la commande à exécuter.</li>
+<li>Les commandes s'appellent « Figer IP » et « Liberer IP » (l'apostrophe tronquait les libellés).</li>
+</ul>
+<h2 id="v2-1-29-27-08-2026">v2.1.29 - 27/08/2026</h2>
+<ul>
+<li>Nouveau : « Figer l'IP » et « Liberer l'IP » posent ou retirent une réservation d'adresse sur le routeur, avec vérification ; l'état « IP figee » est relevé toutes les cinq minutes.</li>
+<li>Page de l'appareil : bandeau « Reservation DHCP » avec bouton et confirmation ; l'adresse figée s'affiche en vert.</li>
+<li>Panel : colonnes « Internet » et « IP figee » pour repérer d'un coup d'œil les appareils privés d'Internet ou à adresse réservée.</li>
+<li>Chaque nouvel appareil reçoit une identification automatique dans son commentaire (fabricant, borne, signal…), sans écraser un texte saisi.</li>
+<li>Correction : la création d'un appareil dont l'IP avait déjà servi échouait en boucle ; le nom est désormais basé sur l'adresse MAC.</li>
+</ul>
+<h2 id="v2-1-21-21-08-2026">v2.1.21 - 21/08/2026</h2>
+<ul>
+<li>Correction majeure : « Interdire Internet », « Retablir Internet » et « Wake On Lan » restaient sans effet sur une partie des équipements ; les commandes existantes ont été réparées.</li>
+<li>Nouvelle option « Internet interdit en permanence » : le blocage est vérifié et remis en place à chaque scan, même après un redémarrage du routeur.</li>
+<li>Correction : les actions Internet ne signalent plus d'erreur à tort et l'état affiché est juste immédiatement.</li>
+</ul>
+<h2 id="v2-1-18-19-08-2026">v2.1.18 - 19/08/2026</h2>
+<ul>
+<li>Page équipement : les cases des catégories reflètent toujours l'état enregistré en passant d'un équipement à l'autre.</li>
+</ul>
+<h2 id="v2-1-17-07-08-2026">v2.1.17 - 07/08/2026</h2>
+<ul>
+<li>Coupure internet : les scans sont suspendus tant que la coupure est confirmée, puis reprennent automatiquement.</li>
+<li>Fiabilité : une connexion SSH bloquée ne gèle plus la détection de présence Wi-Fi.</li>
+</ul></body></html>

@@ -1,0 +1,165 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Withings</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-withings">Changelog MG Withings</h1>
+<h2 id="v2-1-53-23-10-2026">v2.1.53 - 23/10/2026</h2>
+<ul>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-1-53-19-10-2026">v2.1.53 - 19/10/2026</h2>
+<ul>
+<li>Les fichiers internes d'installation du plugin ne sont plus accessibles depuis le navigateur.</li>
+<li>Les icônes du panneau et de l'onglet Equipement s'affichent de nouveau ; le panneau est réservé aux administrateurs, comme ses données.</li>
+<li>Les boutons Documentation et Changelog de Jeedom ouvrent la documentation du plugin.</li>
+</ul>
+<h2 id="v2-1-52-16-10-2026">v2.1.52 - 16/10/2026</h2>
+<ul>
+<li>Les identifiants internes des commandes de mesure prennent des noms explicites (par exemple poids, masse_grasse).</li>
+<li>Le journal ne signale plus à tort un lien Withings indisponible pour une balance, ni pour un compte pas encore lié.</li>
+<li>Le panneau retrouve l'intitulé encadré au-dessus de chaque graphique.</li>
+</ul>
+<h2 id="v2-1-51-15-10-2026">v2.1.51 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-49-14-10-2026">v2.1.49 - 14/10/2026</h2>
+<ul>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+</ul>
+<h2 id="v2-1-47-12-10-2026">v2.1.47 - 12/10/2026</h2>
+<ul>
+<li>Coupure internet : si la commande mémo réglée dans MG Domo est supprimée ou n'est pas une info, plus d'erreur à chaque passage (une ligne par heure au journal de MG Domo) ; le plugin fonctionne comme sans coupure.</li>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom ; description du plugin complétée.</li>
+<li>Fiche du plugin : versions de Debian prises en charge et langue déclarées.</li>
+</ul>
+<h2 id="v2-1-43-10-10-2026">v2.1.43 - 10/10/2026</h2>
+<ul>
+<li>Jeedom 4.4 minimum requis, comme les autres plugins mgDomo ; plugin libéré : installable et mis à jour sur toutes les installations.</li>
+<li>Import de la nuit fiabilisé : il renouvelle l'autorisation si besoin au lieu d'être sauté, sans conflit avec la synchronisation lancée au même moment ; la valeur affichée reste la dernière pesée.</li>
+<li>Synchronisation allégée : seules les mesures des 7 derniers jours sont demandées (quelques Ko au lieu d'environ 500 Ko toutes les 30 minutes) ; les demandes inutiles de sommeil et d'activité sont retirées.</li>
+<li>Journal plus calme : un incident qui se règle seul n'y laisse qu'une information ; avertissement seulement si Withings reste injoignable 3 heures ou refuse l'autorisation 3 fois.</li>
+<li>Vos noms, unités et historisation de commandes sont respectés ; libellés accentués ; secret masqué dans la configuration ; panneau des graphiques corrigé ; la liaison Withings ne demande plus que l'accès aux mesures.</li>
+</ul>
+<h2 id="v2-1-36-09-10-2026">v2.1.36 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation) ; panneau mobile retiré (inutilisé) ; le panneau des graphiques reste.</li>
+<li>Aide complétée : liaison Withings, panneau des graphiques (période, groupement, choix des graphes), onglet Commandes ; libellés de la configuration corrigés.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+<li>Page du plugin : une erreur s'affiche désormais en message au lieu de bloquer la page ; le statut du mode push se met à jour après activation ou désactivation.</li>
+<li>Fichiers de traduction retirés (ils ne traduisaient presque rien) : le plugin s'affiche en français dans toutes les langues, comme les autres plugins mg*.</li>
+</ul>
+<h2 id="v2-1-29-08-10-2026">v2.1.29 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-28-07-10-2026">v2.1.28 - 07/10/2026</h2>
+<ul>
+<li>Fiche, panneau des graphiques, fenêtre Santé et messages relus : accents, vouvoiement, « Graphiques » au lieu de « Graphs », états « En défaut » au lieu de « NOK ».</li>
+<li>Les messages d'échec de liaison indiquent le geste à faire : relier de nouveau l'utilisateur.</li>
+</ul>
+<h2 id="v2-1-27-03-10-2026">v2.1.27 - 03/10/2026</h2>
+<ul>
+<li>Le plugin déclare son matériel « Balance Withings et compte Withings » : il figure dans l'onglet Plugins de MG Domo, tableau « Plugins liés à un matériel », avec la case « présent ».</li>
+</ul>
+<h2 id="v2-1-26-02-10-2026">v2.1.26 - 02/10/2026</h2>
+<ul>
+<li>Correction : une mesure envoyée par Withings juste après l'expiration de l'autorisation est traitée après le renouvellement automatique, au lieu d'être ignorée avec une fausse erreur « lien KO ».</li>
+</ul>
+<h2 id="v2-1-25-22-09-2026">v2.1.25 - 22/09/2026</h2>
+<ul>
+<li>Fiche équipement : boutons Lier, Activer et Désactiver à la taille commune, pastille du mode push harmonisée. Aucun changement de fonctionnement.</li>
+</ul>
+<h2 id="v2-1-24-21-09-2026">v2.1.24 - 21/09/2026</h2>
+<ul>
+<li>Fiche d'un utilisateur, page de configuration, page d'accueil et onglet Commandes remis en page selon la charte mgDomo, avec aides « ? » sur chaque champ.</li>
+<li>Nouvelle zone « Commentaires » sur la fiche ; « Options » devient « Etat du widget ».</li>
+<li>Page d'accueil : un seul champ de recherche pour les deux listes.</li>
+</ul>
+<h2 id="v2-1-20-19-09-2026">v2.1.20 - 19/09/2026</h2>
+<ul>
+<li>Coupure internet : sans réglage de la commande de coupure, le plugin considère qu'il n'y a pas de coupure. Rien ne change si ce réglage est déjà renseigné.</li>
+</ul>
+<h2 id="v2-1-19-11-09-2026">v2.1.19 - 11/09/2026</h2>
+<ul>
+<li>Journal : le renouvellement normal de l'accès Withings n'est plus signalé comme un avertissement.</li>
+<li>Journal : une mesure perdue faute de lien rétabli, ou une commande corrompue réparée, est désormais signalée comme une erreur.</li>
+</ul>
+<h2 id="v2-1-18-09-09-2026">v2.1.18 - 09/09/2026</h2>
+<ul>
+<li>Onglet Commandes : chaque colonne retrouve son bon titre, la valeur et les boutons n'étant plus sous un en-tête erroné.</li>
+</ul>
+<h2 id="v2-1-17-07-09-2026">v2.1.17 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-16-29-08-2026">v2.1.16 - 29/08/2026</h2>
+<ul>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide avec le rapport anonymisé du plugin et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle qui explique son rôle.</li>
+</ul>
+<h2 id="v2-1-12-07-08-2026">v2.1.12 - 07/08/2026</h2>
+<ul>
+<li>Coupure internet : les synchronisations sont suspendues tant que la coupure est confirmée, sans rafales d'erreurs dans le journal, puis reprennent automatiquement.</li>
+</ul>
+<h2 id="v2-1-11-04-07-2026">v2.1.11 - 04/07/2026</h2>
+<ul>
+<li>Sécurité : les jetons d'accès Withings sont stockés chiffrés, sans nouvelle autorisation à donner.</li>
+<li>Suppression d'un ancien écran de liaison inutilisé ; retour d'autorisation plus robuste.</li>
+</ul>
+<h2 id="v2-1-10-26-06-2026">v2.1.10 - 26/06/2026</h2>
+<ul>
+<li>Le journal des modifications est accessible par un bouton depuis la page de configuration du plugin.</li>
+</ul>
+<h2 id="v2-1-9-25-06-2026">v2.1.9 - 25/06/2026</h2>
+<ul>
+<li>Documentation utilisateur illustrée complète : présentation, autorisation, synchronisation et courbes (5 figures).</li>
+<li>Correction : les pesées arrivent de nouveau instantanément ; les notifications Withings visaient une ancienne adresse.</li>
+</ul>
+<h2 id="v2-1-7-23-06-2026">v2.1.7 - 23/06/2026</h2>
+<ul>
+<li>Correction : le faux message « Erreur de synchronisation, verifier les liens utilisateurs » qui apparaissait chaque heure ne s'affiche plus ; les pesées étaient bien importées.</li>
+</ul>
+<h2 id="v2-1-5-21-06-2026">v2.1.5 - 21/06/2026</h2>
+<ul>
+<li>L'adresse de retour de l'autorisation change : elle est à déclarer de nouveau chez Withings, puis à réautoriser.</li>
+</ul>
+<h2 id="v2-1-4-15-06-2026">v2.1.4 - 15/06/2026</h2>
+<ul>
+<li>La composition corporelle n'est plus recalculée avant avril 2026, période où la balance dérivait ; le poids n'est pas concerné.</li>
+<li>Plus grande résistance aux pannes réseau et aux réponses invalides de Withings.</li>
+</ul>
+<h2 id="26-05-2026">26/05/2026</h2>
+<ul>
+<li>Le panneau affiche l'historique complet des mesures, et non plus seulement les derniers jours.</li>
+</ul>
+<h2 id="24-05-2026">24/05/2026</h2>
+<ul>
+<li>Dix mesures prises en charge (poids, masses maigre, grasse, musculaire et osseuse, hydratation, fréquence cardiaque, âge vasculaire…), avec création automatique des commandes.</li>
+<li>Import de tout l'historique, puis des 7 derniers jours chaque jour ; deux commandes d'import manuel.</li>
+<li>Panneau : choix des courbes affichées et regroupement, avec mémorisation des options.</li>
+</ul>
+<h2 id="17-04-2026">17/04/2026</h2>
+<ul>
+<li>L'autorisation Withings est renouvelée régulièrement et automatiquement, avec nouvel essai en cas d'échec.</li>
+</ul>
+<h2 id="avant-04-2026">Avant 04/2026</h2>
+<ul>
+<li>Première version : balances connectées Withings, pesées et composition corporelle, sommeil et activité.</li>
+</ul></body></html>

@@ -1,0 +1,158 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Frame TV</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mgframetv">Changelog mgFrameTV</h1>
+<h2 id="v2-1-48-23-10-2026">v2.1.48 - 23/10/2026</h2>
+<ul>
+<li>Aide : table des matières cliquable en tête de la documentation.</li>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-1-46-17-10-2026">v2.1.46 - 17/10/2026</h2>
+<ul>
+<li>Widget : les listes Collection et Cadence gardent l'option que vous venez de choisir (elles revenaient à l'ancienne valeur à chaque photo du diaporama) ; la liste Diaporama affiche bien la durée en cours.</li>
+<li>Widget : plus de redessin pendant une saisie (chemin d'une photo, liste ouverte) ; il reprend dès que vous quittez le champ ou après un choix.</li>
+<li>Appels à la bibliothèque du socle MG Domo renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+<li>Fiche, widget et documentation : vocabulaire des blocs du widget, accents (dont « Arrêt »), aide du gabarit personnalisé (fichier à créer) ; fichiers d'installation inaccessibles depuis le web.</li>
+<li>Diaporama de photos : plus d'avertissement « suppression non confirmée » à chaque photo (la suppression avait bien lieu) ; nettoyage sans effet visible.</li>
+</ul>
+<h2 id="v2-1-45-16-10-2026">v2.1.45 - 16/10/2026</h2>
+<ul>
+<li>Noms internes mis en ordre selon la norme de l'écosystème MG Domo, sans effet sur les libellés, les réglages, l'historique ni vos scénarios.</li>
+<li>Les identifiants techniques changent pour quelques éléments (ex. commande Muet : sourdine) ; seul un script qui citerait une commande par son identifiant est à revoir.</li>
+<li>La commande Rafraîchir prend l'identifiant standard de Jeedom : son icône apparaît aussi avec le widget « Standard Jeedom ». Le capteur de lumière change d'identifiant technique.</li>
+<li>Widget : seuls les 4 raccourcis prévus sont cherchés ; le diaporama de photos reprend depuis le début après la mise à jour.</li>
+</ul>
+<h2 id="v2-1-44-15-10-2026">v2.1.44 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-1-41-14-10-2026">v2.1.41 - 14/10/2026</h2>
+<ul>
+<li>Historique : marque écrite « mgDomo ».</li>
+<li>Démon démarré dès l'installation du plugin (il ne démarrait qu'au bout de quelques minutes).</li>
+<li>Nouveau panneau dans le menu Accueil : tous les équipements du plugin, pièce par pièce, avec leur widget à jour en direct (masquable en décochant « Afficher le panneau desktop » dans la configuration du plugin).</li>
+<li>Infobulles de la tuile : toujours au format Jeedom (fond bleu) après une mise à jour de la tuile ; elles passaient au format du navigateur (fond clair, petite police).</li>
+</ul>
+<h2 id="v2-1-37-13-10-2026">v2.1.37 - 13/10/2026</h2>
+<ul>
+<li>Widget : fichiers d'affichage allégés à la distribution (commentaires retirés, mention de licence ajoutée).</li>
+</ul>
+<h2 id="v2-1-36-12-10-2026">v2.1.36 - 12/10/2026</h2>
+<ul>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+<li>Fenêtres de confirmation et de saisie au format actuel de Jeedom (prêtes pour les prochaines versions du core).</li>
+</ul>
+<h2 id="v2-1-33-10-10-2026">v2.1.33 - 10/10/2026</h2>
+<ul>
+<li>Compatible avec Jeedom 4.4 (4.5 n'est plus exigé).</li>
+<li>Sécurité : les photos envoyées depuis le PC et celles du dossier des collections ne sont plus lisibles depuis un navigateur sans connexion à Jeedom.</li>
+<li>Une panne passagère d'Immich ne vide plus la liste des collections et n'arrête plus le diaporama dès la première photo manquée.</li>
+<li>« Off » ne rallume plus une Frame en veille quand « Suivre le mode Art » est décoché ; diaporama et widget plus légers.</li>
+<li>Documentation du widget remise à jour (blocs repliables, envoi de photo, collections Immich).</li>
+</ul>
+<h2 id="v2-1-30-09-10-2026">v2.1.30 - 09/10/2026</h2>
+<ul>
+<li>Description du plugin corrigée (liste des plugins et documentation).</li>
+<li>Aide complétée : réglages du diaporama du mode Art, configuration du plugin (délai, dossier des collections, Immich) ; dossier des collections par défaut corrigé.</li>
+<li>Aide : exemple de chemin Windows corrigé (il était illisible).</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein ; affichage mobile : widget standard de Jeedom (modèle mobile du plugin retiré, inutilisé).</li>
+<li>Aide : la commande « Oeuvre » est bien disponible (elle affiche une œuvre déjà présente dans le téléviseur) ; la mention contraire est retirée.</li>
+</ul>
+<h2 id="v2-1-24-08-10-2026">v2.1.24 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-1-23-07-10-2026">v2.1.23 - 07/10/2026</h2>
+<ul>
+<li>Widget mobile et aides des boutons du widget réaccentués ; fiche et messages relus (vouvoiement, plus de majuscules d'insistance).</li>
+</ul>
+<h2 id="v2-1-22-06-10-2026">v2.1.22 - 06/10/2026</h2>
+<ul>
+<li>Téléviseur en veille pendant un diaporama : plus d'avertissement ni d'erreur dans le suivi, le diaporama s'arrête simplement et son état passe à « off ».</li>
+</ul>
+<h2 id="v2-1-21-03-10-2026">v2.1.21 - 03/10/2026</h2>
+<ul>
+<li>MG Frame TV passe en version d'exploitation : installation et mises à jour ouvertes à toutes les installations MG Domo.</li>
+<li>Le plugin déclare son matériel « Téléviseur Samsung Tizen (The Frame) » dans l'onglet Plugins de MG Domo, tableau « Plugins liés à un matériel ».</li>
+<li>À l'installation, un « Téléviseur exemple » en veille apparaît dans « Exemples MG Domo » ; le supprimer suffit, il ne revient pas.</li>
+<li>Collections de photos : dossier par défaut propre au plugin, créé à l'installation ; aide de l'envoi de photo clarifiée (bouton « Choisir sur ce PC »).</li>
+</ul>
+<h2 id="v2-1-17-02-10-2026">v2.1.17 - 02/10/2026</h2>
+<ul>
+<li>Widget refait sur le modèle du widget téléphone de MG Domo : une seule colonne, état du téléviseur en pastille (En veille, Allumée, Mode Art) et bandeau d'état.</li>
+<li>Alimentation : boutons nommés et colorés « Allumer », « Éteindre », « Mode Art », « Mode TV ».</li>
+<li>Télécommande, Mode Art, Photos et Informations dans des blocs repliables, fermés par défaut ; les listes montrent le réglage en cours.</li>
+<li>Seules les commandes cochées « Afficher » apparaissent dans le widget.</li>
+</ul>
+<h2 id="v2-1-16-22-09-2026">v2.1.16 - 22/09/2026</h2>
+<ul>
+<li>Fiche équipement réorganisée : « Raccourcis » dans la colonne de droite, un raccourci par ligne ; « Diaporama du mode Art » sous Connexion.</li>
+<li>Les deux diaporamas (celui du téléviseur et celui d'une collection) sont expliqués dans la fiche et dans la documentation.</li>
+</ul>
+<h2 id="v2-1-15-21-09-2026">v2.1.15 - 21/09/2026</h2>
+<ul>
+<li>Fiche d'un téléviseur, page de configuration, page d'accueil et onglet Commandes remis en page selon la charte mgDomo : aides « ? » sur chaque champ, lisible en thème clair comme sombre.</li>
+<li>« Widget » et « Log actif » rejoignent un groupe « Paramètres » ; « Connexion au téléviseur » devient « Connexion ».</li>
+<li>« Suivre le mode Art » ouvre désormais le bloc « Diaporama du mode Art ».</li>
+</ul>
+<h2 id="v2-1-11-11-09-2026">v2.1.11 - 11/09/2026</h2>
+<ul>
+<li>Journal allégé : le diaporama n'écrit plus deux lignes à chaque photo, et un téléviseur en veille n'est plus signalé comme une erreur.</li>
+<li>Une adresse réseau non renseignée n'est plus signalée qu'une fois par jour ; un faux message d'absence de réponse est supprimé.</li>
+<li>Sécurité : le jeton d'appairage n'est plus écrit en clair dans le journal.</li>
+</ul>
+<h2 id="v2-1-10-07-09-2026">v2.1.10 - 07/09/2026</h2>
+<ul>
+<li>Sécurité : les fichiers d'archives du plugin ne sont plus accessibles par le serveur web.</li>
+</ul>
+<h2 id="v2-1-9-30-08-2026">v2.1.9 - 30/08/2026</h2>
+<ul>
+<li>Page de configuration : les champs sont toujours remis à jour au changement d'équipement, les cases cochées par défaut gardant leur valeur.</li>
+</ul>
+<h2 id="v2-1-8-29-08-2026">v2.1.8 - 29/08/2026</h2>
+<ul>
+<li>L'adresse et la clé API Immich ne sont plus remplies automatiquement par le gestionnaire de mots de passe du navigateur.</li>
+<li>Nouvelle vignette « Community » : elle prépare une demande d'aide avec le rapport anonymisé du plugin et ouvre directement le sujet sur le forum Jeedom.</li>
+<li>L'icône de demande d'aide passe en orange, avec une infobulle qui explique son rôle.</li>
+</ul>
+<h2 id="v2-1-3-28-08-2026">v2.1.3 - 28/08/2026</h2>
+<ul>
+<li>Si le socle MG Domo manque, le message d'installation indique la commande à exécuter pour compléter l'installation.</li>
+</ul>
+<h2 id="v2-1-2-24-08-2026">v2.1.2 - 24/08/2026</h2>
+<ul>
+<li>Nouveau bouton « Rafraichir la liste » dans l'onglet Photo du widget : la liste des collections suit les albums Immich créés, renommés ou supprimés.</li>
+<li>Le bouton indique le nombre de collections trouvées et prévient si la collection choisie n'existe plus.</li>
+<li>Correction : les albums Immich sont lus même si le dossier de photos local n'existe plus.</li>
+</ul>
+<h2 id="v2-1-1-22-08-2026">v2.1.1 - 22/08/2026</h2>
+<ul>
+<li>Nouvelle commande « Afficher photo » : envoie une photo au mode Art de The Frame, en plein écran ou entière ; une seule photo du plugin est gardée sur le téléviseur.</li>
+<li>Réglages du mode Art depuis le widget : choix d'une œuvre, diaporama, luminosité, capteur de lumière et détecteur de mouvement.</li>
+<li>Diaporama piloté par le plugin depuis un dossier, une archive zip ou un album Immich, avec cadence et ordre aléatoire réglables.</li>
+<li>Widget refondu à onglets Télécommande, Mode Art et Photo, avec infobulles ; envoi d'une photo choisie sur l'ordinateur.</li>
+</ul>
+<h2 id="v2-1-0-21-08-2026">v2.1.0 - 21/08/2026</h2>
+<ul>
+<li>Création du plugin : pilotage 100 % local des téléviseurs Samsung Tizen, dont The Frame, sans cloud Samsung, avec appairage automatique.</li>
+<li>24 commandes créées automatiquement (alimentation, son, chaînes, navigation, touches libres) et pilotage du mode Art.</li>
+<li>Détection fiable de la veille et allumage adapté à l'état réel du téléviseur, y compris par Wake-on-LAN.</li>
+<li>4 raccourcis configurables par téléviseur et widget télécommande dédié ; boutons « Tester », « Appairer » et « Oublier ».</li>
+</ul></body></html>
