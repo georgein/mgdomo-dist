@@ -1,0 +1,218 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Domo</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-domo">Changelog MG Domo</h1>
+<h2 id="v2-6-52-31-10-2026">v2.6.52 - 31/10/2026</h2>
+<ul>
+<li>Nouveau tableau « Paramètres partagés » dans l'onglet Variables et paramètres : modifier, ajouter et supprimer les réglages communs sans passer par MG Tabulator.</li>
+<li>Secrets masqués avec un œil pour les lire, listes de choix, sélecteur d'équipement ou de commande, et case « À renseigner seulement ».</li>
+<li>La liste « Reste à faire » et le message « A CONFIGURER » mènent désormais à ce tableau.</li>
+<li>Publication : les réglages propres à MG Geofence devenus sans objet sont retirés de la construction des archives.</li>
+<li>Aide : un bloc de code s'affiche tel quel, sans mise en forme accidentelle de son contenu.</li>
+</ul>
+<h2 id="v2-6-49-30-10-2026">v2.6.49 - 30/10/2026</h2>
+<ul>
+<li>Aide : un lien écrit dans du code reste du code.</li>
+</ul>
+<h2 id="v2-6-48-28-10-2026">v2.6.48 - 28/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-6-48-27-10-2026">v2.6.48 - 27/10/2026</h2>
+<ul>
+<li>Journal allégé : les envois réussis (réveil des téléphones, fiche de suivi) et la remise à jour de l'écran des mises à jour ne sont plus notés qu'en mode débogage ; les échecs restent signalés.</li>
+<li>Altitude des parcours : une coupure passagère du service de l'IGN n'est plus signalée comme une erreur ; un avertissement n'apparaît que si le service reste injoignable plus d'une heure.</li>
+</ul>
+<h2 id="v2-6-48-26-10-2026">v2.6.48 - 26/10/2026</h2>
+<ul>
+<li>Sauvegarde Jeedom : les anciennes versions de travail conservées par le plugin n'y sont plus incluses, la sauvegarde quotidienne est plus légère.</li>
+</ul>
+<h2 id="v2-6-47-25-10-2026">v2.6.47 - 25/10/2026</h2>
+<ul>
+<li>Extension menu 2.1.44 : au démarrage du navigateur, la barre est remise d'elle-même dans les onglets rouverts ; un rechargement refusé dit quelle adresse est en cause et quel Jeedom l'extension sert.</li>
+<li>Onglet Menu : une extension plus récente que le zip de ce Jeedom n'est plus annoncée « à mettre à jour » (versions comparées nombre par nombre).</li>
+<li>Téléphone : la nuit du passage à l'heure d'hiver, un point GPS reçu pendant l'heure qui se répète n'est plus signalé « daté dans le futur » (deux faux avertissements « Vérifier l'horloge » le 25/10).</li>
+<li>Téléphone : pendant une coupure internet déjà signalée, l'échec du réveil des téléphones n'est plus compté comme une erreur dans le journal (simple information, la coupure explique tout).</li>
+</ul>
+<h2 id="v2-6-44-24-10-2026">v2.6.44 - 24/10/2026</h2>
+<ul>
+<li>Widgets : le clic sur le titre d'une commande d'action rouvre l'historique de l'état visé (réglage « Commande de l'historique »), et non celui de l'action ; infobulles des minuteries et pré-réglage slider/Vertical corrigés.</li>
+<li>Audit du 24/10 : un mot de passe fait de lettres, un jeton ou une clé dans une adresse bloquent la publication ; téléphone : liste des sources suivie, confirmations lisibles ; aides des pages d'administration raccourcies.</li>
+<li>Publication : le journal des versions numérote aussi les jours sans publication avec la version qui les contient ; les plugins « Ne pas publier » ont leur journal aligné et borné et leurs aides passent au contrôle des secrets.</li>
+<li>Enceinte Bluetooth : le maintien en éveil peut jouer la dernière radio à très bas volume (choix « Source du maintien » : bruit blanc ou radio) ; les réglages de pic, durée, intervalle et fond s'appliquent aux deux.</li>
+<li>Application mgDomo 0.7.18 : source radio du maintien en éveil ; le volume du téléphone n'est pas modifié ; lancer ou arrêter l'écoute de cette radio ne coupe plus le flux (plus de jingle ni de reprise au début à chaque passage de porte).</li>
+</ul>
+<h2 id="v2-6-43-23-10-2026">v2.6.43 - 23/10/2026</h2>
+<ul>
+<li>Aide : table des matières cliquable en tête de l'aide du plugin et de la présentation de l'écosystème.</li>
+<li>Application mgDomo 0.7.16 : l'aide s'ouvre sur un sommaire ; un titre touché mène directement à sa section.</li>
+<li>Make master : un plugin marqué « Ne pas publier » garde son aide en ligne (PDF et changelog) ; seul son téléchargement est retiré, et il n'apparaît pas dans la liste des plugins.</li>
+<li>Aide : les formules qui contiennent des étoiles s'affichent telles quelles, sans passer en italique (aide du plugin et aide sur la classe mg).</li>
+<li>Page du plugin : nouvelle vignette « Aide générique sur mgDomo » qui ouvre le site d'aide de l'écosystème dans un nouvel onglet.</li>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-6-43-22-10-2026">v2.6.43 - 22/10/2026</h2>
+<ul>
+<li>Tableaux : les boutons dont l'adresse est relative à la page (tableau des consommations de MG Énergie) gardent leur couleur et ne signalent plus d'erreur.</li>
+</ul>
+<h2 id="v2-6-39-20-10-2026">v2.6.39 - 20/10/2026</h2>
+<ul>
+<li>Publication : un plugin dont le journal des versions venait d'être raccourci n'est plus renuméroté à tort à la publication suivante.</li>
+</ul>
+<h2 id="v2-6-38-19-10-2026">v2.6.38 - 19/10/2026</h2>
+<ul>
+<li>Le brouillon non relu de la page Crédits n'est plus livré avec le plugin.</li>
+</ul>
+<h2 id="v2-6-38-18-10-2026">v2.6.38 - 18/10/2026</h2>
+<ul>
+<li>Widgets MG : nouveau pré-réglage de bouton « Pastille », le nom de la commande écrit en blanc sur un fond coloré, couleur et taille réglables dans l'onglet Widgets ; le réglage Taille agrandit ou réduit tout le bouton.</li>
+<li>Onglet Widgets : les pré-réglages de bouton Icone et Pastille ont maintenant une vignette au lieu d'un point d'interrogation.</li>
+</ul>
+<h2 id="v2-6-36-17-10-2026">v2.6.36 - 17/10/2026</h2>
+<ul>
+<li>Noms internes de l'administration, des échanges avec le serveur, des widgets MG, de la tuile des téléphones et de la bibliothèque mg renommés selon la norme de l'écosystème ; scénarios et plugins mis à jour, rien de visible.</li>
+<li>Téléphones : les commandes envoyées au téléphone (annonce des kilomètres, alarme, notifications) échouaient depuis le matin du 17/10 ; de nouveau transmises. Menu 2.1.41 : soulignement et barre du bouton actif redessinés.</li>
+<li>Page MG Domo : les boutons Enregistrer (pré-réglages, menu, Tailscale) ne partent plus en double après un retour sur la page ; défilement remis en haut au clic d'un onglet ; case « Utilisateur principal » sans valeur héritée.</li>
+<li>Rapport de dépannage : ligne « OS » de retour et fichier de diagnostic à son nom habituel ; contrôle de santé : un exemple d'aide de MG Nexus n'est plus signalé comme introuvable ; couleurs par défaut des widgets rétablies.</li>
+<li>Journal : les situations que le socle règle seul ne sont plus en avertissement ; code de migration des anciennes installations retiré ; aide « Classe mg » et documentation du cadre des widgets mises aux noms actuels.</li>
+</ul>
+<h2 id="v2-6-34-16-10-2026">v2.6.34 - 16/10/2026</h2>
+<ul>
+<li>Cadre des widgets : les panneaux du menu Accueil (MG Volets, MG Thermostat, MG Roborock...) ont désormais le même cadre de couleur que le dashboard et les vues.</li>
+<li>Téléphones (application 0.7.15) : le journal ne répète plus la configuration à chaque signal de vie, il la note seulement quand elle change.</li>
+<li>Téléphones : l'alerte de téléphone muet lit les destinataires SOS sous le nouveau nom du réglage de MG Geofence (à installer avec MG Geofence du même jour).</li>
+<li>Make master (machine de référence) : nouveau choix « Générer sans envoyer », qui fabrique archives et documentation sans rien publier ni renuméroter et les garde pour consultation.</li>
+<li>Exemple de démonstration et lien météo : lecture de MG Météo France sous les nouveaux noms de ses commandes (les anciens restent reconnus).</li>
+</ul>
+<h2 id="v2-6-33-15-10-2026">v2.6.33 - 15/10/2026</h2>
+<ul>
+<li>Make master : un plugin renuméroté une fois ne l'est plus à chaque publication suivante (archives identiques d'un build à l'autre à contenu égal) ; une dernière renumérotation générale aura lieu au prochain Make master.</li>
+<li>Mise à jour des plugins depuis l'onglet Plugins : le journal de MG Domo note le début et la durée de la pose de chaque plugin, et consigne en erreur un téléchargement, un contrôle ou une extraction qui échoue.</li>
+<li>Onglet Plugins : colonne « Création » et case « Ne pas publier » : le plugin quitte la distribution au Make master suivant, puis les autres installations (avec ses équipements) à leur mise à jour groupée.</li>
+<li>Nouvel onglet « Crédits ... incréditables » : les auteurs, plugins et idées dont s'inspire MG Domo.</li>
+<li>Horloge numérique : les 38 polices embarquées sont retirées ; « default » reprend la police de la page, et une police déposée dans data/fonts reste utilisable.</li>
+</ul>
+<h2 id="v2-6-25-14-10-2026">v2.6.25 - 14/10/2026</h2>
+<ul>
+<li>Alertes des plugins mgDomo émises d'office par le socle dès son installation, à leur création puis chaque minute ; mode silencieux la nuit ; lampe-voyant, « Salon résumé » et « Maison Général » facultatifs.</li>
+<li>Fiche utilisateur : case « Utilisateur principal » (reçoit les SMS et mails d'alerte) ; widget du téléphone : saisie sur deux lignes, « @identifiant » accepté, aide sur chaque bouton, infobulles au format Jeedom.</li>
+<li>Textes : marque écrite « mgDomo » partout (onglet « Variables mgDomo », widgets, plugins), exemples d'utilisateur neutres (U1, U2) ; mail avec pièce jointe : destinataire obligatoire.</li>
+<li>Menu MG Domo : bouton « MG Geofence » (la carte) ajouté d'office dès que MG Geofence est installé ; téléphone avec suivi GPS : commandes Latitude et Longitude, datées du point reçu.</li>
+<li>Panneaux du menu Accueil des plugins à widget : tous leurs équipements, pièce par pièce, widget à jour en direct.</li>
+</ul>
+<h2 id="v2-6-9-13-10-2026">v2.6.9 - 13/10/2026</h2>
+<ul>
+<li>Le widget de l'onduleur quitte MG Domo : il est désormais fourni par MG Solaire (installer MG Solaire 2.1.71 ou plus récent), réécrit, sans clignotement et réglé dans la fiche de l'onduleur.</li>
+<li>Fenêtre « Tables SQL » : elle tient toujours entière dans l'écran à l'ouverture (une taille ou une position mémorisées pouvaient cacher l'ascenseur horizontal et les dernières lignes).</li>
+<li>Publication des plugins : les widgets sont allégés (commentaires et lignes vides retirés), ce qui réduit ce que chaque écran recharge à l'affichage d'une tuile.</li>
+<li>Publication des plugins : une version déjà publiée n'est plus refusée après une simple retouche sans effet sur le plugin distribué ; seul un vrai changement de contenu exige un nouveau numéro.</li>
+<li>Installation neuve : les utilisateurs d'exemple U1 et U2 ont chacun leur photo (pastille de leur couleur), ce qui les distingue sur la carte de MG Geofence.</li>
+</ul>
+<h2 id="v2-5-93-12-10-2026">v2.5.93 - 12/10/2026</h2>
+<ul>
+<li>Équipement supprimé ou référence mal formée : elle ne désigne plus jamais la commande ou l'équipement d'un autre appareil (plus de lecture, de durée calculée, de mail ni d'ordre envoyé au mauvais appareil).</li>
+<li>Coupure internet : si la commande mémo est supprimée ou n'est pas une info, plus d'erreur à chaque passage (surveillance, plugins mgDomo, annonces) : une ligne par heure au journal, avec la cause ; tout fonctionne comme sans coupure.</li>
+<li>Démo « Démo widgets » : la porte, la fenêtre et la présence de démonstration ne sont plus vues par l'assistant MG Nexus comme de vraies portes et présences (nouvelles installations).</li>
+<li>Bibliothèque mg : aide complète à sommaire cliquable (bouton « Aide sur la classe mg », annexe du PDF) et 12 corrections (alertes, attente, tags, tables) ; générateur de tableaux : documentation en ligne.</li>
+<li>Onglet Plugins : mise à jour groupée des plugins cochés (cochés d'office) ; version installée lue dans le plugin (plus de fausse « mise à jour disponible ») ; Adminer et phpSysInfo à la demande.</li>
+</ul>
+<h2 id="v2-5-77-11-10-2026">v2.5.77 - 11/10/2026</h2>
+<ul>
+<li>Démo « Démo widgets » : commandes à type générique (température, lampe, volet, présence) reconnues par l'assistant MG Nexus dès l'installation ; prévision locale remplacée par « Calcul météo prévue » (MG Météo France).</li>
+<li>Pages de réglage sans débordement des onglets ; station neuve : installation complète (Météo France) et « Ajouter » sans erreur de base ; aide avec un exemple générique ; paramètre « partage / chemin_ia » retiré.</li>
+<li>Médias des enceintes : dossier des médias livré avec les jingles, paramètre « Media / PathMedia », partage Samba « musicshare » créé à l'installation (partage existant gardé), fermé au web, fichiers cachés et PHP refusés.</li>
+<li>Jauge et Vumètre : valeur toujours visible, déplaçable en hauteur, en noir ; plugin désactivé téléchargé depuis l'onglet Plugins : plus d'erreur ; commande mémo de la surveillance internet supprimée : signalée 1 fois par heure.</li>
+<li>Onglet VM/CT Proxmox : architecture MQTT et plugins du Market, une fiche par passerelle (Mosquitto, Zigbee2MQTT, Z-Wave JS UI, rfxcom2mqtt, modbus2mqtt) ; suggestions Immich, AdGuard, Homepage ; forum ; cas du Jeedom en https auto-signé.</li>
+</ul>
+<h2 id="v2-5-60-10-10-2026">v2.5.60 - 10/10/2026</h2>
+<ul>
+<li>Téléphones (application 0.7.14) : un point refusé ne bloque plus les suivants, une position à valeur annexe illisible est gardée, un Wi-Fi à emoji n'arrête plus l'envoi ; SMS en plusieurs parties sans résultats contradictoires.</li>
+<li>Menu 2.1.39 : icône MG Domo, bouton « Recharger l'extension » ; après une remise de la barre, plus de titre figé ni de double barre ; bouton actif stable au survol, sans info-bulle ; aide : bandeau Jeedom masqué par le logo.</li>
+<li>Tuiles : valeur multi-lignes conservée, tuile téléphone mise à jour après un choix ; compatible Jeedom 4.4 ; onglet VM/CT en dernier. Station neuve : l'installation ne s'arrête plus avant Météo France (corrigé).</li>
+<li>Journal : reprises automatiques et réveils de téléphone sans avertissement tant que le code se rattrape seul, une ligne par heure pour une panne persistante.</li>
+<li>Positions des téléphones conservées 365 jours ; presets de widgets protégés à l'installation ; rapport Santé accentué ; images de caméras et code Roborock jamais publiés ; conso mensuelle d'un appareil muet retrouvée.</li>
+</ul>
+<h2 id="v2-5-43-09-10-2026">v2.5.43 - 09/10/2026</h2>
+<ul>
+<li>Mises à jour : chaque matin à 7 h, un message unique cite les plugins mg*, l'extension du menu et l'application des téléphones à mettre à jour ; un plugin tiers nommé mg… n'est plus pris pour un plugin MG Domo.</li>
+<li>Aide : chaque plugin a son PDF, plus un PDF d'ensemble (georgein.github.io/mgdomo-dist) ; l'aide décrit chaque onglet de MG Domo ; licence GNU AGPL v3 clarifiée ; onglet Plugins dans l'ordre de la documentation.</li>
+<li>Téléphones (application 0.7.12) : titre de « Notifier », tuile stable pendant un réglage, nouvelle période du signal de vie appliquée aussitôt, ordre en échec abandonné après 5 essais, Wi-Fi du domicile à virgule reconnu.</li>
+<li>Sécurité : l'extension du menu ne retient une adresse Jeedom qu'avec votre accord ; fichiers non servis à l'accès distant sans identification ; publication contenant une clé refusée ; valeurs des tuiles affichées en texte.</li>
+<li>Fiabilité : installations jamais à moitié faites, widget Distribution affichable deux fois et arrondi, messages d'erreur lisibles, menu qui suit la page ouverte, export CSV sûr, réglages de 31 tuiles appliqués.</li>
+</ul>
+<h2 id="v2-5-22-08-10-2026">v2.5.22 - 08/10/2026</h2>
+<ul>
+<li>Charte commune : les encarts d'explication des pages mg* passent sur fond clair avec un texte sombre et des liens bien visibles (anciens cadres bleus ou verts peu lisibles) ; appliqué d'abord à MG Météo France.</li>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-5-20-07-10-2026">v2.5.20 - 07/10/2026</h2>
+<ul>
+<li>Alertes la nuit (mode « ne pas déranger ») : elles partent par écrit (notification, message, SMS, mail), sans voix, son ni lampe-voyant ; l'annonce vocale reprend au premier rappel après le réveil. Avant, rien ne partait.</li>
+<li>Extension « MG Domo - Menu » 2.1.23 : avec la barre « sur tous les sites », les pages hors Jeedom ne sont plus coupées de 30 px en bas (onglets d'une feuille Google Sheets, Gmail) ; à recharger dans le navigateur.</li>
+<li>« Télécharger le zip » et « Télécharger le diagnostic » n'immobilisent plus la page ; le lien de don Ko-fi devient une barre pleine largeur dans « Demande d'intervention ».</li>
+<li>Libellés, infobulles, messages et aides du plugin et de l'application relus (vouvoiement, mots du quotidien, « Téléintervention ») ; page de configuration réparée : ses boutons ne répondaient plus.</li>
+</ul>
+<h2 id="v2-5-8-06-10-2026">v2.5.8 - 06/10/2026</h2>
+<ul>
+<li>Messages de la maison : chaque canal (SMS, mail, voix, son, notification) a son envoyeur par défaut, réglable dans les paramètres (« convoyeurs ») ; un scénario peut imposer l'envoyeur (un mail par le téléphone passerelle).</li>
+<li>Un scénario peut envoyer une notification sur un téléphone ; un message vers un téléphone part même pendant une coupure internet ; une annonce vocale sans volume précisé ne rend plus le téléphone muet.</li>
+<li>Onglet « Demande d'intervention » : bouton « Soutenir MG Domo » pour faire un don libre au projet, sans lien avec l'aide apportée.</li>
+</ul>
+<h2 id="v2-5-6-05-10-2026">v2.5.6 - 05/10/2026</h2>
+<ul>
+<li>Nouvelle numérotation (2.1.401 devient 2.5.1) et changelogs condensés : une entrée par jour, 30 au plus, rédigées pour l'usage.</li>
+<li>Nouvel onglet « Réseau privé » (ex « Accès de secours ») en trois étapes : installer, connecter et mettre à jour Tailscale depuis Jeedom, voir vos appareils nommés par utilisateur, liste d'anomalies vide quand tout va bien.</li>
+<li>Application téléphone 0.7.5 à 0.7.8 : carte hors de la maison par Tailscale, Tailscale relancé seul, et option « Passerelle mail » : le téléphone envoie des mails avec son compte Google (bouton enveloppe, texte qui s'agrandit).</li>
+<li>Sécurité : installation des plugins mieux contrôlée (plus de faux « md5 invalide »), compte de téléintervention limité, jeton d'API retiré des adresses, diagnostic mieux anonymisé.</li>
+<li>Corrections : aide des titres de colonnes plus coupée, SMS longs avec caractères spéciaux, durée de fonctionnement (plus de marche fantôme de la piscine), widget onduleur, éphémérides après minuit, volume des annonces.</li>
+</ul>
+<h2 id="v2-1-386-03-10-2026">v2.1.386 - 03/10/2026</h2>
+<ul>
+<li>Nouvel onglet « VM/CT Proxmox » (ébauche) : comment installer Mosquitto, Zigbee2MQTT, Z-Wave JS UI ou Immich sur votre Proxmox, à titre d'information.</li>
+<li>Onglet Plugins : second tableau « Plugins liés à un matériel » avec le matériel requis et une case « présent », présentation homogène des trois tableaux, colonnes plus lisibles et état du plugin en texte coloré.</li>
+<li>Nouvelle installation : MG Domo ne modifie plus la position ni l'apparence générale de Jeedom ; météo de démonstration créée par MG Météo France ; couleurs des widgets posées d'emblée ; plugins mgDomo installables à la fin.</li>
+<li>Corrections : plus de « md5 invalide » juste après une publication, tuiles de démonstration à la bonne taille, jauge graphique compacte, commandes de volet d'exemple pour MG Volets, journal d'enceinte de l'application 0.7.4.</li>
+</ul>
+<h2 id="v2-1-369-02-10-2026">v2.1.369 - 02/10/2026</h2>
+<ul>
+<li>Onglet Widgets : nouveau groupe « Couleurs des catégories » (couleur de barre de titre par catégorie, opacité, texte en contraste automatique) et cadre des widgets de 0 à 4 px.</li>
+<li>Onglet Plugins en premier, avec la date de chaque version affichée après son numéro, par exemple « 2.1.96 (02/10/2026) ».</li>
+<li>Installation neuve : utilisateurs d'exemple, scénario « Exemple MG Domo », liste « Reste à faire pour terminer cette installation » en tête de page, et installation qui ne bloque plus si le market Jeedom ne répond pas.</li>
+<li>Application téléphone 0.7.2 et 0.7.3 : reconnexion automatique de l'enceinte Bluetooth, radio sans mélange avec le maintien en éveil ; nouvelle commande « Relancer la radio » et bouton vert sur le widget.</li>
+<li>Corrections : durée de fonctionnement d'un appareil arrêté depuis plusieurs jours, tuile téléphone « À appairer », widget MG Geoloc sans position, texte coupé dans l'onglet Demande d'intervention.</li>
+</ul>
+<h2 id="v2-1-351-01-10-2026">v2.1.351 - 01/10/2026</h2>
+<ul>
+<li>La surveillance d'internet passe dans MG Domo : sonde chaque minute, alerte par SMS, annonces et mails suspendus pendant la coupure ; réglable en Désactivée, Observation ou Active.</li>
+<li>Widget Distribution-Onduleur : peut lire ses données dans mgSolaire, avec une durée de décharge calculée sur une puissance de référence.</li>
+<li>Une commande peut s'afficher en version compacte dans le bandeau de titre de sa tuile (pilotage de la batterie dans mgSolaire).</li>
+<li>Correction : les commandes des téléphones (radio, enceinte, volume, sonnerie, notification) étaient sans effet depuis le 30/09.</li>
+</ul>
+<h2 id="v2-1-346-30-09-2026">v2.1.346 - 30/09/2026</h2>
+<ul>
+<li>Les utilisateurs deviennent des équipements de MG Domo : onglet « Utilisateurs » avec fiche (identité, photo, couleur), et le téléphone connecté devient une option de la fiche (appairage par QR, commandes, journal, surveillance).</li>
+<li>Sécurité des téléphones : chaque téléphone a son propre jeton inscrit dans son QR, révocable seul ; QR affiché à la demande ; les anciennes clés communes ne sont plus acceptées.</li>
+<li>Application téléphone 0.7.1 : plus aucune valeur propre à une installation, arrivée et départ du domicile détectés au changement de Wi-Fi, permissions demandées selon les options, suivi GPS plus fiable, textes accentués.</li>
+<li>La personnalisation de Jeedom n'est plus écrasée : MG Domo n'écrit plus qu'un bloc délimité, le reste vous appartient.</li>
+<li>Corrections : alertes et rappels manqués, SMS au numéro mal formé refusé, curseurs revenus au pas de 1, jauge de démonstration, horloge de réveil, Wi-Fi du domicile non rempli par le navigateur, outils réservés au réseau local.</li>
+</ul>
+<h2 id="v2-1-305-27-09-2026">v2.1.305 - 27/09/2026</h2>
+<ul>
+<li>Widgets : la recopie automatique de la personnalisation ne se relance plus inutilement toutes les 5 minutes quand des couleurs globales sont réglées.</li>
+</ul></body></html>

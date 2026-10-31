@@ -1,0 +1,204 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Geofence</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-geofence">Changelog MG Geofence</h1>
+<h2 id="v2-3-98-31-10-2026">v2.3.98 - 31/10/2026</h2>
+<ul>
+<li>Ressenti de sortie : un bouton « Ressenti » dans la bulle de la carte et dans la page des traces ouvre un questionnaire de huit notes de 1 à 5 (effort global, démarrage, fin, bas du dos, épaules, jambes, température et vent ressentis) et d'un commentaire ; à activer par la case « Saisie du ressenti » de l'équipement.</li>
+<li>Ressenti : notes conservées avec la sortie (modifiables, gardées au recalcul, sortie notée jamais supprimée par les nettoyages) ; une page rechargée pendant la saisie rouvre le questionnaire tel quel ; bouton orange une fois la sortie notée, visible dès la case cochée ; la case d'un équipement n'est plus reprise de celui affiché avant.</li>
+<li>Carte : le survol du profil de dénivelé dans la bulle affiche de nouveau l'altitude ; fiche de l'équipement : les blocs « GPS et détection de la marche » et « Collectes complémentaires » expliquent à quoi ils servent (réglages propres au téléphone ; mesures qui classent l'activité et comptent les pas).</li>
+<li>Sorties : une sortie close en fin de journée, une pause déjà clôturée ou une ligne verrouillée gardent des chiffres justes (bornes kilométriques, vitesse max, bilan du jour, agenda Google poussé seulement pour l'utilisateur concerné).</li>
+<li>Configuration : réglage « Rafraîchissement de la carte », supprimer un domicile enregistre aussitôt la renumérotation, aides des alertes SOS et des annonces mises à jour, distance min d'une sortie enregistrée renommée.</li>
+<li>Carte : effacer la trace de référence la retire de la carte sans recharger la page ; menu de la page des traces bien positionné ; page des traces plus légère.</li>
+<li>Journal : un recalcul manuel n'écrit plus que ce qui change (case « Journal complet » sur la page du plugin pour tout réécrire) ; les défauts persistants ne sont signalés qu'une fois par jour ; textes et aides relus.</li>
+<li>Nettoyage : un parcours trop court pour être enregistré n'est plus repris à chaque nettoyage ; suppression d'un utilisateur plus complète ; poids d'un jour à deux sorties repris correctement.</li>
+</ul>
+<h2 id="v2-3-91-30-10-2026">v2.3.91 - 30/10/2026</h2>
+<ul>
+<li>Aide : un lien écrit dans du code reste du code.</li>
+</ul>
+<h2 id="v2-3-91-29-10-2026">v2.3.91 - 29/10/2026</h2>
+<ul>
+<li>Carte : les domiciles restent visibles quand on dézoome, un point de taille fixe remplace le cercle devenu trop petit, affiché par-dessus les traces et les photos.</li>
+</ul>
+<h2 id="v2-3-90-28-10-2026">v2.3.90 - 28/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-3-89-26-10-2026">v2.3.89 - 26/10/2026</h2>
+<ul>
+<li>Page des traces : sans trace de référence, le bandeau n'affiche plus une ligne « null - Date - Zone... ».</li>
+<li>Aide : les cartes et la page des traces montrent désormais des sorties de démonstration, sans aucun lieu de vie réel ; le nom du Wi-Fi est masqué.</li>
+<li>Après minuit, la carte permet de nouveau de choisir le jour même, et la période proposée pour reprendre l'historique va bien jusqu'à aujourd'hui.</li>
+<li>Sauvegarde Jeedom : les anciennes versions de travail conservées par le plugin n'y sont plus incluses, la sauvegarde quotidienne est plus légère.</li>
+</ul>
+<h2 id="v2-3-87-25-10-2026">v2.3.87 - 25/10/2026</h2>
+<ul>
+<li>Fin d'une sortie : les contrôles qui écartent une fausse sortie utilisent la durée et la vitesse à jour, et le journal n'affiche plus une durée de près de 24 heures pour une sortie de quelques secondes.</li>
+</ul>
+<h2 id="v2-3-86-23-10-2026">v2.3.86 - 23/10/2026</h2>
+<ul>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-3-85-21-10-2026">v2.3.85 - 21/10/2026</h2>
+<ul>
+<li>Après une coupure du réseau mobile, les annonces kilométriques en retard ne sont plus dites d'un coup au retour.</li>
+<li>Nombre de pas d'une sortie : un redémarrage du téléphone en cours de sortie ne fait plus perdre les pas suivants.</li>
+<li>La présence, la distance au domicile et le Wi-Fi sont historisés à l'heure réelle de chaque position, y compris les positions livrées en retard après une coupure (sans relancer les scénarios de présence).</li>
+<li>Création d'un nouvel équipement : elle n'échoue plus sur une erreur de base de données (un réglage interne des pages par type d'activité était pris pour un champ de l'équipement).</li>
+</ul>
+<h2 id="v2-3-83-20-10-2026">v2.3.83 - 20/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-3-81-19-10-2026">v2.3.81 - 19/10/2026</h2>
+<ul>
+<li>Km voiture du jour : la valeur revient à 0 dès le premier calcul d'un nouveau jour sans trajet (elle gardait le cumul de la veille).</li>
+<li>Configuration, Km effort : montée et descente se règlent en mètres qui comptent pour 1 km de plat (100 m et 333 m par défaut, même résultat qu'avant) ; le coefficient de descente disparaît ; les sorties déjà faites gardent leur km-effort.</li>
+<li>Configuration : ajouter ou supprimer un domicile enregistre et efface de nouveau les bons réglages ; un domicile sans coordonnées est ignoré au lieu de fausser la carte.</li>
+<li>Message du réveil : l'entraînement de la semaine et du mois compte de nouveau la marche (il affichait le dernier type d'activité, souvent à zéro).</li>
+<li>Appels à la bibliothèque du socle MG Domo renommés selon la norme de l'écosystème : à installer avec MG Domo du même jour.</li>
+<li>Clé de l'agenda Google protégée, panneau de la carte plus d'alerte de fermeture fantôme, journaux mieux classés.</li>
+<li>Nettoyage sans effet visible : anciennes évolutions de la base et chemins de repli retirés, textes accentués, documentation à jour.</li>
+</ul>
+<h2 id="v2-3-80-16-10-2026">v2.3.80 - 16/10/2026</h2>
+<ul>
+<li>Compatibilité : à installer avec MG Domo et MG Garmin du 16/10/2026 ou plus récents (noms des échanges entre les plugins mis à la norme).</li>
+<li>Noms internes des réglages, des commandes et des pages mis à la norme de l'écosystème.</li>
+<li>Les pages de la carte déjà ouvertes (tablette, téléphone) se rechargent seules après la mise à jour.</li>
+<li>Météo de la carte : lecture de MG Météo France sous les nouveaux noms de ses commandes.</li>
+<li>Corrigé : à l'installation, la météo d'exemple n'était pas retrouvée et la météo des sorties restait sans température, humidité, vent ni libellé.</li>
+</ul>
+<h2 id="v2-3-79-15-10-2026">v2.3.79 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-3-76-14-10-2026">v2.3.76 - 14/10/2026</h2>
+<ul>
+<li>Exemples d'identifiant d'utilisateur neutres (U1, U2) dans la fiche et la documentation.</li>
+<li>Synthèses : la ligne « Depuis le » ne compte plus un jour de trop dans « Act./Tot. » quand la page est produite l'après-midi.</li>
+<li>Installation neuve : sorties d'exemple de U1 et U2 datées des jours précédant l'installation, visibles aussitôt (traces, synthèses, graphiques, carte) ; vélo et course y ralentissent en montée et font une courte pause.</li>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+<li>Infobulles de la tuile : toujours au format Jeedom (fond bleu) après une mise à jour de la tuile ; elles passaient au format du navigateur (fond clair, petite police).</li>
+</ul>
+<h2 id="v2-3-69-13-10-2026">v2.3.69 - 13/10/2026</h2>
+<ul>
+<li>Journal : plusieurs sorties par jour (une ligne et une trace chacune ; nouvelle sortie si le type change ou après « Nouvelle sortie après », 180 min) ; synthèse par jour actif, annonces des km à chaque sortie.</li>
+<li>Carte : pictogramme de l'activité, drapeaux de départ et d'arrivée par sortie, utilisateur à l'arrivée pour un jour passé ; la bulle décrit chaque sortie avec son profil de dénivelé (altitude au survol ou au toucher).</li>
+<li>Vélo et course à pied : une sortie reconnue à la cadence ou aux indications du téléphone est typée course ou vélo (seuils dans le groupe « Vélo et course ») ; une trace verrouillée course ou vélo garde son type au recalcul.</li>
+<li>Gestion des traces : colonne « Type » triable, tous les types dans un tableau, heure de départ dans Date ; le cadenas et le crayon agissent sur la seule sortie choisie ; synthèses et graphiques : barre « Activité » par type.</li>
+<li>Classement des points : un téléphone calme ou une voiture au ralenti ne sont plus comptés comme marche ; installation neuve : exemples de sorties pour U1 et U2 (marche, course, vélo, plusieurs par jour).</li>
+</ul>
+<h2 id="v2-3-57-12-10-2026">v2.3.57 - 12/10/2026</h2>
+<ul>
+<li>Le bouton « Documentation » de Jeedom ouvre la documentation en ligne (PDF) ; l'historique des versions est lui aussi consultable en ligne.</li>
+<li>Icône au nouveau format du Market Jeedom.</li>
+<li>Fenêtres de confirmation et de saisie au format actuel de Jeedom (prêtes pour les prochaines versions du core).</li>
+</ul>
+<h2 id="v2-3-54-10-10-2026">v2.3.54 - 10/10/2026</h2>
+<ul>
+<li>Les positions des téléphones sont désormais conservées 365 jours (réglage « Rétention des positions » de MG Domo, 0 = sans limite) : une journée plus ancienne ne peut plus être recalculée.</li>
+<li>Consulter un jour passé sur la carte ne modifie plus ce jour ; présence à jour même sans objet parent ; nom générique si l'adresse est introuvable (plus de « , ») ; distance minimale d'une sortie par défaut à 2 km.</li>
+<li>Synthèse, graphiques et bilan annoncé au réveil recalculés chaque jour après minuit ; semaines, mois et durées justes aux changements d'heure ; compatible avec Jeedom 4.4 ; exemple de commande de poids neutre.</li>
+<li>Journal : il n'est plus vidé par un recalcul ni un changement de date de la carte, perd ses lignes répétitives et ne signale plus d'erreur pour un nettoyage ou un incident réseau isolé.</li>
+<li>Photos des utilisateurs lues dans leur fiche MG Domo ; carte restée ouverte rechargée seule après une mise à jour ; carte non lisible par un autre site ; le choix de commande des autres plugins n'ouvre plus deux sélecteurs.</li>
+</ul>
+<h2 id="v2-3-36-09-10-2026">v2.3.36 - 09/10/2026</h2>
+<ul>
+<li>Un Wi-Fi du domicile dont le nom contient une virgule est désormais reconnu (présence au domicile).</li>
+<li>Les pages d'activités, de synthèse et les historiques ne sont plus servis aux requêtes relayées par l'accès distant Jeedom sans identification : seul le réseau local et Tailscale y accèdent.</li>
+<li>Le SOS automatique ne part plus tant que la sortie n'est pas valide (distance et vitesse minimales non atteintes) : une sortie qui sera annulée ne déclenche plus d'alerte.</li>
+<li>Aide complétée : boutons de la page du plugin, réglages GPS et collectes, équipement Systeme (activité par défaut, origine des données), réglages globaux champ par champ.</li>
+<li>Licence clarifiée : GNU AGPL v3, auteur Michel Georgein.</li>
+</ul>
+<h2 id="v2-3-31-08-10-2026">v2.3.31 - 08/10/2026</h2>
+<ul>
+<li>Les encarts d'aide des pages du plugin sont sur fond clair, en texte sombre, avec des liens bien visibles : lisibles dans les deux thèmes (charte MG Domo 4.8).</li>
+</ul>
+<h2 id="v2-3-30-07-10-2026">v2.3.30 - 07/10/2026</h2>
+<ul>
+<li>Textes de la page, de la configuration, de la carte, des pages de traces et de graphiques relus : accents, vouvoiement, explications plus courtes et vérifiées.</li>
+<li>Documentation mise à jour : le téléphone se déclare dans la fiche de l'utilisateur de MG Domo, le Wi-Fi du domicile se règle dans MG Domo.</li>
+<li>Fenêtre de recalcul des activités : modes « Simulation » et « Réel » sans pictogrammes, étapes décrites en clair.</li>
+<li>Numéro de version : passage à la série 2.3 (règle des 99 correctifs au plus par série).</li>
+</ul>
+<h2 id="v2-1-229-06-10-2026">v2.1.229 - 06/10/2026</h2>
+<ul>
+<li>Les annonces de distance pendant une sortie passent par les messages de la maison (canal voix vers le téléphone), avec la même règle de volume qu'avant.</li>
+</ul>
+<h2 id="v2-1-228-05-10-2026">v2.1.228 - 05/10/2026</h2>
+<ul>
+<li>Sécurité : la carte, les positions et les synthèses ne sont plus accessibles depuis tout Internet, seulement depuis le réseau local et Tailscale ; à l'extérieur, la carte s'ouvre par l'adresse Tailscale du serveur.</li>
+</ul>
+<h2 id="v2-1-227-02-10-2026">v2.1.227 - 02/10/2026</h2>
+<ul>
+<li>Le plugin passe en « OK pour l'exploitation » : il peut être installé et mis à jour sur les autres installations.</li>
+<li>À l'installation, un équipement est créé pour chaque utilisateur de MG Domo suivi par GPS, ainsi qu'un virtuel « Présences » qui montre l'itinéraire de chacun vers le domicile ; les équipements existants ne sont jamais modifiés.</li>
+<li>La météo des sorties utilise l'équipement Météo France de démonstration quand rien n'est réglé.</li>
+<li>Widget : tant qu'aucune position n'a été reçue, la présence s'affiche « Présence inconnue » au lieu de « Absent ».</li>
+</ul>
+<h2 id="v2-1-223-30-09-2026">v2.1.223 - 30/09/2026</h2>
+<ul>
+<li>Le téléphone devient un équipement du socle MG Domo (page Téléphones) : batterie, réseau, messages, enceintes, QR d'appairage et maintenance y passent avec leur historique ; mgGeofence garde la géolocalisation et les activités.</li>
+<li>Les téléphones doivent passer à l'application MG Domo 0.7.0 (mise à jour automatique) ; le plugin nécessite le socle MG Domo 2.1.338 ou plus.</li>
+<li>La photo, la couleur et le Wi-Fi du domicile d'un utilisateur se règlent désormais dans sa fiche du socle MG Domo ; la valeur déjà saisie est reprise automatiquement.</li>
+<li>Widget d'un utilisateur : il retrouve batterie, réseau, dernier contact et messages ; le bloc « Retrouver le téléphone » se replie comme « Maintenance ».</li>
+</ul>
+<h2 id="v2-1-217-29-09-2026">v2.1.217 - 29/09/2026</h2>
+<ul>
+<li>Nouveau widget mgGeofence, au choix par équipement : tuile compacte en blocs, adaptée au mode géolocalisation ou passerelle, mise à jour en direct.</li>
+<li>La tuile s'agrandit quand on ouvre un bloc replié puis revient à la hauteur réglée en mode édition.</li>
+<li>Corrections d'affichage : enceinte arrêtée affichée « Aucune » sans bouton d'arrêt, marge sous le dernier bloc, libellé du maintien en éveil raccourci.</li>
+</ul>
+<h2 id="v2-1-211-28-09-2026">v2.1.211 - 28/09/2026</h2>
+<ul>
+<li>Enceintes Bluetooth pilotées depuis Jeedom sur le téléphone passerelle (application 0.6.50) : choix de l'enceinte, interrupteur marche / arrêt, lecture d'une radio (60 stations) ou d'une adresse de flux, arrêt de la lecture.</li>
+<li>Maintien en éveil de l'enceinte : un souffle inaudible et un pic bref l'empêchent de s'éteindre, réglables par enceinte avec des commandes simples et quatre curseurs.</li>
+<li>Les listes « Lire une radio » et « Choisir une enceinte » affichent la radio en cours et l'enceinte choisie au lieu de « Aucun ».</li>
+<li>Nouveau réglage « Version de l'APK proposée » : il bloque la mise à jour automatique d'un téléphone au-delà d'une version donnée.</li>
+</ul>
+<h2 id="v2-1-203-25-09-2026">v2.1.203 - 25/09/2026</h2>
+<ul>
+<li>La température ressentie du journal devient un « indice effort » qui tient compte du vent et du soleil, en plus de la température et de l'humidité ; tout l'historique a été recalculé.</li>
+<li>Les infobulles du groupe Météo recommandent une source de mesure en plein air ; sans le plugin MG Météo France, l'ancien calcul reste utilisé.</li>
+</ul>
+<h2 id="v2-1-202-24-09-2026">v2.1.202 - 24/09/2026</h2>
+<ul>
+<li>Journal de l'application : la case « Loguer les traces » devient un choix Aucun / Essentiel / Détaillé ; le niveau Essentiel (application 0.6.49) ne garde que les décisions du téléphone.</li>
+<li>Passerelle SMS : le compte rendu d'envoi des SMS est désormais écrit dans le log de MG Domo.</li>
+</ul>
+<h2 id="v2-1-199-23-09-2026">v2.1.199 - 23/09/2026</h2>
+<ul>
+<li>Les positions GPS sont conservées sans limite dans une table dédiée, consultable dans mgTabulator : un recalcul redonne exactement le calcul en direct, même pour une journée ancienne.</li>
+<li>Avec l'application 0.6.45 et suivantes, chaque position enregistre aussi la précision, les pas et la reconnaissance d'activité, réglables dans le nouveau groupe « Collectes complémentaires (analyse) ».</li>
+<li>Corrections : la page Utilisateurs de Jeedom ne s'ouvre plus en erreur « Trop de sessions » ; batterie et Wi-Fi des positions importées correctement relus.</li>
+<li>Fiche d'un téléphone réorganisée ; les téléphones déjà configurés continuent de fonctionner sans nouveau QR code.</li>
+</ul>
+<h2 id="v2-1-193-22-09-2026">v2.1.193 - 22/09/2026</h2>
+<ul>
+<li>Journal des sorties : nouvelle colonne « origine » (direct, recalcul sur les positions ou depuis le seul fichier GPX) ; un recalcul depuis le GPX ne peut plus écraser une sortie calculée en direct.</li>
+<li>Pauses au rejeu d'une trace GPX comptées comme en direct (une sortie affichait 11 min de pause au lieu de 56).</li>
+<li>Fiche utilisateur et équipement Système mises au gabarit commun, sans changement de fonctionnement.</li>
+</ul>
+<h2 id="v2-1-190-21-09-2026">v2.1.190 - 21/09/2026</h2>
+<ul>
+<li>Page du plugin, page de configuration, onglet Commandes et fiches d'équipement mis aux normes de la charte graphique des plugins mgDomo : réglages regroupés, aides « ? » sur chaque ligne, textes accentués.</li>
+<li>Le cadre « Cache » de la fiche utilisateur disparaît ; les réglages GPS ont leur propre groupe « GPS et détection de la marche ».</li>
+<li>Correction : à la deuxième ouverture de la configuration, « Ajouter un domicile » ajoutait deux domiciles.</li>
+</ul></body></html>
