@@ -1,0 +1,36 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Broadlink</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-broadlink">Changelog MG Broadlink</h1>
+<h2 id="v0-1-0-06-11-2026">v0.1.0 - 06/11/2026</h2>
+<ul>
+<li>Apprentissage radio (RM pro) : la fréquence est réellement attendue avant la capture du code ; un code collé à la main est vérifié à l'enregistrement et ne rend plus un boîtier « injoignable » par erreur.</li>
+<li>Démon : un ordre que Jeedom n'attend plus n'est plus exécuté en retard ; un démon dont les lectures restent bloquées est relancé ; une remontée en échec est rejouée au lieu d'être perdue.</li>
+<li>Un démon figé est arrêté puis relancé même après « Désactiver » ; les commandes du boîtier (État, Dernier contact, Erreur, Firmware, Rafraîchir) ne peuvent plus être supprimées par erreur.</li>
+<li>Fiche : le modèle doit avoir la forme 0x5216 ; Firmware et nom de commande sont remis à zéro au changement de boîtier ; aide et documentation précisées (radio, port, image, dépendances).</li>
+<li>Journaux allégés (une erreur par ordre perdu, boîtier débranché signalé à la transition) ; fichiers internes du plugin non servis par le web ; dépendances Python toutes figées.</li>
+</ul>
+<h2 id="v0-1-0-04-11-2026">v0.1.0 - 04/11/2026</h2>
+<ul>
+<li>Première version : télécommandes Broadlink RM mini 3, RM4 mini et RM4 pro, découverte des boîtiers sur le réseau, apprentissage infrarouge et radio, envoi des codes appris.</li>
+<li>Chaque boîtier porte un État, un Dernier contact et une Erreur, mis à jour à chaque lecture (toutes les 60 s par défaut) et à chaque envoi.</li>
+<li>Un ordre qui ne part pas (démon arrêté ou figé, boîtier injoignable, clé refusée) est une erreur visible au premier essai, jamais un silence ; le démon écrit un battement et, s'il se fige, Jeedom le voit NOK et le relance.</li>
+<li>Relance du démon protégée par un verrou : deux relances simultanées (plugin et cœur) ne lancent plus deux démons.</li>
+<li>Chaque boîtier porte la photo de son modèle (choisie à la découverte, modifiable dans la fiche), affichée sur sa carte.</li>
+</ul></body></html>
