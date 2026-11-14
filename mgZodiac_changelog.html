@@ -1,0 +1,32 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Zodiac</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-zodiac">Changelog MG Zodiac</h1>
+<h2 id="v0-1-0-14-11-2026">v0.1.0 - 14/11/2026</h2>
+<ul>
+<li>« Dernier nettoyage » ne prend plus la date de mise sous tension du boîtier (prise coupée puis remise) pour un nettoyage : seule la date d'un cycle réellement lancé est retenue.</li>
+</ul>
+<h2 id="v0-1-0-13-11-2026">v0.1.0 - 13/11/2026</h2>
+<ul>
+<li>Première version : robots de piscine Zodiac connectés par iAquaLink (famille vr, testé sur un OA 6600 iQ) : découverte des robots du compte, un équipement par robot, démon relié au cloud surveillé par un battement, mot de passe chiffré.</li>
+<li>Chaque robot porte État, Mode, panier, erreur traduite d'après la notice Zodiac, début, durée et fin estimée du cycle, heures de fonctionnement, En ligne et Dernier contact ; température seulement si rapportée depuis moins de 24 h.</li>
+<li>Actions : Démarrer, Arrêter, Régler le mode, +15 et -15 min, Rafraîchir ; un ordre qui ne part pas est une erreur visible. Pas de pause (le robot ne reprend pas un cycle interrompu) ; remontée hors de l'eau masquée, pour les scénarios.</li>
+<li>Widget sur le modèle MG Roborock : pastille d'état, indicateurs, Démarrer et Arrêt, mode, avancement du cycle, « Dernier nettoyage : date (il y a …) », maintenance repliée ; la liste Mode n'est plus refermée par un rafraîchissement.</li>
+<li>Audit : plus de « hors ligne » d'une seconde au renouvellement horaire de la session cloud, jetons jamais au journal, état 3 nommé « Remontée (sortie du bassin) », série figée après création, deux +15 rapprochés comptent bien 30 min.</li>
+</ul></body></html>
