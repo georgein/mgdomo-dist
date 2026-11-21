@@ -1,0 +1,55 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Piscine</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-piscine">Changelog MG Piscine</h1>
+<h2 id="v0-1-5-20-11-2026">v0.1.5 - 20/11/2026</h2>
+<ul>
+<li>Widget : la hauteur de la tuile n'est plus figée au minimum quand elle est masquée à son premier affichage (pièce filtrée) sans hauteur mémorisée.</li>
+<li>Marche forcée : pendant une coupure EDF confirmée, le délestage de MG Energie l'emporte de nouveau (la pompe ne tourne pas sur batterie).</li>
+<li>Widget : jauges pH et Redox graduées d'après les seuils du bassin ; les bornes plausibles détectent une sonde en défaut et bornent l'échelle des jauges (un Redox bas redit « ajouter du chlore »).</li>
+</ul>
+<h2 id="v0-1-3-18-11-2026">v0.1.3 - 18/11/2026</h2>
+<ul>
+<li>Marche forcée : la pompe tourne même quand MG Energie a délesté la piscine (le bouton l'affichait mais la pompe restait arrêtée) ; sa pastille de titre passe en rouge.</li>
+<li>Widget : le bouton Auto du robot est marqué d'une coche quand le nettoyage automatique est actif.</li>
+<li>Widget : boutons d'action en relief et en couleur selon leur rôle, comme sur les autres widgets MG ; un bouton désactivé reste plat.</li>
+<li>Catégorie d'origine du plugin déclarée : « Confort » (classement « Chaque plugin sous sa catégorie » de MG Domo).</li>
+<li>Widget, remplissage : boutons moins et plus de l'objectif colorés (orange pour baisser, vert pour monter) ; un clic sur l'objectif ou sur les litres versés ouvre le graphe du compteur, comme le total du jour.</li>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v0-1-1-17-11-2026">v0.1.1 - 17/11/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v0-1-1-16-11-2026">v0.1.1 - 16/11/2026</h2>
+<ul>
+<li>Widget : bloc d'analyse de l'eau au nom du plugin de la sonde (température retenue et batterie en couleur, vu-mètres pH / Redox de la sonde gradués entre les bornes plausibles, zone verte selon les seuils du plugin) ; un clic sur le nom ouvre la sonde dans son plugin.</li>
+<li>Widget : Filtration en tête, pastilles pompe et robot (vert en marche, gris à l'arrêt, orange hors ligne) ; bloc Robot au nom de son plugin, bouton Auto avec le prochain départ ; volume versé du jour dans la barre Remplissage.</li>
+<li>Remplissage mesuré sur le compteur total de la vanne (source « Compteur total », le volume journalier n'est plus demandé) ; un relevé illisible ou un 0 passager ne fausse plus le volume du jour ; minuit ne perd plus les litres versés.</li>
+<li>Actions du widget et état réel de la pompe pris en compte dans la seconde (messages au journal, pastille à jour) ; sortie du mode gel avec 0,5 °C de marge, même après un délestage ; heure du milieu de fenêtre contrôlée.</li>
+<li>Plugin libéré ; seul le compresseur de filtration est requis (sonde, vanne et robot facultatifs) ; bouton Configuration ; taille de tuile manuelle respectée, commandes typées pour MG Nexus, journal sans répétitions, aides à jour.</li>
+</ul>
+<h2 id="v0-1-0-15-11-2026">v0.1.0 - 15/11/2026</h2>
+<ul>
+<li>Première version : filtration selon la température de l'eau (durée et fenêtre centrée sur le midi solaire), marche forcée et mode gel, délestage par MG Energie.</li>
+<li>Bilan de l'eau (pH, Redox, batterie de la sonde) avec bornes de plausibilité, réglages modifiables à l'écran.</li>
+<li>Remplissage sur objectif : arrêt automatique à l'objectif, sur coupure EDF, et protection contre la remise à zéro du compteur de la vanne.</li>
+<li>Départ automatique du robot MG Zodiac quand le dernier nettoyage date de plusieurs jours, dans un créneau de 2 h ; refusé si l'eau est trop froide, en cas de gel, robot hors ligne ou en erreur.</li>
+<li>Widget unique : filtration du jour, eau, remplissage et robot, graphes d'historique au clic ; mode observation pour comparer avec un ancien scénario.</li>
+</ul></body></html>

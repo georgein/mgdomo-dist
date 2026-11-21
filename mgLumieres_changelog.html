@@ -1,0 +1,40 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Lumières</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-lumieres">Changelog MG Lumières</h1>
+<h2 id="v0-1-4-21-11-2026">v0.1.4 - 21/11/2026</h2>
+<ul>
+<li>Une lampe éteinte à la main (interrupteur, tuile de la lampe, curseur d'un design) pendant que l'éclairage est allumé reste éteinte jusqu'à la prochaine extinction de l'éclairage ; avant, l'éclairage la rallumait dans les secondes.</li>
+</ul>
+<h2 id="v0-1-3-20-11-2026">v0.1.3 - 20/11/2026</h2>
+<ul>
+<li>Une lampe allumée à la main est rendue au plugin dès qu'une partie de la condition d'extinction devient vraie (le jour par vent fort) ; une durée maximale d'allumage manuel se règle par éclairage.</li>
+<li>Une ambiance choisie à la main tient jusqu'au changement de plage horaire ; une lampe « suivie » n'est plus éteinte que lorsque son éclairage s'éteint ; Éteindre agit aussi sur un éclairage sans détecteur.</li>
+<li>Tuile : pastille fidèle aux lampes, main affichée sans retard sur les autres tuiles, plus de boutons de niveau sans effet sur un éclairage réglé sur la luminosité ; hauteur juste quand la tuile apparaît dans une pièce d'abord masquée.</li>
+<li>Fiche : onglet Réglages réorganisé par sujet, sur deux colonnes, suivi des tableaux ; les cases d'un équipement ne reprennent plus celles de la fiche ouverte avant ; aide dotée d'un sommaire ; une icône par sorte d'équipement.</li>
+<li>Un même ordre n'est plus renvoyé plusieurs fois ; une lampe que le plugin vient d'éteindre (même si elle garde son niveau) se rallume en secondes au mouvement ou déclencheur suivant (avant : 1 mn après, ou jamais) ; journal allégé.</li>
+</ul>
+<h2 id="v0-1-0-19-11-2026">v0.1.0 - 19/11/2026</h2>
+<ul>
+<li>Création du plugin : un éclairage (une ou plusieurs lampes) s'allume sur présence et s'éteint après un délai ou sur une condition choisie (jour, nuit, vent, porte fermée, alerte en cours) ; variateur ou tout ou rien reconnu seul.</li>
+<li>Un seul type d'éclairage, du couloir au salon : ambiances, niveau de chaque lampe par ambiance et plages horaires se règlent dans des tableaux, avec une frise de la journée.</li>
+<li>Le niveau peut suivre la luminosité mesurée de la pièce ; chaque éclairage porte ses commandes Allumer, Eteindre, Régler le niveau et Choisir une ambiance.</li>
+<li>Zones jour / nuit : le plugin tient à jour une variable par le soleil (jour, nuit, aube) ou par un capteur de luminosité (jour, soir, nuit), lue par les éclairages et les autres plugins.</li>
+<li>Tuile du tableau de bord : état, niveau, ambiances, et pour chaque lampe son état réel et ses boutons ; une lampe allumée à la main, depuis la tuile ou par son interrupteur, n'est plus éteinte faute de mouvement. Mode observation.</li>
+</ul></body></html>
