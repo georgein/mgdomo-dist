@@ -1,0 +1,82 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Lumières</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-lumieres">Changelog MG Lumières</h1>
+<h2 id="v0-1-20-28-11-2026">v0.1.20 - 28/11/2026</h2>
+<ul>
+<li>Lever de nuit : le délai court s'arrête 3 h avant le réveil, au lieu de durer toute la matinée quand la zone reste en soir jusqu'au jour.</li>
+<li>Lampe commandée par une liste Allumer / Éteindre (projecteur de caméra) : la liste liée à son état est choisie, même si l'équipement en porte d'autres, comme le micro.</li>
+<li>Aide : textes du lever de nuit, de « Pas de nuit si », de l'exemple et de la lampe commandée par son interrupteur mis en accord avec le fonctionnement.</li>
+</ul>
+<h2 id="v0-1-19-27-11-2026">v0.1.19 - 27/11/2026</h2>
+<ul>
+<li>Exemple : un éclairage d'exemple, deux lampes de l'équipement de démonstration et deux ambiances, est créé à l'installation sur une station neuve ; supprimé, il ne revient qu'en recréant tous les exemples depuis la page MG Domo.</li>
+<li>Journal des événements : sur une installation neuve, la destination du journal est créée d'office au lieu de rester vide avec une erreur.</li>
+</ul>
+<h2 id="v0-1-16-26-11-2026">v0.1.16 - 26/11/2026</h2>
+<ul>
+<li>Zone par capteur : l'heure du dernier changement n'est plus rangée dans une variable Jeedom ; la liste des variables ne contient plus que celles que vous réglez.</li>
+<li>Zone par capteur : le réglage « Variable du lever de nuit » disparaît ; toute zone par capteur signale d'elle-même un lever de nuit à ses éclairages.</li>
+<li>Lever de nuit : le délai court ne reste plus appliqué quand la zone quitte l'état « soir » ou n'est plus pilotée par capteur.</li>
+</ul>
+<h2 id="v0-1-12-24-11-2026">v0.1.12 - 24/11/2026</h2>
+<ul>
+<li>Lever de nuit : seul un lever entre minuit et 3 h avant le réveil éteint après le délai court ; un retour à la maison le soir, quand la zone était en nuit faute de présence, garde le délai normal.</li>
+<li>Zone par capteur : nouveau réglage « Pas de nuit si » ; tant que son expression est vraie, la zone ne passe pas en nuit (par exemple avant l'heure de « Ne pas déranger » quand la maison est occupée).</li>
+</ul>
+<h2 id="v0-1-11-23-11-2026">v0.1.11 - 23/11/2026</h2>
+<ul>
+<li>Zone par capteur : plus de faux retour en jour après une chute brutale de lumière ; l'éclairage qui suit la zone ne s'éteint plus quelques minutes au crépuscule ou quand un nuage passe.</li>
+<li>Extinctions : une lampe partagée éteinte par son éclairage n'est plus rallumée par celui qui la suit ; une lampe allumée à l'instant où la condition « Éteindre si » devient vraie s'éteint en quelques secondes, plus une minute après.</li>
+<li>Widget Design retiré : il reste une seule tuile, avec le réglage de chaque lampe ; à la mise à jour du plugin, les commandes ajoutées par une version sont créées.</li>
+<li>Tuile : les infobulles restent lisibles après chaque mise à jour, un bouton grisé dit pourquoi au survol, et en observation les boutons sont grisés puisque rien ne part vers les lampes.</li>
+<li>Page du plugin : vignette « Nouveau sujet » branchée, bandeau de départ en bleu, onglet Commandes aux largeurs communes avec recherche au-delà de 30 commandes ; aide corrigée (lampe sans détecteur, Allumer forcé, mode automatique).</li>
+</ul>
+<h2 id="v0-1-10-22-11-2026">v0.1.10 - 22/11/2026</h2>
+<ul>
+<li>Tuile normalisée : lampe seule = aucun bouton en titre, son icône allume ou éteint l'éclairage ; groupe = une bascule, − % + toujours là (grisés si régulé), Auto, ambiances ; plus de pastille ni de coche, la décision au survol.</li>
+<li>Boutons ronds « + » orange et « − » vert, texte au meilleur contraste (Auto : rouge plus foncé), ambiances en bleu clair plus lisible ; l'icône de chaque lampe l'allume ou l'éteint (jaune / grise), son état ouvre l'historique.</li>
+<li>Allumer rallume tout de suite un éclairage réglé sur la luminosité, au moins au premier pas (même après une extinction au délai), puis le niveau suit la mesure ; avant, il restait éteint jusqu'à une minute ou s'allumait à peine.</li>
+<li>Gestes au bouton de la lampe : Auto et la main agissent tout de suite, même juste après ; une lampe allumée puis éteinte aussitôt (projecteur) ne laisse plus l'éclairage affiché allumé.</li>
+<li>Barre de titre à la hauteur des autres tuiles (nom tronqué si la tuile est étroite), niveau en % de la couleur du nom, donc lisible ; aide de la fiche corrigée : Allumer passe outre « Allumer seulement si » et « Éteindre si ».</li>
+</ul>
+<h2 id="v0-1-4-21-11-2026">v0.1.4 - 21/11/2026</h2>
+<ul>
+<li>Une lampe éteinte à la main (interrupteur, tuile de la lampe, curseur d'un design) pendant que l'éclairage est allumé reste éteinte jusqu'à la prochaine extinction de l'éclairage ; avant, l'éclairage la rallumait dans les secondes.</li>
+<li>Allumer allume vraiment, même quand la condition d'extinction est vraie (vent) ou l'allumage non autorisé : l'éclairage tient jusqu'à Éteindre, au délai sans mouvement ou au retour du jour.</li>
+<li>Les projecteurs des caméras MG Reolink se pilotent directement, avec leur état réel ; bouton « Auto » et clic sur la main : les lampes tenues à la main reviennent à l'automatique sans rien éteindre.</li>
+<li>Nouveau widget « Design » au choix sur la fiche : une case par lampe avec son image, clic pour allumer ou éteindre, curseur de niveau, temps depuis le dernier changement, zone et luminosité en tête.</li>
+<li>Tuile détaillée : Allumer, Éteindre, le niveau et les ambiances dans la barre de titre (gain de hauteur) ; lampe allumée : nom en vert, pourcentage en orange ; vumètre de luminosité dans le Design.</li>
+</ul>
+<h2 id="v0-1-3-20-11-2026">v0.1.3 - 20/11/2026</h2>
+<ul>
+<li>Une lampe allumée à la main est rendue au plugin dès qu'une partie de la condition d'extinction devient vraie (le jour par vent fort) ; une durée maximale d'allumage manuel se règle par éclairage.</li>
+<li>Une ambiance choisie à la main tient jusqu'au changement de plage horaire ; une lampe « suivie » n'est plus éteinte que lorsque son éclairage s'éteint ; Éteindre agit aussi sur un éclairage sans détecteur.</li>
+<li>Tuile : pastille fidèle aux lampes, main affichée sans retard sur les autres tuiles, plus de boutons de niveau sans effet sur un éclairage réglé sur la luminosité ; hauteur juste quand la tuile apparaît dans une pièce d'abord masquée.</li>
+<li>Fiche : onglet Réglages réorganisé par sujet, sur deux colonnes, suivi des tableaux ; les cases d'un équipement ne reprennent plus celles de la fiche ouverte avant ; aide dotée d'un sommaire ; une icône par sorte d'équipement.</li>
+<li>Un même ordre n'est plus renvoyé plusieurs fois ; une lampe que le plugin vient d'éteindre (même si elle garde son niveau) se rallume en secondes au mouvement ou déclencheur suivant (avant : 1 mn après, ou jamais) ; journal allégé.</li>
+</ul>
+<h2 id="v0-1-0-19-11-2026">v0.1.0 - 19/11/2026</h2>
+<ul>
+<li>Création du plugin : un éclairage (une ou plusieurs lampes) s'allume sur présence et s'éteint après un délai ou sur une condition choisie (jour, nuit, vent, porte fermée, alerte en cours) ; variateur ou tout ou rien reconnu seul.</li>
+<li>Un seul type d'éclairage, du couloir au salon : ambiances, niveau de chaque lampe par ambiance et plages horaires se règlent dans des tableaux, avec une frise de la journée.</li>
+<li>Le niveau peut suivre la luminosité mesurée de la pièce ; chaque éclairage porte ses commandes Allumer, Eteindre, Régler le niveau et Choisir une ambiance.</li>
+<li>Zones jour / nuit : le plugin tient à jour une variable par le soleil (jour, nuit, aube) ou par un capteur de luminosité (jour, soir, nuit), lue par les éclairages et les autres plugins.</li>
+<li>Tuile du tableau de bord : état, niveau, ambiances, et pour chaque lampe son état réel et ses boutons ; une lampe allumée à la main, depuis la tuile ou par son interrupteur, n'est plus éteinte faute de mouvement. Mode observation.</li>
+</ul></body></html>

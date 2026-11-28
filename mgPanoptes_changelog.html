@@ -1,0 +1,167 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Panoptes</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-panoptes">Changelog MG Panoptes</h1>
+<h2 id="v2-2-79-28-11-2026">v2.2.79 - 28/11/2026</h2>
+<ul>
+<li>Résolution DNS : bandeau orange pendant les premiers échecs et pendant une coupure internet, rouge clignotant seulement en alerte ; une même panne n'est plus réannoncée à chaque changement de motif dans la Timeline ni le journal.</li>
+<li>Paramètres : les équipements trouvés par « Détecter » s'affichent par leur nom ; un objet à égalité ou plusieurs machines possibles ne sont plus proposés ; une page encore en cours de génération est annoncée.</li>
+</ul>
+<h2 id="v2-2-78-27-11-2026">v2.2.78 - 27/11/2026</h2>
+<ul>
+<li>Installation : l'objet des équipements réseau (et des équipements à redémarrer) et celui des brokers sont pris là où sont rangés les équipements MG Asus et les brokers jMQTT, et non plus dans le premier objet venu.</li>
+<li>Installation : onduleur (Nut_free), VM Jeedom et hôte Proxmox (Monitoring) sont renseignés quand la station les désigne sans ambiguïté ; la VM n'est plus confondue avec l'hôte.</li>
+<li>Paramètres, onglet Général : nouveau bouton « Détecter », qui remplit les champs encore vides pour un plugin installé après Panoptes ; il suffit ensuite d'enregistrer.</li>
+</ul>
+<h2 id="v2-2-77-26-11-2026">v2.2.77 - 26/11/2026</h2>
+<ul>
+<li>Prises de réparation des démons : le démon se désigne par le nom de son plugin ; l'équipement virtuel de monitoring « Jeedom interne » et son réglage ne sont plus nécessaires, un plugin installé après coup est reconnu d'office.</li>
+<li>Aide de la colonne « Démon » précisée : on y écrit le nom du plugin ou son identifiant, celui qu'affiche le cadre de surveillance.</li>
+<li>Réparation des démons : un nom de la colonne « Démon » qui ne correspond à aucun plugin actif est signalé au journal, au lieu d'être ignoré en silence.</li>
+</ul>
+<h2 id="v2-2-74-25-11-2026">v2.2.74 - 25/11/2026</h2>
+<ul>
+<li>Pendant une coupure internet et dix minutes après son retour, les alertes « Résolution DNS » et « Secours Tailscale » ne partent plus (Timeline, mail) : MG Domo annonce déjà la coupure. Une panne qui dure au-delà est signalée.</li>
+</ul>
+<h2 id="v2-2-73-24-11-2026">v2.2.73 - 24/11/2026</h2>
+<ul>
+<li>Surveillance de la résolution DNS : un nom jamais en cache est demandé à chaque serveur DNS du Jeedom ; un échec affiche un bandeau rouge, puis alerte par la Timeline et par mail s'il dure 10 à 15 minutes. Réglage dans l'onglet Réseau.</li>
+</ul>
+<h2 id="v2-2-72-23-11-2026">v2.2.72 - 23/11/2026</h2>
+<ul>
+<li>Fenêtre Paramètres : le mode d'emploi des tables (cliquer, cocher, glisser une ligne) passe en encart clair à texte sombre ; le cadre bleu à texte clair se lisait mal.</li>
+</ul>
+<h2 id="v2-2-71-21-11-2026">v2.2.71 - 21/11/2026</h2>
+<ul>
+<li>Démons : la prise d'un démon (ou sa voie de multiprise) n'est plus coupée si elle est éteinte exprès, sans courant ou juste après une coupure de secteur, ni deux fois en 30 mn ; restée éteinte après un redémarrage, elle est signalée.</li>
+<li>Démons : un démon non lançable (dépendances, compte déconnecté) ou dont l'état est illisible reste affiché en orange au lieu de disparaître ou de bloquer tout le cadre.</li>
+<li>Disques et cache : alerte écrite dans la Timeline et envoyée par mail une fois par épisode ; relevé ancien daté en orange ; disque en défaut sans compteur d'usure montré.</li>
+<li>Piles : les seuils d'alerte saisis dans Jeedom sous la forme d'une condition sont respectés ; page de réglages : messages d'échec lisibles, disques trouvés par le relevé gardés à l'enregistrement.</li>
+<li>Aide corrigée (arrêt de toute la surveillance quand la génération est décochée, onduleur, disques, installation) ; figures refaites sur un réseau d'exemple ; passages de surveillance sautés signalés au journal.</li>
+</ul>
+<h2 id="v2-2-69-20-11-2026">v2.2.69 - 20/11/2026</h2>
+<ul>
+<li>Journaux : un échec de mise à jour d'un plugin ou du cœur est de nouveau signalé en erreur ; les étapes normales d'une mise à jour restent ignorées.</li>
+<li>Réseau : une prise dont l'état est inconnu n'est plus prise pour une prise coupée ; « Off depuis » donne la date quand la coupure date d'un autre jour.</li>
+<li>Fenêtre de graphique de la page seule : plein écran sur tout l'écran, la fenêtre suit exactement la souris, et sa taille est reprise telle quelle par la fenêtre de graphique de Jeedom.</li>
+<li>Aides et documentation alignées (erreurs des scénarios, taille d'alerte des logs de scénario, prise coupée, graphiques) ; le journal des mises à jour est lu par défaut.</li>
+</ul>
+<h2 id="v2-2-68-18-11-2026">v2.2.68 - 18/11/2026</h2>
+<ul>
+<li>Graphiques : même fenêtre que sur le tableau de bord de Jeedom (barre orange, nom complet de la commande) ; dans Jeedom, c'est la fenêtre de Jeedom elle-même qui s'ouvre.</li>
+<li>Un clic sur le nom de la commande, en haut du graphique, ouvre sa configuration.</li>
+</ul>
+<h2 id="v2-2-67-17-11-2026">v2.2.67 - 17/11/2026</h2>
+<ul>
+<li>Journaux : le journal des mises à jour n'est plus signalé en erreur après une mise à jour réussie ; un vrai échec de mise à jour reste signalé.</li>
+</ul>
+<h2 id="v2-2-66-14-11-2026">v2.2.66 - 14/11/2026</h2>
+<ul>
+<li>Réseau : une prise volontairement éteinte (coupure de sécurité pluie, action manuelle) est annoncée « prise coupée (Off depuis ...) » et non plus « prise muette » ; comme avant, Panoptès ne la redémarre pas.</li>
+</ul>
+<h2 id="v2-2-65-11-11-2026">v2.2.65 - 11/11/2026</h2>
+<ul>
+<li>Synthèse des logs : les erreurs et avertissements écrits par les scénarios (ERROR / WARNING sans crochets) sont désormais détectés et signalés, comme ceux du cœur.</li>
+</ul>
+<h2 id="v2-2-64-10-11-2026">v2.2.64 - 10/11/2026</h2>
+<ul>
+<li>Fenêtre des graphes : même taille et même position que la fenêtre d'historique du bureau Jeedom, retenues d'une page à l'autre.</li>
+</ul>
+<h2 id="v2-2-63-09-11-2026">v2.2.63 - 09/11/2026</h2>
+<ul>
+<li>Les graphiques ouverts depuis la page (présence, réseau, disques) affichent le graphe d'historique MG Domo au lieu de la page Analyse / Historique de Jeedom.</li>
+</ul>
+<h2 id="v2-2-62-08-11-2026">v2.2.62 - 08/11/2026</h2>
+<ul>
+<li>Deux textes d'aide corrigés : taille d'alerte des journaux et durée « En erreur depuis » des démons.</li>
+</ul>
+<h2 id="v2-2-61-04-11-2026">v2.2.61 - 04/11/2026</h2>
+<ul>
+<li>Cadre Système : l'hôte Proxmox, ses stockages et le dernier snapshot se lisent désormais sur un équipement Monitoring de l'hôte ; le plugin proxmox n'est plus nécessaire.</li>
+<li>Cadre Système : une machine injoignable en SSH affiche « Connexion SSH : KO » au lieu de ses dernières mesures, qui semblaient actuelles ; la ligne CPU indique sa vraie période de mesure (8 secondes).</li>
+</ul>
+<h2 id="v2-2-59-03-11-2026">v2.2.59 - 03/11/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-58-02-11-2026">v2.2.58 - 02/11/2026</h2>
+<ul>
+<li>Disques durs : un disque mécanique sans compteur d'écritures reste surveillé (âge et alertes) au lieu d'être ignoré ; le bouton « Relever » montre aussi la ligne « Usure HDD ».</li>
+<li>Système : « Aucun snapshot valide » s'affiche en rouge comme un backup absent ; les bulles d'aide des titres de tableaux sont relues en langage courant.</li>
+<li>Aide en ligne : rendue par le moteur commun du socle mgDomo, même lecture que le PDF (paragraphes, listes numérotées, citations) ; les mots entre chevrons et « mg* » s'affichent correctement.</li>
+</ul>
+<h2 id="v2-2-56-01-11-2026">v2.2.56 - 01/11/2026</h2>
+<ul>
+<li>Aide : deux noms de plugins écrits « mg* » sur une même ligne ne sont plus affichés en italique.</li>
+<li>Les tableaux de réglages fonctionnent sans MG Tabulator : la bibliothèque est désormais livrée avec le plugin.</li>
+</ul>
+<h2 id="v2-2-54-31-10-2026">v2.2.54 - 31/10/2026</h2>
+<ul>
+<li>Aide : un bloc de code s'affiche tel quel, sans mise en forme accidentelle de son contenu.</li>
+</ul>
+<h2 id="v2-2-53-30-10-2026">v2.2.53 - 30/10/2026</h2>
+<ul>
+<li>Aide : un lien écrit dans du code reste du code.</li>
+</ul>
+<h2 id="v2-2-52-28-10-2026">v2.2.52 - 28/10/2026</h2>
+<ul>
+<li>Les bulles d'aide des titres de tableaux s'affichent de nouveau en entier (elles étaient réduites à une fine barre orange).</li>
+<li>Le cadre « Informations système » a désormais sa bulle d'aide sur son titre.</li>
+<li>Les disques durs mécaniques ont leur propre ligne « Usure HDD » sous celle des SSD : âge, volume écrit par jour et moyenne de vie, alerte dès le premier secteur réalloué, en attente ou incorrigible.</li>
+</ul>
+<h2 id="v2-2-52-26-10-2026">v2.2.52 - 26/10/2026</h2>
+<ul>
+<li>Sauvegarde Jeedom : les anciennes versions de travail conservées par le plugin n'y sont plus incluses, la sauvegarde quotidienne est plus légère.</li>
+</ul>
+<h2 id="v2-2-51-24-10-2026">v2.2.51 - 24/10/2026</h2>
+<ul>
+<li>Cadre système : la date du dernier snapshot et celle du dernier backup s'affichent en vert (moins de 24 h), orange (24 à 48 h) ou rouge (plus de 48 h).</li>
+</ul>
+<h2 id="v2-2-50-23-10-2026">v2.2.50 - 23/10/2026</h2>
+<ul>
+<li>Aide : table des matières cliquable en tête de la documentation.</li>
+<li>Nouvelle page « Présentation du plugin », en tête du sommaire de l'aide : ce que fait le plugin, en une page.</li>
+</ul>
+<h2 id="v2-2-48-19-10-2026">v2.2.48 - 19/10/2026</h2>
+<ul>
+<li>Les fichiers internes d'installation du plugin ne sont plus accessibles depuis le navigateur.</li>
+</ul>
+<h2 id="v2-2-47-18-10-2026">v2.2.47 - 18/10/2026</h2>
+<ul>
+<li>Supervision : un second incident identique sur un broker ou un équipement silencieux est de nouveau noté au journal après un retour à la normale.</li>
+<li>Page de configuration : quitter la page par le menu de Jeedom avec des réglages non enregistrés demande confirmation ; l'aide ne s'ouvre plus en double sur les autres pages MG.</li>
+<li>Nettoyage sans effet visible : anciennes reprises de données et chemins de repli retirés, commentaires et documentation à jour.</li>
+</ul>
+<h2 id="v2-2-46-17-10-2026">v2.2.46 - 17/10/2026</h2>
+<ul>
+<li>À installer avec MG Domo du même jour.</li>
+<li>La taille mémorisée de la fenêtre des graphiques est oubliée une fois et reprend sa taille par défaut.</li>
+<li>Une page de supervision ouverte avant la mise à jour se remet à jour d'elle-même à la génération suivante (5 minutes au plus).</li>
+</ul>
+<h2 id="v2-2-45-15-10-2026">v2.2.45 - 15/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-2-41-14-10-2026">v2.2.41 - 14/10/2026</h2>
+<ul>
+<li>Exemples de destinataires neutres (@U1) dans les aides et la documentation.</li>
+<li>À l'installation, les alertes graves sont adressées par défaut à l'utilisateur principal coché dans MG Domo.</li>
+<li>Tableaux des paramètres : un clic sur une cellule ouvre bien la saisie ; une ligne se déplace désormais par sa poignée, tout à gauche.</li>
+<li>Le panneau du plugin apparaît d'office dans le menu Accueil dès l'installation ; il se masque en décochant « Afficher le panneau desktop » dans la configuration du plugin.</li>
+</ul></body></html>

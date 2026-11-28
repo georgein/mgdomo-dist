@@ -1,0 +1,198 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Changelog MG Domo</title><base href="https://georgein.github.io/mgdomo-dist/"><style>
+@page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+body { font-family: "DejaVu Sans", sans-serif; font-size: 10.5pt; line-height: 1.5; color: #1c2a1e; }
+h1 { font-size: 20pt; color: #0b3d91; border-bottom: 2px solid #0b3d91; padding-bottom: 4px; }
+h2 { font-size: 14pt; color: #0b3d91; margin-top: 18px; page-break-after: avoid; }
+h3 { font-size: 12pt; color: #1c2a1e; page-break-after: avoid; }
+a { color: #0b3d91; }
+code { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; background: #f2f4f2; padding: 0 3px; word-break: break-all; }
+pre { background: #f2f4f2; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+pre code { background: none; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; page-break-inside: auto; }
+th, td { border: 1px solid #b8c4b8; padding: 4px 6px; vertical-align: top; text-align: left; }
+th { background: #eef6e9; }
+tr { page-break-inside: avoid; }
+img { max-width: 100%; page-break-inside: avoid; }
+.garde { border: 1px solid #9ccf9a; background: #eef6e9; padding: 10px 14px; margin-bottom: 16px; }
+.garde p { margin: 2px 0; }
+.bloc { font-size: 13pt; color: #a65b00; margin-top: 16px; }
+.toc td.nom { white-space: nowrap; font-weight: bold; }
+</style></head><body><h1 id="changelog-mg-domo">Changelog MG Domo</h1>
+<h2 id="v2-7-14-28-11-2026">v2.7.14 - 28/11/2026</h2>
+<ul>
+<li>Aide : la recherche porte sur tout le texte des aides mg* ; la page s'ouvre toujours sur l'onglet Plugins.</li>
+<li>Présence : départs et arrivées par téléphone de nouveau dans la timeline, sans faire attendre le téléphone ni perdre le dernier point d'une rafale ; un nouvel habitant ne bloque plus l'armement ; porte historisée exigée.</li>
+<li>Alarme : coupure internet close hors du mode Actif ; une sonnette avant l'entrée en nuit est sans effet ; l'aide dit où poser confirmation ou code d'accès des boutons de la tuile.</li>
+<li>Corrections : diagnostic sans positions, commune ni numéro de série ; sauvegarde allégée de 56 Mo ; durées et dates triées dans les tableaux ; appli du téléphone 0.7.28 : plus de point envoyé deux fois, échecs d'envoi dans son journal.</li>
+<li>Widgets : bandeau et 2 réglages retirés, -/+ refusé rétabli ; menu : extension pour Firefox sur Android ; passerelles Proxmox : arrondi juste pour tout multiplicateur, liste des volets RFY publiée une seule fois.</li>
+</ul>
+<h2 id="v2-7-11-27-11-2026">v2.7.11 - 27/11/2026</h2>
+<ul>
+<li>Nouvel onglet « Aide », en orange tout à gauche : posez une question avec vos mots, il propose les passages de l'aide des plugins mg*, les pages de réglage, les onglets et les paramètres qui en parlent, sans internet.</li>
+<li>Coupure internet : l'information est lue directement sur l'équipement « État Maison » ; le paramètre « cmdAlarmeInternet », qui désignait cette même commande, est supprimé.</li>
+<li>Alarme : le bouton « Forcé » de la tuile « État Maison » est supprimé (Armer arme déjà sans regarder la porte) ; l'annonce d'armement automatique annulé donne la durée et invite à armer à la main.</li>
+<li>Corrections : onglet « Variables et paramètres » rempli après un F5 ; Santé plus juste sur « État Maison » ; texte d'exemple des champs en bleu en thème sombre ; « Reste à faire » signale un DNS Jeedom sans pare-feu.</li>
+<li>Exemples : « Supprimer » retire aussi ceux des plugins, restés branchés sur des commandes disparues ; « Créer » les recrée tous, éclairage et piscine compris ; nouvelle lampe « Lampadaire » dans l'équipement de démonstration.</li>
+</ul>
+<h2 id="v2-7-2-26-11-2026">v2.7.2 - 26/11/2026</h2>
+<ul>
+<li>Nouvel équipement « État Maison » et sa tuile : qui est présent et depuis quand, étage, porte, serrure, alarme, Ne pas déranger, internet, saison, alerte en cours ; boutons pour l'alarme et la serrure.</li>
+<li>L'onglet « Présence » devient « État Maison » ; le socle pilote l'alarme et la serrure. Une alarme armée automatiquement est coupée à toute arrivée ; après une ouverture par la sonnette, plus de réarmement avant le matin.</li>
+<li>Onglet « État Maison » : réglage « Accès externe », pour être prévenu de la perte et du retour de l'accès à Jeedom depuis l'extérieur.</li>
+<li>Utilisateurs : nouveau réglage « Téléphone vu par le routeur » dans la fiche, sous « Habite la maison » ; dans l'annuaire, chaque personne qui habite la maison porte une pastille « Présent » ou « Absent ».</li>
+<li>Widgets du téléphone et « État Maison » posés sur un design : la hauteur réglée sur le design est respectée. Variable de coupure des volets renommée <code>disableVoletJourNuit</code> (sans tiret bas).</li>
+</ul>
+<h2 id="v2-6-94-25-11-2026">v2.6.94 - 25/11/2026</h2>
+<ul>
+<li>Coupure internet : le socle signale aussi les dix minutes qui suivent le retour d'internet, le temps que les services en ligne se reconnectent ; les plugins n'alertent plus sur les suites d'une coupure déjà annoncée.</li>
+<li>Présence à domicile : nouvel onglet « Présence ». Le socle détermine lui-même qui est à la maison (téléphone et routeur de chaque utilisateur) et l'écrit dans ses propres commandes ; en observation pour l'instant, rien n'est piloté.</li>
+<li>Onglet « Présence » : réglages facultatifs de l'alarme, de l'alarme de nuit et de la serrure de la porte d'entrée, et commande « Armement forcé » ; en observation, les ordres sont décidés et notés, jamais envoyés.</li>
+</ul>
+<h2 id="v2-6-93-24-11-2026">v2.6.93 - 24/11/2026</h2>
+<ul>
+<li>« Ne pas déranger » : le plugin tient lui-même cette fenêtre, de l'heure réglée au réveil ; l'heure de début est un paramètre partagé (section general, 23:00 par défaut), plus besoin d'un scénario.</li>
+<li>Onglet Variables : la colonne « Utilisée par » cite aussi les scripts de la maison qui lisent une variable de la liste ; les descriptions de « nePasDeranger », « NuitSalon » et « NuitExt » disent qui les écrit aujourd'hui.</li>
+</ul>
+<h2 id="v2-6-92-23-11-2026">v2.6.92 - 23/11/2026</h2>
+<ul>
+<li>Page MG Domo : la liste « Reste à faire » et l'avertissement « Annuaire sans fiche » passent en encart clair à texte sombre ; le cadre orange à texte clair se lisait mal.</li>
+</ul>
+<h2 id="v2-6-91-22-11-2026">v2.6.91 - 22/11/2026</h2>
+<ul>
+<li>Contraste automatique des titres : il colore aussi le lien vers le panneau et les libellés des commandes en bandeau ; un navigateur trop ancien garde bien le blanc.</li>
+<li>Widgets : les icônes d'alerte des barres de titre (batterie, alerte) ont un fond noir, lisibles sur toute couleur de catégorie.</li>
+<li>Widgets : texte des boutons et des pastilles noir ou blanc selon le meilleur contraste, en demi-gras ; mêmes fonds dans les deux thèmes ; relief plus léger, rouge un peu plus foncé.</li>
+<li>Couleurs des catégories : la couleur choisie est celle affichée dans les barres de titre et les cadres ; le réglage « Opacité des titres » est retiré (pour adoucir une couleur, la choisir plus foncée).</li>
+<li>Widgets : un bouton indisponible est gris uni, boutons − et + ronds ; tuile Téléphone : interrupteur rouge actif / vert inactif, « Injoignable » orange, SMS et mail bleus.</li>
+</ul>
+<h2 id="v2-6-88-21-11-2026">v2.6.88 - 21/11/2026</h2>
+<ul>
+<li>Sécurité : phpsysinfo ne liste plus les processus (clés des démons visibles) ; publication : secrets en français (jeton) ou dans une adresse bloqués ; figures archivées de l'aide non servies ; diagnostic : identifiants masqués.</li>
+<li>Pages : erreurs lisibles sans trace, aides corrigées, « Relancer Tailscale » dans la Maintenance de la tuile Téléphone, illustration sans adresse. Bouton On/Off d'un design : lampe allumée à un niveau autre que 99 plus vue éteinte.</li>
+<li>Classe mg : 19 fonctions inutilisées retirées ; mail en échec signalé ; coupure internet avertie une fois ; annonce longue sans 2e passe ; annonce bloquée signalée ; commande renommée non recréée. Tableaux : ligne invalide sans arrêt.</li>
+<li>Téléphones : échecs passagers du réveil notés en info, un avertissement au 5e de suite ; file d'ordres pleine notée ; requête de l'application sur une action inconnue refusée sans fausse « clé refusée ». Application 0.7.27 (Android 14+).</li>
+<li>Menu (extension 2.1.51) : bouton par défaut ouvert dans la bonne fenêtre, barre stylée après l'autorisation d'un site, adresse retirée oubliée. Make master : un outil bloqué ne gèle plus la publication. Sonnette : coupe l'annonce jouée.</li>
+</ul>
+<h2 id="v2-6-83-20-11-2026">v2.6.83 - 20/11/2026</h2>
+<ul>
+<li>Variables et paramètres : les variables lues par les plugins MG dans les réglages de leurs équipements (zones et conditions de MG Lumières, MG Thermostat) sont listées avec le plugin qui s'en sert ; les faux noms tronqués disparaissent.</li>
+<li>Graphiques : cadres de la page (consommations, menu d'un design) de nouveau actifs après deux ouvertures et un déplacement de la fenêtre ; case Variation décochée respectée ; sur un écran plus petit, fenêtre ramenée entière à l'écran.</li>
+<li>Téléphone : pendant une radio, l'éveil « suspendu » n'est plus affiché comme arrêté. Application 0.7.26 : mise à jour refusée par Android reprise 1 h après. Menu (extension 2.1.47) : un site ne peut plus déclencher un bouton de la barre.</li>
+<li>Annonces vocales : une annonce que l'enceinte Google ne lance pas est aussi notée au journal MG Domo. Outils : Adminer 6.3.0 et phpsysinfo 3.4.7 (à réinstaller depuis l'onglet Bibliothèques), connexion automatique d'Adminer gardée.</li>
+<li>Tuiles MG : bloc déplié refermé en mode édition, sans mémoriser sa hauteur. Téléintervention : secrets masqués, non modifiables. Maturité : correction comptée une fois. Panoptes : fenêtre d'un tableau centrée, qui suit la souris.</li>
+</ul>
+<h2 id="v2-6-79-18-11-2026">v2.6.79 - 18/11/2026</h2>
+<ul>
+<li>Widgets des plugins MG, téléphone et passerelle compris : boutons d'action en relief et en couleur selon leur rôle, plus aucun gris ; le bouton de l'état en cours est marqué d'un liseré blanc et d'une coche.</li>
+<li>Graphiques : boutons Actualiser (fond vert) et Analyse (fond bleu) bien distincts ; ouverts depuis un tableau hors de Jeedom, même fenêtre que le tableau de bord (un clic sur le nom ouvre la configuration de la commande).</li>
+<li>Annonces vocales : une annonce que l'enceinte Google ne lance pas est désormais signalée en erreur dans le journal au lieu d'être perdue en silence.</li>
+<li>Make master : la catégorie d'origine d'un plugin se lit dans sa fiche ; un nouveau plugin n'a plus besoin d'un passage manuel par « Chaque plugin sous sa catégorie ».</li>
+<li>Widget : la tuile garde sa hauteur après l'ouverture puis la fermeture d'un bloc, même si la fenêtre du navigateur est redimensionnée ensuite.</li>
+</ul>
+<h2 id="v2-6-77-17-11-2026">v2.6.77 - 17/11/2026</h2>
+<ul>
+<li>Graphe d'historique : le bouton de durée (Jour, Semaine, Mois, Année, Tout) qui correspond aux dates affichées est mis en valeur dès l'ouverture et après une saisie de dates.</li>
+</ul>
+<h2 id="v2-6-76-16-11-2026">v2.6.76 - 16/11/2026</h2>
+<ul>
+<li>Widgets : la taille de tuile réglée à la main est respectée ; un repli ouvert agrandit la tuile le temps de la lecture, elle reprend ensuite sa hauteur mémorisée. La largeur du widget téléphone n'est plus forcée à 300 px.</li>
+<li>Onglet Plugins : le matériel requis et la description tiennent sur une ligne ; un texte trop long finit par des points de suite, le libellé complet s'affiche au survol.</li>
+</ul>
+<h2 id="v2-6-75-15-11-2026">v2.6.75 - 15/11/2026</h2>
+<ul>
+<li>Onglet Plugins de la machine qui publie la distribution : nouvelle colonne Maturité (Stabilisé, Rodage, Chantier) selon les corrections de défauts des 14 derniers jours, détail au survol.</li>
+</ul>
+<h2 id="v2-6-75-14-11-2026">v2.6.75 - 14/11/2026</h2>
+<ul>
+<li>Graphe d'historique : la barre de titre affiche le nom complet de la commande (objet, équipement, commande) à la place de son numéro, dès l'arrivée des données ; c'est ce nom qui ouvre la configuration de la commande.</li>
+</ul>
+<h2 id="v2-6-74-13-11-2026">v2.6.74 - 13/11/2026</h2>
+<ul>
+<li>Graphe d'historique : le nom de la commande dans la barre de titre devient un lien qui ouvre la configuration de cette commande (profil administrateur).</li>
+</ul>
+<h2 id="v2-6-73-11-11-2026">v2.6.73 - 11/11/2026</h2>
+<ul>
+<li>Graphe d'historique : nouveau bouton de période « Heure » (la dernière heure), avant « Jour ».</li>
+<li>Boutons « pastille » des widgets : coins plus arrondis et effet de relief (dégradé, ombre portée, reflet), le bouton s'enfonce au clic.</li>
+</ul>
+<h2 id="v2-6-71-10-11-2026">v2.6.71 - 10/11/2026</h2>
+<ul>
+<li>Graphe d'historique : quand toutes les courbes partagent la même unité, l'échelle est affichée à gauche et à droite du graphe.</li>
+<li>Graphe d'historique : les informations texte (mode, statut...) s'affichent dans la fenêtre MG Domo en chronologie, une étiquette par changement, seules ou mêlées aux courbes (Ctrl+clic) ; plus de fenêtre Jeedom depuis les tuiles MG.</li>
+<li>Graphe d'historique : la fenêtre garde la même taille et la même position d'où qu'elle soit ouverte (tuiles, pages des plugins, Panoptès) ; sous la souris, le réticule trace désormais aussi le trait horizontal.</li>
+<li>Graphe d'historique : il peut aussi s'afficher directement dans une page, et non plus seulement en fenêtre (premier usage : le panneau MG Withings), avec une durée imposée par la page qui l'accueille (dont 3 mois, 6 mois et 3 ans).</li>
+</ul>
+<h2 id="v2-6-69-09-11-2026">v2.6.69 - 09/11/2026</h2>
+<ul>
+<li>Graphe d'historique : un clic sur le titre ou l'image d'une tuile MG ouvre une fenêtre MG Domo (périodes, actualisation, min/max/dernier, point modifiable par l'administrateur, réglages mémorisés) ; Ctrl+clic : tout l'équipement.</li>
+<li>Graphe d'historique : même fenêtre depuis la tuile Téléphone, le réveil, MG Thermostat et MG Volets ; page entière pour Panoptès et les consommations ; textes signalés sans bloquer le tracé ; taille et position retenues.</li>
+<li>Graphe d'historique : nouvel habillage « graphite chaud » (fond brun-gris doux, courbe sur une carte arrondie, dégradé sous la courbe jusqu'à trois courbes, grille discrète, plus de bandes de nuit), décliné pour le thème clair.</li>
+<li>Tableaux : le bouton « Exporter CSV » affiche une infobulle qui explique son rôle.</li>
+<li>Application téléphone 0.7.24 : quand Android refuse une mise à jour, elle est retentée une heure plus tard au lieu de six ; une notification d'installation en attente n'est plus effacée.</li>
+</ul>
+<h2 id="v2-6-68-08-11-2026">v2.6.68 - 08/11/2026</h2>
+<ul>
+<li>Mises à jour publiées : un réglage propre à la station (réseaux autorisés de Panoptes) n'est plus inclus, et la publication s'arrête si un fichier autorise une adresse précise du réseau local.</li>
+<li>Alertes vocales : quand le service d'IA ne rend pas de reformulation, le message d'origine est annoncé au lieu d'un texte technique lu à voix haute.</li>
+<li>Aide en ligne : les liens externes accompagnés d'une infobulle s'ouvrent désormais eux aussi dans un nouvel onglet.</li>
+<li>Réseau privé : le message de fin d'installation invite à cliquer sur « Connecter au réseau privé », le libellé réel du bouton.</li>
+<li>Corrections internes sans effet visible.</li>
+</ul>
+<h2 id="v2-6-67-06-11-2026">v2.6.67 - 06/11/2026</h2>
+<ul>
+<li>Téléphone : commande « Suivre les pas » (minutes), compteur et heure du dernier pas dans la fiche ; pendant le suivi, l'application envoie ses pas toutes les 5 secondes sans attendre le GPS (application 0.7.22, mise à jour automatique).</li>
+<li>Téléphone : l'ordre Suivre les pas n'est plus envoyé à une application trop ancienne (message clair) ; Latitude, Longitude et Pas suivent l'option téléphone et ne sont plus supprimées par l'enregistrement de la fiche.</li>
+<li>Onglet Plugins : sans accès à GitHub, la liste des versions n'est retentée qu'une fois par minute ; une liste illisible ou un plugin absent est noté au journal comme les autres échecs de mise à jour.</li>
+<li>Aide en ligne : un nom avec souligné écrit après un bloc de code garde son souligné ; l'aide décrit la commande Suivre les pas et le clic sur les icônes de la tuile du téléphone.</li>
+</ul>
+<h2 id="v2-6-63-05-11-2026">v2.6.63 - 05/11/2026</h2>
+<ul>
+<li>Mise à jour des plugins : attente plus longue quand GitHub répond lentement, et message clair si la liste des versions est momentanément illisible.</li>
+<li>Téléphone : un message vocal envoyé quelques secondes après un autre part aussitôt, au lieu d'attendre jusqu'à une demi-minute.</li>
+</ul>
+<h2 id="v2-6-61-04-11-2026">v2.6.61 - 04/11/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-6-60-03-11-2026">v2.6.60 - 03/11/2026</h2>
+<ul>
+<li>Onglet VM/CT Proxmox : la spécification fournie pour l'onduleur Huawei (modbus2mqtt) ajoute les compteurs de sortie AC totale et d'injection, comme sur la passerelle en service.</li>
+<li>Tuile du téléphone : un clic sur la batterie, la charge, le réseau, le mode ne pas déranger ou le dernier contact ouvre son historique, comme sur les autres commandes (Ctrl+clic : tous ensemble).</li>
+</ul>
+<h2 id="v2-6-57-02-11-2026">v2.6.57 - 02/11/2026</h2>
+<ul>
+<li>Aide en ligne des plugins mg* : moteur commun au socle (Markdown Parsedown, même lecture que le PDF : paragraphes, listes numérotées, citations) ; chaque plugin n'a plus qu'un fichier de renvoi.</li>
+</ul>
+<h2 id="v2-6-56-01-11-2026">v2.6.56 - 01/11/2026</h2>
+<ul>
+<li>MG Tabulator n'est plus installé ni proposé : chaque table se gère dans son plugin. L'onglet Tables SQL est retiré.</li>
+<li>Widgets, paramètres partagés, utilisateurs, alertes et positions : leurs tables ne passent plus par MG Tabulator ; tout se gère dans les onglets Widgets, Variables et paramètres et Utilisateurs.</li>
+<li>Widgets : boutons Nouveau et Renommer pour les presets ; un preset ajouté reprend les valeurs du défaut de son type, et la croix d'un attribut rétablit bien sa valeur par défaut.</li>
+<li>Rapport de santé : les tables qui ne dépendent plus de MG Tabulator restent contrôlées, sous leur nouveau nom.</li>
+<li>Audit : types de widgets en minuscules, type nouveau aux valeurs du catalogue, plus de fausse alerte au semis des presets sur la machine de référence, extension menu 2.1.45 sans fuite des adresses, aide en ligne sans lignes techniques.</li>
+</ul>
+<h2 id="v2-6-52-31-10-2026">v2.6.52 - 31/10/2026</h2>
+<ul>
+<li>Nouveau tableau « Paramètres partagés » dans l'onglet Variables et paramètres : modifier, ajouter et supprimer les réglages communs sans passer par MG Tabulator.</li>
+<li>Secrets masqués avec un œil pour les lire, listes de choix, sélecteur d'équipement ou de commande, et case « À renseigner seulement ».</li>
+<li>La liste « Reste à faire » et le message « A CONFIGURER » mènent désormais à ce tableau.</li>
+<li>Publication : les réglages propres à MG Geofence devenus sans objet sont retirés de la construction des archives.</li>
+<li>Aide : un bloc de code s'affiche tel quel, sans mise en forme accidentelle de son contenu.</li>
+</ul>
+<h2 id="v2-6-49-30-10-2026">v2.6.49 - 30/10/2026</h2>
+<ul>
+<li>Aide : un lien écrit dans du code reste du code.</li>
+</ul>
+<h2 id="v2-6-48-28-10-2026">v2.6.48 - 28/10/2026</h2>
+<ul>
+<li>Corrections mineures.</li>
+</ul>
+<h2 id="v2-6-48-27-10-2026">v2.6.48 - 27/10/2026</h2>
+<ul>
+<li>Journal allégé : les envois réussis (réveil des téléphones, fiche de suivi) et la remise à jour de l'écran des mises à jour ne sont plus notés qu'en mode débogage ; les échecs restent signalés.</li>
+<li>Altitude des parcours : une coupure passagère du service de l'IGN n'est plus signalée comme une erreur ; un avertissement n'apparaît que si le service reste injoignable plus d'une heure.</li>
+</ul>
+<h2 id="v2-6-48-26-10-2026">v2.6.48 - 26/10/2026</h2>
+<ul>
+<li>Sauvegarde Jeedom : les anciennes versions de travail conservées par le plugin n'y sont plus incluses, la sauvegarde quotidienne est plus légère.</li>
+</ul></body></html>
