@@ -26,6 +26,7 @@ MG Domo, onglet **Plugins**, avec contrôle d'intégrité.
 
 - une archive par plugin (`<plugin>-<version>.tgz`) ;
 - `versions.json` : version, date et empreinte md5 de chaque archive, lu par MG Domo ;
+- `outils.json` et `outil-<nom>.tgz` : outils installables de l'onglet Bibliothèques (bouton Installer), avec leur empreinte md5 ;
 - `install_new_station_mgDomo.sh` : installation du socle sur une nouvelle box.
 
 ## Aide
